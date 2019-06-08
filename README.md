@@ -19,7 +19,7 @@
 
 [Proposta](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/proposta.md)
 
-## Stackeholder
+## Stakeholder
  Evelyn Cantarino Marins Pereira - Empresária do Studio de Beleza Evelyn Marins
 
 ## Requisitos
