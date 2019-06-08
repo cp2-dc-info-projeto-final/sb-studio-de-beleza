@@ -36,6 +36,7 @@ Diagrama de Casos de Uso:
 [Especificação de Casos de Uso](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/casos-de-uso.md)
 
 ## Modelagem
-*Em andamento*
+![Diagrama de Classes](diagrama-de-classes.png)
+
 ## Manual de Utilização
 *Em andamento*
