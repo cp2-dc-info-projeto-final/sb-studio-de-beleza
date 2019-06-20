@@ -1,7 +1,7 @@
 </!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UFT-8">
   <title>Cadastre-se</title>
 	 <link rel="stylesheet" href="jquery_css/jquery-ui.css"/>
     <link rel="stylesheet" href="jquery_javascript/calendario.js"/>
@@ -58,24 +58,16 @@ body /* estilização do esqueleto da página */
    margin-top : 10px;
    padding: 0;
   }
-
 #menu li /* esquematização de cada item da lista contida no menu */
   {
-   display: table-cell;
+    display: table-cell;
 	width: 160px;
-	transition:1s;
+	
   }
-
-#menu li:hover /* trecho correspondente ao atributo hover, ao passar o mouse, aplicará um efeito em cada um dos itens listados no menu */
-  {
-	width:200px;
-	transition:1s;
-  }
-
 #menu a{
 	display: block;
 	line-height: 46px;
-   text-align: center;
+    text-align: center;
 	text-decoration : none;
 	color : white;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
@@ -83,7 +75,6 @@ body /* estilização do esqueleto da página */
 	position:relative;
 	
 }
-
 #menu a:hover{
 	background: rgba(255,255,255,0.1);
 	border-bottom: solid 4px #f1af09;
@@ -91,26 +82,11 @@ body /* estilização do esqueleto da página */
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 	transition : text-shadow,color 1s;
 }
-
 #menu a:before{
    content: '';
    position: absolute;
-   left: 50%;
-   bottom: 5px;
-	transition:1s;
-	width: 0;
-	height: 0;
-	border-left: 3px;
-   border-right: 3px;
-   border-top: 5px;
+   transition:1s;	
 }
-
-#menu a:hover::before{
-	border-color: rgba(255, 255, 255, 0.5) transparent transparent;
-	box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-	transition:1s
-}
-
 .icone_usuariodiv:hover /* estilização da div (.icone_usuariodiv) atráves da pseudoclasse hover */
 {
    box-shadow: 
@@ -123,16 +99,15 @@ body /* estilização do esqueleto da página */
 .icone_usuariodiv {
 	background:#ed7f7a;
 	width:260px;
-   height:320px;
-   margin-top:16px;
-   float:left;
-   margin-left:10px;
+    height:320px;
+    margin-top:16px;
+    float:left;
+    margin-left:10px;
 }
 #icone_perfil_usuario {
 	margin-left:75px;
 	margin-top:32px;
 }
-
 #titulo 
 {
 	margin-left:296px;
@@ -147,7 +122,7 @@ body /* estilização do esqueleto da página */
 	margin-top: 3%;
 	font-size:25px;
 }
-.ui-datepicker-header
+.ui-datepicker-header 
 {
    background-color:#f1af09 !important;
 }
@@ -160,7 +135,7 @@ body /* estilização do esqueleto da página */
 	margin-left:100px;
 	margin-top:3%;
 }
-input[type="submit"], [type="reset"] 
+input[type="submit"], [type="reset"] /* estilização da cor do calendário */
 {
    border: 1px solid #000000;
    background:#cd5c5c;
@@ -193,18 +168,19 @@ hr {
 	</head>
 	 <body>
 		<div class="logo_studiodiv">
-			<img id="logo_studio" src="logo_editada.png" width="120">
+
+			<img id="logo_studio" src="logo_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
 		</div>
       <div>
 			<ul id="menu">
-			<li><a href="https://www.youtube.com/watch?v=OKNXn2qCEws">Página Inicial</a></li>
+			<li><a href="#">Página Inicial</a></li>
 			<li><a href="#">Serviços</a></li>
 			<li><a href="#">Galeria de Fotos</a></li>
 			<li><a href="#">Quem somos nós</a></li>
 			</ul>
 		</div>
-      <div class="icone_usuariodiv"> <!-- criação da primeira DIV -->
-       	<img id="icone_perfil_usuario" src="icone.png" width="120"> <!-- inclusão do ícone de usuário -->
+      <div class="icone_usuariodiv"> 
+       	<img id="icone_perfil_usuario" src="icone.png" width="120"> 
         	<h1 align="center">@Usuário</h1>
          <p align="center">Cliente assíduo(a) do Studio de Beleza Evelyn Marins</p>  
       </div>
