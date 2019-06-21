@@ -16,7 +16,7 @@
      /* inserção das mascáras nos campos de input */
      $("#cCpf").mask("000.000.000-00", {placeholder: " 9 dígitos + 2 dígitos"});
      $("#datepicker").mask("00/00/0000", {placeholder: " __/__/____"});
-     $("#cTelefone").mask("(00) 00000-0000", {placeholder: " (00) 90000-0000"});
+     $("#cTelefone").mask("(00) 00000-0000", {placeholder: " (00) 00000000000"});
   });
    </script>
    <script type="text/javascript"> 
@@ -28,6 +28,8 @@
   
 	</head>
 	 <body>
+	 	
+
 		<div class="logo_studiodiv">
 
 			<img id="logo_studio" src="logo_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
@@ -51,7 +53,7 @@
       </div>
       <div>
 
-<form method="post" action=""> <!-- configurar com php | todos os inputs estão sem o termo VALUE! -->
+<form action="cadastro.php" method="post"> <!-- configurar com php | todos os inputs estão sem o termo VALUE! -->
 
       <!-- DADOS PESSOAIS-->
       <fieldset class="fieldset_cadastro">
@@ -76,15 +78,17 @@
              <label for="datepicker">Data de nascimento:</label>
            </td>
             <td align="left">
-             <input type="text" id="datepicker">
+             <input type="text" id="datepicker" name="tCalendario">
             </td>
            <td align="left">
          <legend>Sexo:</legend>
            </td>
            <td>
- 	          <input type="radio" name="tSexo" id="cMasc" checked/>
+
+  
+ 	          <input type="radio" name="tSexo" id="cMasc" value="M" />
              <label for="cMasc">Masculino</label><br>
-             <input type="radio" name="tSexo" id="cFem" checked/>
+             <input type="radio" name="tSexo" id="cFem" value="F"/>
              <label for="cFem">Feminino</label><br>   
             </td>
          </tr>
@@ -93,7 +97,7 @@
              <label for="cCpf">CPF:</label>
             </td>
             <td align="left">
-             <input type="text" name="cCpf" id="cCpf"> 
+             <input type="text" name="tCpf" id="cCpf"> 
             </td>
           <td>
              <label for="cTelefone">Telefone: </label>
