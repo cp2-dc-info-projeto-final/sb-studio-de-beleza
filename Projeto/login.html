@@ -1,0 +1,72 @@
+<html>
+    <meta charset="UTF-8">
+    <title>Faça agora o seu login</title>
+<head>
+	<style>
+	body {
+    background-color:#fcf0eb;
+    font-family:lato,Verdana, serif;
+    position: absolute;  
+}
+.cabecalho_login{
+    margin-top: 8%;
+    margin-left:550px;
+}
+.div_centro{
+    margin-left:480px;
+    width: 20px;
+    margin-top:1px;
+    height:240px;
+    font-size:20px;
+    letter-spacing:3;   
+}
+.fieldset_login {
+    border-radius: 5px;
+    background:white;
+    border-color:#ff9e81;
+    border-width:3px;   
+}
+input {
+    width:265px;
+    height:35px;
+    margin-top:8px;   
+}
+.btn_enviar {
+    margin-top:24px;
+    height: 45px;
+    background-color:#ffbc57;
+    border:0;
+    border-radius:5px;
+    color:white;
+    letter-spacing:3;
+    font-size:20px; 
+}
+#cBtn_Cadastrar{
+    margin-left:480px;
+    margin-top:25px;
+    width:304px;
+    height:70px;
+    background-color:#d4d5d4;
+}
+</style>
+</head>
+<body>   
+    <div class="cabecalho_login">
+    <h1>Faça login</h1>
+    </div>
+    <form action="teste_login.php" method="post"> 
+     <div class="div_centro">
+		 <fieldset class="fieldset_login">      
+			<label><b>Endereço de email</b></label>
+            <input type="text" name="tEmail" id="cEmail"><br><br>
+            <label><b>Senha</b></label><br>
+            <input input type="password" name="tSenha" id="cSenha" maxlength="8">
+            <input type="submit" class="btn_enviar">       
+          </fieldset>      
+       </div>
+    </form>
+    <a href="cadastro.html">
+      <button name="btn_cadastrar" class="btn_enviar" id="cBtn_Cadastrar">Não possui cadastro?</button>
+    </a>
+</body>
+</html>
