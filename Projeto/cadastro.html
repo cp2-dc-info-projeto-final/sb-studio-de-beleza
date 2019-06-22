@@ -16,7 +16,7 @@
      /* inserção das mascáras nos campos de input */
      $("#cCpf").mask("000.000.000-00", {placeholder: " 9 dígitos + 2 dígitos"});
      $("#datepicker").mask("00/00/0000", {placeholder: " __/__/____"});
-     $("#cTelefone").mask("(00) 00000-0000", {placeholder: " (00) 00000000000"});
+     $("#cTelefone").mask("(00) 00000-0000", {placeholder: " (00) 90000-0000"});
   });
    </script>
    <script type="text/javascript"> 
@@ -24,14 +24,10 @@
   {
      $("#datepicker").datepicker({
   });
-   </script>
-  
+   </script> 
 	</head>
 	 <body>
-	 	
-
-		<div class="logo_studiodiv">
-
+		<div class="logo_studiodiv"></div>
 			<img id="logo_studio" src="logo_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
 		</div>
       <div>
@@ -53,7 +49,7 @@
       </div>
       <div>
 
-<form action="cadastro.php" method="post"> <!-- configurar com php | todos os inputs estão sem o termo VALUE! -->
+<form action="teste_cadastro.php" method="post"> <!-- configurar com php | todos os inputs estão sem o termo VALUE! -->
 
       <!-- DADOS PESSOAIS-->
       <fieldset class="fieldset_cadastro">
@@ -83,12 +79,10 @@
            <td align="left">
          <legend>Sexo:</legend>
            </td>
-           <td>
-
-  
- 	          <input type="radio" name="tSexo" id="cMasc" value="M" />
+           <td> 
+ 	          <input type="radio" name="tSexo" id="cMasc" value="M" required/>
              <label for="cMasc">Masculino</label><br>
-             <input type="radio" name="tSexo" id="cFem" value="F"/>
+             <input type="radio" name="tSexo" id="cFem" value="F" required/>
              <label for="cFem">Feminino</label><br>   
             </td>
          </tr>
@@ -122,7 +116,7 @@
          </td>
          <td>
           <label>Tipo de usuário</label>
-           <select name="tipo_usuario">
+           <select name="tTipoUsuario">
                 <option value="">Selecione</option>
                 <option value="1">Cliente</option>
                 <option value="2">Funcionário</option>
@@ -159,3 +153,4 @@
             <p align="center">Rua José Ferreira Murro, Nº 320 - Nova Iguaçu<br>Rio de Janeiro - RJ - 26031-170<br>Tel:. (00) 0000-0000</p>
          </footer>
 </body>
+</html>
