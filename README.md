@@ -39,4 +39,4 @@ Diagrama de Casos de Uso:
 ![Diagrama de Classes](diagrama-de-classes.png)
 
 ## Manual de Utilização
-*Em andamento...*
+*Em andamento*
