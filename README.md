@@ -23,20 +23,20 @@
  Evelyn Cantarino Marins Pereira - Empresária do Studio de Beleza Evelyn Marins
 
 ## Requisitos
-[Entrevista em texto](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/entrevista.md)
+[Entrevista em texto](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/entrevista.md)
 
-[Entrevista em áudio](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/entrevista.mp3)
+[Entrevista em áudio](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/entrevista.mp3)
 
-[Especificação de Requisitos](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/requisitos.md)
+[Especificação de Requisitos](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/requisitos.md)
 
 ## Casos de Uso
 Diagrama de Casos de Uso:
-![Diagrama de Casos de Uso](diagrama-de-casos-de-uso.png)
+![Diagrama de Casos de Uso](Documentacao/diagrama-de-casos-de-uso.png)
 
-[Especificação de Casos de Uso](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/casos-de-uso.md)
+[Especificação de Casos de Uso](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/casos-de-uso.md)
 
 ## Modelagem
-![Diagrama de Classes](diagrama-de-classes.png)
+![Diagrama de Classes](Documentacao/diagrama-de-classes.png)
 
 ## Manual de Utilização
 *Em andamento*
