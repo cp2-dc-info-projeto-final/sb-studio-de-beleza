@@ -17,7 +17,7 @@
 ## Visão Geral da Proposta
 - Construção de Desenvolvimento Web para um Studio de Beleza que auxilie principalmente no agendamento dos serviços oferecidos pelo salão.
 
-[Proposta](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/proposta.md)
+[Proposta](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/proposta.md)
 
 ## Stakeholder
  Evelyn Cantarino Marins Pereira - Empresária do Studio de Beleza Evelyn Marins
@@ -37,6 +37,8 @@ Diagrama de Casos de Uso:
 
 ## Modelagem
 ![Diagrama de Classes](Documentacao/diagrama-de-classes.png)
+
+[Script SQL](Projeto/schema.sql) 
 
 ## Manual de Utilização
 *Em andamento*
