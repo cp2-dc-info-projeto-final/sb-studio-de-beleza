@@ -3,7 +3,7 @@
 server with default setting (user 'root' with no password) */
 $link = mysqli_connect("localhost", "root", "", "studiodebeleza");
  
-// Check connection
+// Checar conexão
 if($link === false)
 {
     die("ERRO: Não foi possível conectar" . mysqli_connect_error());
@@ -14,14 +14,14 @@ if($link === false)
  
 $email = $_POST['tEmail'];
 $senha = $_POST['tSenha'];
-$nome = $_POST["tNome"];
-$tipoUsuario = $_POST["tTipoUsuario"];
-$tel = $_POST["$tTelefone"];
-$calendario = $_POST["$tCalendario"];
-$cpf = $_POST["tCpf"];
-$sexo = $_POST["$tSexo"];
+$nome = $_POST['tNome'];
+$tipoUsuario = $_POST['tTipoUsuario'];
+$tel = $_POST['tTelefone'];
+$calendario = $_POST['tCalendario'];
+$calendario = date('Y-m-d', strtotime($calendario)); 
+$cpf = $_POST['tCpf'];
+$sexo = $_POST['tSexo'];
 // Attempt insert query execution
-
 $sql = "INSERT INTO usuario (email, senha) VALUES ('$email', '$senha')";
 if(mysqli_query($link, $sql))
 {
@@ -50,7 +50,7 @@ if ($result=mysqli_query($link,$sql))
                 }
 
         }
-        if ($tTipoUsuario == 1) // if tipo == cliente
+        if ($tipoUsuario == 1) // if tipo == cliente
         {
             $sql = "INSERT INTO Cliente (id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo) VALUES ($id_usuario, '$nome', '$tel', '$calendario', '$cpf', '$sexo')";
                 if(mysqli_query($link, $sql))
