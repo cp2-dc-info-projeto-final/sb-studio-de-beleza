@@ -31,7 +31,7 @@ id_cliente INT,
 nome_cliente VARCHAR (50),
 telefone VARCHAR (20),
 data_nasc date,
-cpf VARCHAR (12),
+cpf VARCHAR (20),
 sexo VARCHAR (1),
 PRIMARY KEY (id_cliente),
 FOREIGN KEY (id_cliente) REFERENCES usuario(id_usuario)
