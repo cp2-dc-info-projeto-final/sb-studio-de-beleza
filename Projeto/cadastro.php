@@ -7,52 +7,64 @@ $link = mysqli_connect("localhost", "root", "", "studiodebeleza");
 if($link === false)
 {
     die("ERRO: Não foi possível conectar" . mysqli_connect_error());
+} else
+{
+    echo "Hello World!";
 }
  
-$login = $_POST['tEmail'];
+$email = $_POST['tEmail'];
 $senha = $_POST['tSenha'];
-// Attempt insert query execution
-$sql = "INSERT INTO usuario (email, senha) VALUES ($login, $senha)";
-    if(mysqli_query($link, $sql))
-    {
-        echo "Cadastro Concluído com Sucesso :)";
-    } else
-        {
-            echo "ERRO: Não foi possível executar o $sql. " . mysqli_error($link);
-        }
-
-$id_usuario = SELECT id FROM usuario WHERE email = $tEmail //$id_usuario = SELECT id FROM usuario WHERE email=$temail
 $nome = $_POST["tNome"];
 $tipoUsuario = $_POST["tTipoUsuario"];
 $tel = $_POST["$tTelefone"];
 $calendario = $_POST["$tCalendario"];
 $cpf = $_POST["tCpf"];
 $sexo = $_POST["$tSexo"];
-if ($tipoUsuario == 2) // if tipo == funcionario
-{
-    $id_func = $id_usuario // id_func = $id_usuario
-    $sql = "INSERT INTO Funcionario (id_func, nome_funcionario, telefone, data_nasc, cpf, sexo) VALUES ($id_func, $nome, $tel, $calendario, $cpf, $sexo)";
-    if(mysqli_query($link, $sql))
-    {
-        echo "Cadastro concluído com sucesso! :)";
-    } else
-        {
-            echo "ERRO: Não foi possível executar o $sql. " . mysqli_error($link);
-        }
+// Attempt insert query execution
 
-}
-if ($tTipoUsuario == 1) // if tipo == cliente
+$sql = "INSERT INTO usuario (email, senha) VALUES ('$email', '$senha')";
+if(mysqli_query($link, $sql))
 {
-    id_cliente = $id_usuario // id_cliente = $id_usuario
-    $sql = "INSERT INTO Cliente (id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo) VALUES ($id_cliente, $nome, $tel, $calendario, $cpf, $sexo)";
-        if(mysqli_query($link, $sql))
-        {
-            echo "Cadastro concluído com sucesso! :)";
-        } else
-            {
-                echo "ERRO: Não foi possível executar o $sql. " . mysqli_error($link);
-            }
+    echo "<br/>Cadastro Concluído com Sucesso :)";
+} else
+{
+    echo "<br/>ERRO: Não foi possível executar o $sql. " . mysqli_error($link);
 }
-// FECHAR CONEXÃO
+
+$sql = "SELECT id_usuario FROM usuario where email='$email'";
+if ($result=mysqli_query($link,$sql))
+  {
+  // Fetch one and one row
+    if ($row=mysqli_fetch_row($result))
+    {
+        $id_usuario = $row[0];
+        if ($tipoUsuario == 2) // if tipo == funcionario
+        {
+            $sql = "INSERT INTO Funcionario (id_func, nome_funcionario, telefone, data_nasc, cpf, sexo) VALUES ($id_usuario, '$nome', '$tel', '$calendario', '$cpf', '$sexo')";
+            if(mysqli_query($link, $sql))
+            {
+                echo "<br/>Cadastro concluído com sucesso! :)";
+            } else
+                {
+                    echo "<br/>ERRO: Não foi possível executar o $sql. " . mysqli_error($link);
+                }
+
+        }
+        if ($tTipoUsuario == 1) // if tipo == cliente
+        {
+            $sql = "INSERT INTO Cliente (id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo) VALUES ($id_usuario, '$nome', '$tel', '$calendario', '$cpf', '$sexo')";
+                if(mysqli_query($link, $sql))
+                {
+                    echo "<br/>Cadastro concluído com sucesso! :)";
+                } else
+                    {
+                        echo "<br/>ERRO: Não foi possível executar o $sql. " . mysqli_error($link);
+                    }
+        }
+    }
+  // Free result set
+  mysqli_free_result($result);
+}
+
 mysqli_close($link);
 ?>
