@@ -1,6 +1,6 @@
 $(function(){
 $("#datepicker").datepicker({
-    dateFormat: 'dd/mm/yy',
+    dateFormat: 'dd-mm-yy',
     dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'
         ],
     dayNamesMin: [
