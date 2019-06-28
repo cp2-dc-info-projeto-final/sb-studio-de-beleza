@@ -1,46 +1,47 @@
 	        body > div
   {
-     transition: all 0.3s ease;           
-     font-family: Verdana, serif;
-     color:white;
-     letter-spacing:2px;          
+    transition: all 0.3s ease;           
+    font-family: Verdana, serif;
+    color:white;
+    letter-spacing:2px;          
   }
 body /* estilização do esqueleto da página */
   { 
-    background-color:#fcf0eb; 
-    position:absolute;
-    margin:0;
-    padding:0;  
+   background-color:#fcf0eb; 
+   position:absolute;
+   margin:0;
+   padding:0;  
   }
 #logo_studio /* definir altura e largura (respectivamente) do logo situado no topo da página */ 
-  {
-   width: 100%;
-   height: 135px;
-  }
+{
+  width: 100%;
+  height: 135px;
+}
 #menu /* estilização e esquematização da borda, sombra, margem, etc do menu contido em uma div */
-  {
-   width: 100%;
-   background: linear-gradient(#ed7f7a, #c36d66);
-   border-radius: 0px 0px 4px 4px;
-   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2),
+{
+  width: 100%;
+  background: linear-gradient(#ed7f7a, #c36d66);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2),
 	0px 1px 0px 1px rgba(255, 255, 255, 0.5) inset,
 	0px -3px 0px 1px rgba(0, 0, 0, 0.1) inset;
-   overflow : hidden;
-   font-family: Roboto,Arial,Helvetica,Sans-serif;
-   display: table;
-   margin-top : 10px;
-   padding: 0;
-  }
+  overflow : hidden;
+  font-family: Roboto,Arial,Helvetica,Sans-serif;
+  display: table;
+  margin-top : 10px;
+  padding: 0;
+}
 #menu li /* esquematização de cada item da lista contida no menu */
-  {
-    display: table-cell;
+{
+  display: table-cell;
 	width: 160px;
 	
-  }
-#menu a{
+}
+#menu a
+{
 	display: block;
 	line-height: 46px;
-    text-align: center;
+  text-align: center;
 	text-decoration : none;
 	color : white;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
@@ -48,36 +49,40 @@ body /* estilização do esqueleto da página */
 	position:relative;
 	
 }
-#menu a:hover{
+#menu a:hover
+{
 	background: rgba(255,255,255,0.1);
 	border-bottom: solid 4px #f1af09;
 	color : white;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 	transition : text-shadow,color 1s;
 }
-#menu a:before{
-   content: '';
-   position: absolute;
-   transition:1s;	
+#menu a:before
+{
+  content: '';
+  position: absolute;
+  transition:1s;	
 }
 .icone_usuariodiv:hover /* estilização da div (.icone_usuariodiv) atráves da pseudoclasse hover */
 {
-   box-shadow: 
-   8px 6px #f1af09,
-   7px 5px #f1af09, 
-   6px 4px #f1af09; 
-   -webkit-transform: translateX(-3px);
-   transform: translateX(-3px); /* comandos de propriedades de transformação da sombra */
+  box-shadow: 
+  8px 6px #f1af09,
+  7px 5px #f1af09, 
+  6px 4px #f1af09; 
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px); /* comandos de propriedades de transformação da sombra */
 }
-.icone_usuariodiv {
+.icone_usuariodiv 
+{
 	background:#ed7f7a;
 	width:260px;
-    height:320px;
-    margin-top:16px;
-    float:left;
-    margin-left:10px;
+  height:320px;
+  margin-top:16px;
+  float:left;
+  margin-left:10px;
 }
-#icone_perfil_usuario {
+#icone_perfil_usuario 
+{
 	margin-left:75px;
 	margin-top:32px;
 }
@@ -97,32 +102,32 @@ body /* estilização do esqueleto da página */
 }
 .ui-datepicker-header 
 {
-   background-color:#f1af09 !important;
+  background-color:#f1af09 !important;
 }
 .fieldset_cadastro 
 {
-   color:black;
-   border-color:#ff9e81;
-   font-size:25px;
+  color:black;
+  border-color:#ff9e81;
+  font-size:25px;
 	margin-right:100px;
 	margin-left:100px;
   margin-top:3%;
   border-radius:5px;
 }
-input[type="submit"], [type="reset"] /* estilização da cor do calendário */
+input[type="submit"], [type="reset"] /* estilização dos botões enviar e limpar */
 {
-   border: 1px solid #000000;
-   background:#cd5c5c;
-   width:150px;
-   height:40px;
-   border-radius:4px;
-   -moz-border-radius:4px;
-   -webkit-border-radius:4px;
-   box-shadow: 1px 1px 2px #333333;    
-   -moz-box-shadow: 1px 1px 2px #333333;
-   color:white;
-   margin-left:100px;
-   margin-right:-50px;
+  border: 1px solid #000000;
+  background:#cd5c5c;
+  width:150px;
+  height:40px;
+  border-radius:4px;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  box-shadow: 1px 1px 2px #333333;    
+  -moz-box-shadow: 1px 1px 2px #333333;
+  color:white;
+  margin-left:100px;
+  margin-right:-50px;
 }
 .footer 
 {
@@ -131,7 +136,8 @@ input[type="submit"], [type="reset"] /* estilização da cor do calendário */
   font-family:lato,arial;
   font-size:15px;
 }
-hr {
+hr 
+{
   border: 0;
   height:4px;
   width:55%;
