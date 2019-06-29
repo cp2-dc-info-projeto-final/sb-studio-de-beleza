@@ -25,6 +25,17 @@
     $("#datepicker").datepicker({
     });
 });
+function validarSenha(form) /* declaração para conferir se as senhas digitadas condizem uma com a outra, através de código javascript */ 
+{ 
+    tSenha = document.formulario.tSenha.value
+    tConfirmaSenha = document.formulario.tConfirmaSenha.value
+    if (tSenha != tConfirmaSenha)
+    {
+        alert("As senhas não condizem. Por favor, repita a senha corretamente");
+        document.formulario.tConfirmaSenha.focus();  
+        return false;
+    }
+}
    </script> 
 	</head>
 	 <body>
@@ -52,7 +63,7 @@
 
       <div>
 
-<form action="cadastro.php" method="post"> <!-- configurar com php | todos os inputs estão sem o termo VALUE! -->
+<form action="cadastro.php" method="post" onsubmit="return validarSenha(this);" name="formulario"> <!-- configurar com php | todos os inputs estão sem o termo VALUE! -->
 
       <!-- DADOS PESSOAIS-->
       <fieldset class="fieldset_cadastro">
