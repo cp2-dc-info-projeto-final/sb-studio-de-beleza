@@ -13,7 +13,7 @@ if($link === false)
 }
  
 $email = $_POST['tEmail'];
-$senha = $_POST['tSenha'];
+$senha = $_POST['tSenha'] = md5('{$senha}');
 $nome = $_POST['tNome'];
 $tipoUsuario = $_POST['tTipoUsuario'];
 $tel = $_POST['tTelefone'];
