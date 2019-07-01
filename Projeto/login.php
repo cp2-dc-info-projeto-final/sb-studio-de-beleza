@@ -12,5 +12,6 @@ $db = mysqli_query('studiodebeleza');
         header('Location: index.php');
         exit();
    
+        
   }
 ?>
