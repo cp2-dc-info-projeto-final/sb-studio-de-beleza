@@ -21,6 +21,16 @@ $calendario = $_POST['tCalendario'];
 $calendario = date('Y-m-d', strtotime($calendario)); 
 $cpf = $_POST['tCpf'];
 $sexo = $_POST['tSexo'];
+session_start();
+$sql = "SELECT id_usuario FROM usuario where email='$email'";
+$result = mysqli_query($link, $sql);
+$erro = "";
+if (mysqli_num_rows($result) > 0) {
+    $erro = "E-mail indisponível";        
+    $_SESSION["erro"] = $erro;
+    header("Location: cadastro.html");
+    exit();
+}
 // Attempt insert query execution
 $sql = "INSERT INTO usuario (email, senha) VALUES ('$email', '$senha')";
 if(mysqli_query($link, $sql))
@@ -32,6 +42,8 @@ if(mysqli_query($link, $sql))
 }
 
 $sql = "SELECT id_usuario FROM usuario where email='$email'";
+
+
 if ($result=mysqli_query($link,$sql))
   {
   // Fetch one and one row
