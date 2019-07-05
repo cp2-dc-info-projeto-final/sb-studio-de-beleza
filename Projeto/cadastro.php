@@ -13,7 +13,8 @@ if($link === false)
 }
  
 $email = $_POST['tEmail'];
-$senha = $_POST['tSenha'] = md5('{$senha}');
+$senha = $_POST['tSenha'];
+$hash = password_hash($senha, PASSWORD_DEFAULT);
 $nome = $_POST['tNome'];
 $tipoUsuario = $_POST['tTipoUsuario'];
 $tel = $_POST['tTelefone'];
@@ -21,8 +22,18 @@ $calendario = $_POST['tCalendario'];
 $calendario = date('Y-m-d', strtotime($calendario)); 
 $cpf = $_POST['tCpf'];
 $sexo = $_POST['tSexo'];
+session_start();
+$sql = "SELECT id_usuario FROM usuario where email='$email'";
+$result = mysqli_query($link, $sql);
+$erro = "";
+if (mysqli_num_rows($result) > 0) {
+    $erro = "E-mail indisponível";        
+    $_SESSION["erro"] = $erro;
+    header("Location: cadastro.html");
+    exit();
+}
 // Attempt insert query execution
-$sql = "INSERT INTO usuario (email, senha) VALUES ('$email', '$senha')";
+$sql = "INSERT INTO usuario (email, senha) VALUES ('$email', '$hash')";
 if(mysqli_query($link, $sql))
 {
     echo "<br/>Cadastro Concluído com Sucesso :)";
@@ -32,6 +43,8 @@ if(mysqli_query($link, $sql))
 }
 
 $sql = "SELECT id_usuario FROM usuario where email='$email'";
+
+
 if ($result=mysqli_query($link,$sql))
   {
   // Fetch one and one row
@@ -58,7 +71,7 @@ if ($result=mysqli_query($link,$sql))
                     echo "<br/>Cadastro concluído com sucesso! :)";
                 } else
                     {
-                        echo "<br/>ERRO: Não foi possível executar o $sql. " . mysqli_error($link);
+                        echo "<br/>ERRO:  Não foi possível executar o $sql. " . mysqli_error($link);
                     }
         }
     }
