@@ -1,0 +1,75 @@
+	body {
+    background-color:#fcf0eb;
+    font-family:lato,Verdana, serif;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+.cabecalho_login {
+    margin-top: 8%;
+    width:100%;
+}
+.fieldset_cadastro{
+    margin: 0 auto;
+    width: 10%;
+    margin-top:1px;
+    height:240px;
+    border-radius: 5px;
+    background:white;
+    border-color:#ff9e81;
+    border-width:3px;
+    font-size:20px;
+    letter-spacing:3;   
+}
+input {
+    width:265px;
+    height:35px;
+    margin-top:8px;
+}
+.btn_enviar {
+    margin-top:24px;
+    height: 45px;
+    background-color:#ffbc57;
+    border:0;
+    border-radius:5px;
+    color:white;
+    letter-spacing:3;
+    font-size:20px; 
+}
+.btn_cadastrar{
+    margin-left:39%;
+    margin-top:1%;
+    width:22%;
+    height:70px;
+    background-color:#d4d5d4;
+    border:0;
+    border-radius:5px;
+    color:white;
+    letter-spacing:3;
+    font-size:20px; 
+}
+.footer 
+{
+  background-color:#e4423b;
+  color:white;
+  font-family:lato,arial;
+  font-size:15;
+  margin-top:12%;
+  height:16%;
+  border-top:60%;
+}
+hr 
+{
+  border: 0;
+  height:4px;
+  width:59%;
+  background: #f8998e;
+  background-image: linear-gradient(to right, #f1af09, #f8998e, #f1af09);
+}
+#itens_rodape {
+    padding-top: 1%;
+}
+
+   
