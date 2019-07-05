@@ -13,7 +13,8 @@ if($link === false)
 }
  
 $email = $_POST['tEmail'];
-$senha = $_POST['tSenha'] = md5('{$senha}');
+$senha = $_POST['tSenha'];
+$hash = password_hash($senha, PASSWORD_DEFAULT);
 $nome = $_POST['tNome'];
 $tipoUsuario = $_POST['tTipoUsuario'];
 $tel = $_POST['tTelefone'];
@@ -32,7 +33,7 @@ if (mysqli_num_rows($result) > 0) {
     exit();
 }
 // Attempt insert query execution
-$sql = "INSERT INTO usuario (email, senha) VALUES ('$email', '$senha')";
+$sql = "INSERT INTO usuario (email, senha) VALUES ('$email', '$hash')";
 if(mysqli_query($link, $sql))
 {
     echo "<br/>Cadastro Concluído com Sucesso :)";
@@ -70,7 +71,7 @@ if ($result=mysqli_query($link,$sql))
                     echo "<br/>Cadastro concluído com sucesso! :)";
                 } else
                     {
-                        echo "<br/>ERRO: Não foi possível executar o $sql. " . mysqli_error($link);
+                        echo "<br/>ERRO:  Não foi possível executar o $sql. " . mysqli_error($link);
                     }
         }
     }
