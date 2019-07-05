@@ -56,6 +56,6 @@ CREATE TABLE usuario (
     
 id_usuario int AUTO_INCREMENT,
 email VARCHAR (100),
-senha VARCHAR (200),
+senha VARCHAR (253),
 PRIMARY KEY (id_usuario)
 );
