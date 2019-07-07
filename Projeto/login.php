@@ -31,7 +31,7 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     $erro = "Login inexistente";
     $_SESSION["erro"] = $erro;
-    header("Location: cadastro.html");
+    header("Location: formLogin.php");
     exit();
 }        
 mysqli_close($connection);
