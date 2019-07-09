@@ -22,14 +22,14 @@ if (mysqli_num_rows($result) > 0) {
           header("Location: logo.png");
           exit();
       } else {
-          $erro = "Senha incorreta";        
+          $erro = "<p style='font-size: 35px;color:red;' align='center'>Senha incorreta</p>";     
           $_SESSION["erro"] = $erro;
           header("Location: formLogin.php");
           exit();
       }
     }
 } else {
-    $erro = "Login inexistente";
+    $erro = "<p style='font-size: 35px;color:red;' align='center'>Login inexistente</p>";
     $_SESSION["erro"] = $erro;
     header("Location: formLogin.php");
     exit();
