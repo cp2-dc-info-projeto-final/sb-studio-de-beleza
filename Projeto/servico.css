@@ -1,3 +1,4 @@
+
 #logo_studio /* definir altura e largura (respectivamente) do logo situado no topo da página */ 
 {
   width: 100%;
@@ -15,13 +16,12 @@
   font-family: Roboto,Arial,Helvetica,Sans-serif;
   display: table;
   margin-top : 10px;
-  padding: 0;
+
 }
 #menu li /* esquematização de cada item da lista contida no menu */
 {
   display: table-cell;
 	width: 160px;
-	
 }
 #menu a
 {
@@ -52,9 +52,6 @@
 
 body {
     background-color: #fcf0eb; 
-    position:absolute;
-    margin:0;
-    padding:0;
     font-family: Verdana, serif;
     font-size: big;
 }

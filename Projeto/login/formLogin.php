@@ -4,9 +4,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LOGIN</title>
-<link rel="stylesheet" href="bootstrap.min.css">
-<script src="jquery_javavacript/jquery.min.js"></script>
-<script src="jquery_javascript/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../bootstrap.min.css">
+<script src="../jquery_javavacript/jquery.min.js"></script>
+<script src="../jquery_javascript/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="formLogin.css"/> 
 </head>
 <body>
