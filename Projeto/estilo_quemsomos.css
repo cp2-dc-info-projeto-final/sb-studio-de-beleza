@@ -1,4 +1,5 @@
-body {
+body 
+{
   background-color: #fcf0eb; 
   position:absolute;
   margin:0;
@@ -28,7 +29,6 @@ body {
 {
   display: table-cell;
 	width: 160px;
-	
 }
 #menu a
 {
@@ -39,8 +39,7 @@ body {
 	color : white;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 	transition : text-shadow,color 1s;
-	position:relative;
-	
+	position:relative;	
 }
 #menu a:hover
 {
@@ -56,30 +55,22 @@ body {
   position: absolute;
   transition:1s;	
 }
-.div1 {
+.div1 
+{
   font-size: 20px;
   text-align: justify;
-  margin-top: 1%;
+  margin-top: -1%;
   margin-left:20%;
   margin-right:20%;
   color:#4a4a49;
   letter-spacing:2px;
-  border-style: solid; 
-  border-bottom-width: 5px;
-  border-top-width: 0;
-  border-color:#ff9d95;
-  border-right-width: 0;
-  border-left-width: 0;
   padding-top:1%;
   padding-bottom:1%;
-  
 }
-.fundo {
+.fundo 
+{
 background-color:#fcfcfc; 
 height:30%;
-}
-h1 {
-  font-size:25px;
 }
 .footer 
 {
@@ -89,7 +80,7 @@ h1 {
     color:white;
     font-size:15px;
     position:relative;
-    top:60px;       
+    top:50px;       
     line-height:120%;
     letter-spacing:2px;
 }
@@ -107,5 +98,8 @@ h1 {
     padding-top: 1%;
     letter-spacing:2px;
     font-size: 1.5em;
+}
+#iframe1 {
+  margin-top:2%;
 }
    
