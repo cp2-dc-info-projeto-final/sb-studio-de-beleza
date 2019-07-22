@@ -12,9 +12,9 @@
 <body>
 <div class="login-form">
 	<h2 class="text-center" id="itens_titulo">Faça seu login agora mesmo</h2>
-    <form action="login.php" method="post">
+    <form action="LoginCtrl.php" method="post">
 		<div class="avatar">
-			<img src="icon.png" alt="Avatar">
+			<img src="../fotos_icones/icon.png" alt="Avatar">
 		</div>           
         <div class="form-group">
         	<input type="text" class="form-control input-lg" name="tEmail" placeholder=" E-mail " required="required">
@@ -25,7 +25,7 @@
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-lg btn-block login-btn" name="entrar">Enviar</button>
         </div>
-		<p class="hint-text">Não possui cadastro? <a href="cadastro.html"> Clique aqui!</a></p>
+		<p class="hint-text">Não possui cadastro? <a href="../cadastro/cadastro.html"> Clique aqui!</a></p>
     </form>
     <?php
             session_start();
