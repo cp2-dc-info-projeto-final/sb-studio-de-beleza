@@ -1,10 +1,9 @@
 <?php
-    require "login.php";
+    require "LoginModel.php";
 
     $email = $_POST['tEmail'];
     $senha = md5($_POST['tSenha']);
     $senha = $_POST['tSenha'];
-    $connection = mysqli_connect("localhost", "root", "", "studiodebeleza"); 
 
     session_start();
 
@@ -17,7 +16,7 @@
     } else {
         $erro = "<p style='font-size: 35px;color:red;' align='center'> Login ou senha incorretos </p>";
         $_SESSION["erro"] = $erro;
-        header("Location: formLogin.php");
+        header("Location: LoginView.php");
         exit();
     }
 
