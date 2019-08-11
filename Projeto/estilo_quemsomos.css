@@ -62,14 +62,14 @@ body
   margin-top: -1%;
   margin-left:20%;
   margin-right:20%;
-  color:#4a4a49;
-  letter-spacing:2px;
+  color:#707070;
+  letter-spacing:1px;
   padding-top:1%;
   padding-bottom:1%;
 }
 .fundo 
 {
-background-color:#f4ecec; 
+background-color:white; 
 height:30%;
 }
 .footer 
