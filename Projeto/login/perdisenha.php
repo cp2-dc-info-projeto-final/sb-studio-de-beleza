@@ -31,7 +31,10 @@
           echo '<p>Houve um erro ao enviar o email (o servidor suporta a função mail?)</p>';
  
         }
-
+ 
+		// Apenas para testar o link, no caso do e-mail falhar
+		echo '<p>Link: '.$link.' (apresentado apenas para testes; nunca expor a público!)</p>';
+ 
       } else {
         echo '<p>Não foi possível gerar o link de recuperação</p>';
  
