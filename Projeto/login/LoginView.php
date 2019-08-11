@@ -25,8 +25,8 @@
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-lg btn-block login-btn" name="entrar">Enviar</button>
         </div>
-		<p class="hint-text">Não possui cadastro? <a href="../cadastro/cadastro.html"> Clique aqui!</a></p>
-    </form>
+        <p class="hint-text">Não possui cadastro? <a href="../cadastro/cadastro.html"> Clique aqui!</a><br><br>
+        <a href="perdisenha.php"> Esqueceu a senha?</a></p>
     <?php
             session_start();
             if(array_key_exists('erro', $_SESSION) == true){
