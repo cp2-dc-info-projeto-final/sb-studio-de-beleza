@@ -1,4 +1,11 @@
-
+body 
+{
+  background-color: #fcf0eb; 
+  position:absolute;
+  margin:0;
+  padding:0;
+  font-family: Verdana, serif;
+}
 #logo_studio /* definir altura e largura (respectivamente) do logo situado no topo da página */ 
 {
   width: 100%;
@@ -16,7 +23,7 @@
   font-family: Roboto,Arial,Helvetica,Sans-serif;
   display: table;
   margin-top : 10px;
-
+  padding: 0;
 }
 #menu li /* esquematização de cada item da lista contida no menu */
 {
@@ -32,13 +39,12 @@
 	color : white;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 	transition : text-shadow,color 1s;
-	position:relative;
-	
+	position:relative;	
 }
 #menu a:hover
 {
 	background: rgba(255,255,255,0.1);
-	border-bottom: solid 4px #f1af09;
+	border-bottom: solid 3px #f1af09;
 	color : white;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 	transition : text-shadow,color 1s;
@@ -49,37 +55,51 @@
   position: absolute;
   transition:1s;	
 }
-#button button
-
-{ 
-  padding: 4px 11px;
-  
-  border: 1px solid #ffcc00;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  
-  background-color: #ffcc00 !important;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffcc00), color-stop(100%,#ff6600)) !important;
-  background: -webkit-linear-gradient(top, #ffcc00, #ff6600) !important;
-  background: -moz-linear-gradient(top, #ffcc00, #ff6600) !important;
-  background: -ms-linear-gradient(top, #ffcc00, #ff6600) !important;
-  background: -o-linear-gradient(top, #ffcc00, #ff6600) !important;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc00', endColorstr='#ff6600',GradientType=0 );
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmY2MwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjY2MDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  
-  font-family:"Segoe UI";
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 1px 0 #666;
-  
-  box-shadow: inset 0 1px 1px #fff, 0 2px 3px #666;
-  cursor:pointer;
-  position: relative;
-  }
-
-body {
-    background-color: #fcf0eb; 
-    font-family: Verdana, serif;
-    font-size: big;
+.div1 
+{
+  font-size: 20px;
+  text-align: justify;
+  margin-top: -1%;
+  margin-left:20%;
+  margin-right:20%;
+  color:#707070;
+  letter-spacing:1px;
+  padding-top:1%;
+  padding-bottom:1%;
 }
+.fundo 
+{
+background-color:white; 
+height:30%;
+}
+.footer 
+{
+    background-color:#e4423b;
+    padding-bottom:12px;
+    font-family: Verdana, serif;
+    color:white;
+    font-size:15px;
+    position:relative;
+    top:50px;       
+    line-height:120%;
+    letter-spacing:2px;
+}
+    hr 
+{
+    border: 0;
+    height:4px;
+    width:55%;
+    background: #f8998e;
+    background-image: linear-gradient(to right, #f1af09, #f8998e, #f1af09);
+}
+#itens_rodape 
+{
+    font-weight:bold;
+    padding-top: 1%;
+    letter-spacing:2px;
+    font-size: 1.5em;
+}
+#iframe1 {
+  margin-top:2%;
+}
+   
