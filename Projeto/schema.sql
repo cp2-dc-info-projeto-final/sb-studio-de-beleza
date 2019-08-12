@@ -59,3 +59,11 @@ email VARCHAR (100),
 senha VARCHAR (255),
 PRIMARY KEY (id_usuario)
 );
+
+drop table if exists recuperacao;
+CREATE TABLE recuperacao (
+
+  utilizador  VARCHAR(100),
+  confirmacao VARCHAR(255),
+  KEY(utilizador, confirmacao)
+);
