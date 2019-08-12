@@ -66,8 +66,4 @@ CREATE TABLE recuperacao (
   utilizador  VARCHAR(100),
   confirmacao VARCHAR(255),
   KEY(utilizador, confirmacao)
-<<<<<<< HEAD
 );
-=======
-);
->>>>>>> a11d22ad45104e2aa5ed42a2a223c195b6198b04
