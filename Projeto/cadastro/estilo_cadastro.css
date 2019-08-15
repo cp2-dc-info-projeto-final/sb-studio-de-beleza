@@ -1,7 +1,7 @@
 	        body > div
   {
     transition: all 0.3s ease;           
-    font-family: Verdana, serif;
+    font-family: Segoe Ui, Verdana, serif;
     color:white;
     letter-spacing:2px;          
   }
