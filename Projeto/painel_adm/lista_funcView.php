@@ -33,16 +33,15 @@
                     $funcionarios = controle_listar_funcionarios();
                     foreach ($funcionarios as $funcionario) {
                         echo "<tr>";
-                        echo "<td>$funcionario['id']<br></td>";
-                        echo "<td>$funcionario['nome']<br></td>";
-                        echo "<td>$funcionario['telefone']<br></td>";
-                        echo "<td>$funcionario['nasc']<br></td>";
-                        echo "<td>$funcionario['cpf']<br></td>";
-                        echo "<td>$funcionario['sexo']<br></td>";
-                        echo "<td><a href='excluir.php? id=$id'>Excluir</a><br></td>";
+                        echo "<td>" . $funcionario['id'] . "<br></td>";
+                        echo "<td>" . $funcionario['nome'] . "<br></td>";
+                        echo "<td>" . $funcionario['telefone'] . "<br></td>";
+                        echo "<td>" . $funcionario['nasc'] . "<br></td>";
+                        echo "<td>" . $funcionario['cpf'] . "<br></td>";
+                        echo "<td>" . $funcionario['sexo'] . "<br></td>";
+                        echo "<td><a href='excluir.php?id=" . $funcionario['id'] ."'>Excluir</a><br></td>";
                         echo "</tr>";
                     }
-                }
             ?>
                 
             </tbody>
