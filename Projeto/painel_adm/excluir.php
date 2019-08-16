@@ -9,6 +9,6 @@ mysqli_select_db($connection, "studiodebeleza");
 $sql = "DELETE FROM funcionario WHERE id_func = '$id' ";
 
 $result = mysqli_query($connection, $sql) or die ("Houve um erro");
- echo '<script> location.href="lista.php"; </script>';
+ echo '<script> location.href="lista_func.php"; </script>';
 
 ?>
