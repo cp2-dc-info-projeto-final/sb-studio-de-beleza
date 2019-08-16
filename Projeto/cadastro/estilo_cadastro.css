@@ -1,7 +1,7 @@
 	        body > div
   {
     transition: all 0.3s ease;           
-    font-family: Verdana, serif;
+    font-family: Segoe Ui, Verdana, serif;
     color:white;
     letter-spacing:2px;          
   }
@@ -108,8 +108,8 @@ body /* estilização do esqueleto da página */
   color:black;
   border-color:#ff9e81;
   font-size:25px;
-	margin-right:100px;
-	margin-left:100px;
+	margin-right:15%;
+	margin-left:15%;
   margin-top:3%;
   border-radius:5px;
   font-size:15px;
@@ -126,7 +126,7 @@ input[type="submit"], [type="reset"] /* estilização dos botões enviar e limpa
   box-shadow: 1px 1px 2px #333333;    
   -moz-box-shadow: 1px 1px 2px #333333;
   color:white;
-  margin-left:100px;
+  margin-left:15%;
   margin-right:-50px;
 }
 .footer 

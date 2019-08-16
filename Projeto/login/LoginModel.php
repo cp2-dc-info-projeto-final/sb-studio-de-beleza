@@ -1,6 +1,7 @@
 <?php 
 
     function autenticacao($email, $senha) {
+        $connection = mysqli_connect("localhost", "root", "", "studiodebeleza"); 
         $sql = "SELECT senha,email FROM usuario WHERE email='$email'";
         $result = mysqli_query($connection, $sql);
         $erro = "";

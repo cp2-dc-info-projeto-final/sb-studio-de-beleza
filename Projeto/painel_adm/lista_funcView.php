@@ -10,18 +10,9 @@
 <body>
 <div class="container">
   <h1>Painel Administrativo</h1>
+  
   <p>Gerenciamento de funcionários</p> 
 </div>
-
-    <?php
-        $connection = mysqli_connect("localhost", "root", "", "studiodebeleza");
-        if(!$connection) die("Falha ao conectar ao banco");
-
-        mysqli_select_db($connection, "studiodebeleza");
-
-        $sql = "SELECT * FROM funcionario";
-        $result = mysqli_query($connection, $sql);
-    ?>
 
     <div class="container">
         <h1>Listagem de Funcionários</h1>
@@ -36,29 +27,24 @@
                 <th>Sexo</th>
             </head>
             <tbody>
-                <?php 
-                   
-                    while($linha = mysqli_fetch_assoc($result))
-                    {
-                        $id = $linha["id_func"];
-                        $nome =  $linha["nome_funcionario"];
-                        $telefone =  $linha["telefone"];
-                        $nasc =  $linha["data_nasc"];
-                        $cpf =  $linha["cpf"];
-                        $sexo =  $linha["sexo"];
+            <?php 
+                    require "lista_funcCtrl.php";
 
+                    $funcionarios = controle_listar_funcionarios();
+                    foreach ($funcionarios as $funcionario) {
                         echo "<tr>";
-                        echo "<td>$id<br></td>";
-                        echo "<td>$nome<br></td>";
-                        echo "<td>$telefone<br></td>";
-                        echo "<td>$nasc<br></td>";
-                        echo "<td>$cpf<br></td>";
-                        echo "<td>$sexo<br></td>";
+                        echo "<td>$funcionario['id']<br></td>";
+                        echo "<td>$funcionario['nome']<br></td>";
+                        echo "<td>$funcionario['telefone']<br></td>";
+                        echo "<td>$funcionario['nasc']<br></td>";
+                        echo "<td>$funcionario['cpf']<br></td>";
+                        echo "<td>$funcionario['sexo']<br></td>";
                         echo "<td><a href='excluir.php? id=$id'>Excluir</a><br></td>";
                         echo "</tr>";
                     }
-                    mysqli_close($connection);
-                ?>
+                }
+            ?>
+                
             </tbody>
 
         </table>
