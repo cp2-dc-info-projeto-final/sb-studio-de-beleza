@@ -63,6 +63,7 @@ body
     top:20%;       
     line-height:120%;
     letter-spacing:2px;
+    margin-top:-2%;
 }
     hr 
 {
@@ -86,6 +87,7 @@ body
 .jumbotron-fluid {
   padding-top:2%;
   padding-bottom:2%;
+  margin-top:-1%;
   color:#707070;
 }
 #jumbotron-fluid1 {
