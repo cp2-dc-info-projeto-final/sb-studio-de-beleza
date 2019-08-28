@@ -11,7 +11,7 @@
     {
         session_unset();
         $_SESSION["nome"] = $row["nome"]; 
-        header("Location: ../fotos_logo.png");
+        header("Location: ../pagina_inicial/paginainicial.html");
         exit();
     } else {
         $erro = "<p style='font-size: 35px;color:red;' align='center'> Login ou senha incorretos </p>";

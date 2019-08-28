@@ -24,6 +24,7 @@
         </div>        
         <div class="form-group">
             <button type="submit" class="btn btn-primary btn-lg btn-block login-btn" name="entrar">Enviar</button>
+            <link rel="stylesheet" href="../Projeto/pagina_inicial/paginainicial.html"/>
         </div>
         <p class="hint-text">Não possui cadastro? <a href="../cadastro/cadastro.html"> Clique aqui!</a><br><br>
         <a href="perdisenha.php"> Esqueceu a senha?</a></p>
