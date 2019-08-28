@@ -59,3 +59,25 @@ email VARCHAR (100),
 senha VARCHAR (255),
 PRIMARY KEY (id_usuario)
 );
+
+drop table if exists recuperacao;    
+CREATE TABLE recuperacao (
+    
+id_pergunta int,
+ VARCHAR (255),
+PRIMARY KEY (id_pergunta)
+);
+
+
+
+drop table if exists recuperacao;    
+CREATE TABLE recuperacao (
+    
+id_pergunta int,
+id_clinte int,
+resposta VARCHAR (255),
+PRIMARY KEY (id_pergunta, id_cliente)
+FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)
+FOREIGN KEY (id_pergunta) REFERENCES Pergunta(id_pergunta)
+);
+

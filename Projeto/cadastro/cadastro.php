@@ -22,6 +22,8 @@ $calendario = $_POST['tCalendario'];
 $calendario = date('Y-m-d', strtotime($calendario)); 
 $cpf = $_POST['tCpf'];
 $sexo = $_POST['tSexo'];
+$id_pergunta = $_POST['tPergunta'];
+$resposta = $_POST['tResposta'];
 session_start();
 $sql = "SELECT id_usuario FROM usuario where email='$email'";
 $result = mysqli_query($link, $sql);
@@ -34,6 +36,14 @@ if (mysqli_num_rows($result) > 0) {
 }
 // Attempt insert query execution
 $sql = "INSERT INTO usuario (email, senha) VALUES ('$email', '$hash')";
+if(mysqli_query($link, $sql))
+{
+    echo "<br/>Cadastro Concluído com Sucesso :)";
+} else
+{
+    echo "<br/>ERRO: Não foi possível executar o $sql. " . mysqli_error($link);
+}
+$sql = "INSERT INTO recuperacao (id_pergunta, resposta) VALUES ('$id_pergunta', '$resposta')";
 if(mysqli_query($link, $sql))
 {
     echo "<br/>Cadastro Concluído com Sucesso :)";

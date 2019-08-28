@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -138,6 +137,24 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
          <td align="left">
           <input type="password" name="tSenha" placeholder=" 8 digítos" maxlength="8" id="cSenha" size="30">
          </td>
+         <td align="left">
+               <label>Pergunta de Segurança:</label>
+               <select name="tPergunta">
+                     <option value="">Selecione</option>
+
+                     <?php
+                        require "controle busque perguntas"
+
+                        $perguntas = buscarPerguntas()
+
+                        foreach ($perguntas as $pergunta)
+                        {
+                           echo "<option value='". $pergunta['id'] . "'>" . $pergunta['texto']. "</option>";
+                        }
+                     
+                     ?>
+                 </select>
+           </td>
       </tr>
       <tr>
          <td>
@@ -146,6 +163,9 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
          <td align="left">
           <input type="password" name="tConfirmaSenha" placeholder=" 8 digítos" maxlength="8" id="cConfirmaSenha" size="30">
          </td>
+         <td align="left">
+            <input type="text" name="tResposta" id="cResposta" placeholder=" RESPOSTA">
+           </td>
       </tr>
         </table>
       </fieldset>
