@@ -60,21 +60,19 @@ senha VARCHAR (255),
 PRIMARY KEY (id_usuario)
 );
 
-drop table if exists recuperacao;    
-CREATE TABLE recuperacao (
+drop table if exists Pergunta;    
+CREATE TABLE Pergunta (
     
-id_pergunta int,
- VARCHAR (255),
+id_pergunta int AUTO_INCREMENT,
+pergunta VARCHAR (255),
 PRIMARY KEY (id_pergunta)
 );
 
-
-
 drop table if exists recuperacao;    
 CREATE TABLE recuperacao (
     
 id_pergunta int,
-id_clinte int,
+id_cliente int,
 resposta VARCHAR (255),
 PRIMARY KEY (id_pergunta, id_cliente)
 FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)

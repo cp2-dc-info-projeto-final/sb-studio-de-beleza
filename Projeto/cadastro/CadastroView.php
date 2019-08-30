@@ -141,12 +141,10 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
                <label>Pergunta de Segurança:</label>
                <select name="tPergunta">
                      <option value="">Selecione</option>
-
                      <?php
-                        require "controle busque perguntas"
+                        require "";
 
-                        $perguntas = buscarPerguntas()
-
+                        $perguntas = BuscarPerguntas()
                         foreach ($perguntas as $pergunta)
                         {
                            echo "<option value='". $pergunta['id'] . "'>" . $pergunta['texto']. "</option>";
