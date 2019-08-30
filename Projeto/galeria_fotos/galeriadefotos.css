@@ -57,10 +57,32 @@ body
   position: absolute;
   transition:1s;	
 }
+#butftC, #butftS, #butftM
+{
+	color: #3a3838;
+	border-radius: 20px;
+    margin-bottom: 15px;
+    background: #fff;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 20px;		
+}
+
+#butftC, #butftS, #butftM
+{
+  font-weight: bold;
+background:#ed7f7a;;
+border: none;
+margin-bottom: 20px;
+}
+#butftC:hover, #butftS:hover, #butftM:hover, #butftC:focus, #butftS:focus, #butftM:focus
+{
+	background: #f1af09;
+  outline: none !important;
+}
 .div1 
 {
   font-size: 20px;
-  text-align: justify;
+  text-align: center;
   margin-top: -1%;
   margin-left:20%;
   margin-right:20%;
@@ -102,7 +124,8 @@ height:30%;
     font-size: 1.5em;
 }
 
-#bordagf
+#fotosgaleria
 {
-  background-color: red;
+  height: 20%;
+  width: 10%;
 }
