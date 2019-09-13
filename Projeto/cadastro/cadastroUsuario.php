@@ -25,4 +25,28 @@ function cadastraUsuario($email, $hash, $nome, $tipoUsuario, $tel, $calendario, 
     }
     mysqli_close($connection);
 }
+
+    function BuscarPerguntas() {
+        
+        $connection = mysqli_connect("localhost", "root", "", "studiodebeleza");
+        if(!$connection) die("Falha ao conectar ao banco");
+
+        mysqli_select_db($connection, "studiodebeleza");
+
+        $sql = "SELECT * FROM pergunta";
+        $result = mysqli_query($connection, $sql);
+
+        $perguntas = [];
+
+        while($linha = mysqli_fetch_assoc($result))
+        {
+            $pergunta["id"] = $linha["id_pergunta"];
+            $pergunta["pergunta"] =  $linha["pergunta"];
+            array_push($perguntas, $pergunta);
+        }
+        mysqli_close($connection);
+
+        return $perguntas;
+    }
+
 ?>

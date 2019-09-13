@@ -74,8 +74,8 @@ CREATE TABLE recuperacao (
 id_pergunta int,
 id_cliente int,
 resposta VARCHAR (255),
-PRIMARY KEY (id_pergunta, id_cliente)
+PRIMARY KEY (id_pergunta, id_cliente),
+FOREIGN KEY (id_pergunta) REFERENCES Pergunta(id_pergunta),
 FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)
-FOREIGN KEY (id_pergunta) REFERENCES Pergunta(id_pergunta)
 );
 
