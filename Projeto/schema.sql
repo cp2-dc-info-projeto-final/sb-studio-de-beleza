@@ -54,7 +54,7 @@ FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)
 drop table if exists usuario;    
 CREATE TABLE usuario (
     
-id_usuario int AUTO_INCREMENT,
+id_usuario int NOT NULL AUTO_INCREMENT,
 email VARCHAR (100),
 senha VARCHAR (255),
 PRIMARY KEY (id_usuario)
@@ -67,15 +67,18 @@ id_pergunta int AUTO_INCREMENT,
 pergunta VARCHAR (255),
 PRIMARY KEY (id_pergunta)
 );
-
+INSERT INTO pergunta (pergunta) VALUES ('Qual era o seu apelido de infância?');
+INSERT INTO pergunta (pergunta) VALUES ('Qual é o seu livro de infância preferido?');
+INSERT INTO pergunta (pergunta) VALUES ('Qual era o nome do seu primeiro animal de estimação?');
+INSERT INTO pergunta (pergunta) VALUES ('Qual o apelido de seu filho mais novo?');
+INSERT INTO pergunta (pergunta) VALUES ('Qual o apelido de seu filho mais velho?');
 drop table if exists recuperacao;    
 CREATE TABLE recuperacao (
-    
+
+id_usuario int AUTO_INCREMENT,
 id_pergunta int,
-id_cliente int,
 resposta VARCHAR (255),
-PRIMARY KEY (id_pergunta, id_cliente),
-FOREIGN KEY (id_pergunta) REFERENCES Pergunta(id_pergunta),
-FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)
+PRIMARY KEY (id_resposta),
+FOREIGN KEY (id_pergunta) REFERENCES Pergunta(id_pergunta)
 );
 
