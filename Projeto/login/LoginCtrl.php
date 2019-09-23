@@ -14,7 +14,7 @@
         header("Location: ../pagina_inicial/paginainicial.html");
         exit();
     } else {
-        $erro = "<p style='font-size: 35px;color:red;' align='center'> Login ou senha incorretos </p>";
+        $erro = "<h1 style='font-size: 25px;color:red;' align='center'> Login ou senha incorretos </h1>";
         $_SESSION["erro"] = $erro;
         header("Location: LoginView.php");
         exit();

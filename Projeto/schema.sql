@@ -7,6 +7,7 @@ telefone VARCHAR (20),
 data_nasc date,
 cpf VARCHAR (20),
 sexo VARCHAR (1),
+municipio VARCHAR (50),
 PRIMARY KEY (id_func),
 FOREIGN KEY (id_func) REFERENCES usuario(id_usuario)
 );
@@ -33,6 +34,7 @@ telefone VARCHAR (20),
 data_nasc date,
 cpf VARCHAR (20),
 sexo VARCHAR (1),
+municipio VARCHAR (50),
 PRIMARY KEY (id_cliente),
 FOREIGN KEY (id_cliente) REFERENCES usuario(id_usuario)
 );
@@ -54,7 +56,7 @@ FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)
 drop table if exists usuario;    
 CREATE TABLE usuario (
     
-id_usuario int NOT NULL AUTO_INCREMENT,
+id_usuario int AUTO_INCREMENT,
 email VARCHAR (100),
 senha VARCHAR (255),
 PRIMARY KEY (id_usuario)
@@ -72,13 +74,15 @@ INSERT INTO pergunta (pergunta) VALUES ('Qual é o seu livro de infância prefer
 INSERT INTO pergunta (pergunta) VALUES ('Qual era o nome do seu primeiro animal de estimação?');
 INSERT INTO pergunta (pergunta) VALUES ('Qual o apelido de seu filho mais novo?');
 INSERT INTO pergunta (pergunta) VALUES ('Qual o apelido de seu filho mais velho?');
+
 drop table if exists recuperacao;    
 CREATE TABLE recuperacao (
-
 id_usuario int AUTO_INCREMENT,
 id_pergunta int,
+email varchar(100) not null,
 resposta VARCHAR (255),
-PRIMARY KEY (id_resposta),
-FOREIGN KEY (id_pergunta) REFERENCES Pergunta(id_pergunta)
+PRIMARY KEY (id_usuario),
+FOREIGN KEY (id_pergunta) REFERENCES Pergunta(id_pergunta),
+FOREIGN KEY (email) REFERENCES usuario(email)
 );
 

@@ -1,16 +1,12 @@
 body > div
 {
   transition: all 0.3s ease;           
-  font-family: Segoe Ui, Verdana, serif;
-  color:white;
-  letter-spacing:2px;          
+  color:black;
+         
 }
 body /* estilização do esqueleto da página */
 { 
  background-color:#fcf0eb; 
- position:absolute;
- margin:0;
- padding:0;  
 }
 #logo_studio /* definir altura e largura (respectivamente) do logo situado no topo da página */ 
 {
@@ -79,11 +75,16 @@ height:320px;
 margin-top:16px;
 float:left;
 margin-left:10px;
+color:white;
 }
 #icone_perfil_usuario 
 {
 margin-left:75px;
 margin-top:32px;
+}
+#texto-iconeusuario {
+  margin-top:12%;
+  font-size:18px;
 }
 #titulo 
 {
@@ -101,40 +102,16 @@ font-size:25px;
 }
 .ui-datepicker-header 
 {
-background-color:#f1af09 !important;
-}
-.fieldset_cadastro 
-{
-color:black;
-border-color:#ff9e81;
-font-size:25px;
-margin-right:15%;
-margin-left:15%;
-margin-top:3%;
-border-radius:5px;
-font-size:15px;
-}
-input[type="submit"], [type="reset"] /* estilização dos botões enviar e limpar */
-{
-border: 1px solid #000000;
-background:#cd5c5c;
-width:150px;
-height:40px;
-border-radius:4px;
--moz-border-radius:4px;
--webkit-border-radius:4px;
-box-shadow: 1px 1px 2px #333333;    
--moz-box-shadow: 1px 1px 2px #333333;
-color:white;
-margin-left:15%;
-margin-right:-50px;
+background-color:#cfd2d4 !important;
 }
 .footer 
 {
 background-color:#e4423b;
+color:white;
 padding-bottom:12px;
 font-family:lato,arial;
 font-size:15px;
+margin-top:-8%;
 }
 hr 
 {
@@ -147,15 +124,22 @@ background-image: linear-gradient(to right, #f1af09, #f8998e, #f1af09);
 #itens_rodape {
 padding-top: 1%;
 }
-input {
-background:#f2f2f2;
-border: 1px solid #ced4da;
-height:20px;
+.form-cadastro {
+border: solid #cfd2d4;
+background-color:white;
+padding: 6%;
+padding-top: 2%;
+margin:10%;
+margin-top: 3%;
+padding-bottom:2%;
 }
-#cResposta {
-  margin-left:38%;
-  width:55%;
-background:#f2f2f2;
-border: 1px solid #ced4da;
-height:20px;
+.btn-primary {
+  background-color: #dc3545;
+    border-color: #dc3545;
+}
+.btn-outline-danger {
+  margin-top:1%;
+}
+.card-title {
+  font-size:30px;
 }

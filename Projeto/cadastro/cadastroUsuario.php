@@ -1,6 +1,6 @@
 <?php
 
-function cadastraUsuario($email, $hash, $nome, $tipoUsuario, $tel, $calendario, $cpf, $sexo) {
+function cadastraUsuario($email, $hash, $senha) {
     $connection = mysqli_connect("localhost", "root", "", "studiodebeleza");
 
     // Check connection
@@ -13,11 +13,11 @@ function cadastraUsuario($email, $hash, $nome, $tipoUsuario, $tel, $calendario, 
     # password hash
     $hash = password_hash($senha, PASSWORD_DEFAULT);
     
-    if (mysqli_num_rows($result) > 0) {
+    if (mysqli_num_rows($result) > 0 ) {
         return false;
     }
     $sql = "INSERT INTO usuario (email, senha) VALUES
-            ($email', '$hash')";
+            ('$email', '$hash')";
     if(mysqli_query($connection, $sql)){
         return true;
     } else{

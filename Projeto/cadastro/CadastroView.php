@@ -2,6 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Cadastre-se</title>
+  <link rel="stylesheet" href="../jquery_css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="estilo_cadastro.css" />
 	 <link rel="stylesheet" href="../jquery_css/jquery-ui.css"/>
     <link rel="stylesheet" href="../jquery_javascript/calendario.js"/>
@@ -53,93 +54,110 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
       <div class="icone_usuariodiv"> 
        	<img id="icone_perfil_usuario" src="../fotos_icones/icone.png" width="120"> 
         	<h1 align="center">@Usuário</h1>
-         <p align="center">Cliente assíduo(a) do Studio de Beleza Evelyn Marins</p>  
+         <p align="center" id="texto-iconeusuario">Cliente assíduo(a) do Studio de Beleza Evelyn Marins</p>  
       </div>
       <div>        	
         	<h1 id="titulo">Olá, caro visitante!</h1>
         	<p id="subtitulo" align="justify"><b>É um prazer tê-lo acessando o nosso site!</b> <br><br> Você sabia que agora fazer o <b>agendamento</b> dos nossos serviços está bem mais fácil? <br><br> Para isso, é preciso que você possua um cadastro em nosso sistema. Caso não possua, <b>faça-o agora mesmo</b> preenchendo os campos abaixo. </p>
       </div>
-
       <div>
+ <form class="form-cadastro" action="cadastro.php" method="post" onsubmit="return validarSenha(this);" name="formulario">
+ <?php
+            session_start();
+            if(array_key_exists('erro', $_SESSION) == true){
+                $erro = $_SESSION["erro"];
+                ?>
 
-<form action="cadastro.php" method="post" onsubmit="return validarSenha(this);" name="formulario"> <!-- configurar com php | todos os inputs estão sem o termo VALUE! -->
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <?php
+  echo $erro;
+  ?>
+</div>
+<?php
 
-      <!-- DADOS PESSOAIS-->
-      <fieldset class="fieldset_cadastro">
- 			<legend>Dados Pessoais</legend>
- 			<table cellspacing="15">
-			<tr>
- 	         <td>
-    		    <label for="cNome">Nome completo: </label>
-  		      </td>
-            <td align="left">
-             <input type="text" name="tNome" id="cNome" size="30">
-            </td>
-         </tr>
-         <tr>
-           <td>
-             <label for="datepicker">Data de nascimento:</label>
-           </td>
-            <td align="left">
-             <input type="text" id="datepicker" name="tCalendario">
-            </td>
-           <td align="left">
-         <legend>Sexo:</legend>
-           </td>
-           <td> 
- 	          <input type="radio" name="tSexo" id="cMasc" value="M" required/>
-             <label for="cMasc">Masculino</label><br>
-             <input type="radio" name="tSexo" id="cFem" value="F" required/>
-             <label for="cFem">Feminino</label><br>   
-            </td>
-         </tr>
-         <tr>
-          <td>
-             <label for="cCpf">CPF:</label>
-            </td>
-            <td align="left">
-             <input type="text" name="tCpf" id="cCpf"> 
-            </td>
-          <td>
-             <label for="cTelefone">Telefone: </label>
-            </td>
-          <td align="left">
-             <input type="text" name="tTelefone" id="cTelefone">
-            </td>
-         </tr>
-         </table>
-      </fieldset>
 
-      <!-- DADOS DE LOGIN --> 
-      <fieldset class="fieldset_cadastro">
-         <legend>Dados de login</legend>
-         <table cellspacing="10">
-      <tr>
-         <td>
-          <label for="cEmail">E-mail: </label>
-         </td>
-         <td align="left">
-          <input type="text" name="tEmail" placeholder=" abcde@blabla.com" size="30" id="cEmail">
-         </td>
-         <td>
-          <label>Tipo de usuário</label>
-           <select name="tTipoUsuario" class="fieldset2">
-                <option value="">Selecione</option>
+                session_unset();
+            }
+        ?>
+   <h1 class="card-title">Informações pessoais</h1>
+   <div class="form-row">
+   <div class='form-group col-md-6'>
+   <label>Nome</label>
+   <input type="text" name="tNome" class="form-control form-control-sm" required>
+</div>
+<div class='form-group col-md-6'>
+<label>Data de nascimento</label>
+<input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
+</div>
+</div>
+<div class="form-row">
+<div class='form-group col-md-6'>
+<label>CPF</label>
+<input type="text" name="tCpf" id="cCpf" class="form-control form-control-sm"> 
+</div>
+<div class='form-group col-md-6'>
+   <label>Sexo</label>
+   <select class="form-control form-control-sm" name="tSexo">
+  <option value="">Selecione</option>
+                <option value="F">Feminino</option>
+                <option value="M">Masculino</option>
+</select>
+</div>
+</div>
+<div class="form-row">
+<div class='form-group col-md-6'>
+<label>Telefone</label>
+<input type="text" name="tTelefone" id="cTelefone" class="form-control form-control-sm" required>
+</div>
+<div class='form-group col-md-6'>
+   <label>Municipio</label>
+<select class="form-control form-control-sm" name="tMunicipio" required>
+                     <option value="">Selecione</option>
+                
+	<option value="Belford Roxo">Belford Roxo</option>
+    <option value="Duque de Caxias">Duque de Caxias</option>
+    <option value="Guapimirim">Guapimirim</option>
+    <option value="Itaguai">Itaguai</option>
+    <option value="Japeri">Japeri</option>
+    <option value="Magé">Magé</option>
+    <option value="Mesquita">Mesquita</option>
+    <option value="Nilopolis">Nilopolis</option>
+    <option value="Nova Iguaçu">Nova Iguaçu</option>
+    <option value="Paracambi">Paracambi</option>
+    <option value="Queimados">Queimados</option>
+    <option value="São João de Meriti">São João de Meriti</option>
+    <option value="Seropedica">Seropedica</option>
+                   </select>
+                     </div>
+                     </div>
+      <h2 class="card-title">Informações de login</h2>
+      <div class="form-group">
+    <label>Endereço de email</label>
+    <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email" name="tEmail" required>
+  </div>
+  <div class="form-row">
+    <div class='form-group col-md-6'>
+    <label>Senha</label>
+    <input type="password" class="form-control form-control-sm" id="exampleInputPassword1" placeholder="Senha" maxlength="8" name="tSenha" required>
+    <small class="form-text text-muted">A senha deverá possuir apenas 8 dígitos</small>
+</div>
+    <div class='form-group col-md-6'>
+    <label>Confirme a senha</label>
+    <input type="password" class="form-control form-control-sm" id="exampleInputPassword2" placeholder="Confirme a senha" maxlength="8"name="tConfirmaSenha" required>
+</div>
+</div>  
+  <div>
+  <label>Selecione o tipo de usuário</label>
+  <select class="form-control form-control-sm" name="tTipoUsuario" required>
+  <option value="">Selecione</option>
                 <option value="1">Cliente</option>
                 <option value="2">Funcionário</option>
-            </select>
-         </td>
-      </tr>
-      <tr>
-         <td>
-          <label for="cSenha">Senha: </label>
-         </td>
-         <td align="left">
-          <input type="password" name="tSenha" placeholder=" 8 digítos" maxlength="8" id="cSenha" size="30">
-         </td>
-         <td align="left">
-               <label>Pergunta de Segurança:</label>
-               <select name="tPergunta">
+</select>
+</div><br>
+<div class="form-row"> 
+<div class='form-group col-md-6'>
+   <label>Selecione uma pergunta de segurança</label>
+<select name="tPergunta"  class="form-control form-control-sm" required>
                      <option value="">Selecione</option>
                      <?php
                         require "BuscaPerguntaCtrl.php";
@@ -148,29 +166,22 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
                         {
                            echo "<option value='". $pergunta['id'] . "'>" . $pergunta['pergunta']. "</option>";
                         }
-                     
                      ?>
-                 </select>
-           </td>
-      </tr>
-      <tr>
-         <td>
-          <label for="cConfirmaSenha">Confirme a senha: </label>
-         </td>
-         <td align="left">
-          <input type="password" name="tConfirmaSenha" placeholder=" 8 digítos" maxlength="8" id="cConfirmaSenha" size="30">
-         </td>
-         <td align="left">
-            <input type="text" name="tResposta" id="cResposta" placeholder=" RESPOSTA">
-           </td>
-      </tr>
-        </table>
-      </fieldset>
-      </div>
-<br/>
-          <input type="submit">
-          <input type="reset" value="Limpar"> 
+                   </select>
+                     </div>
+<div class='form-group col-md-6'>
+<label>Resposta</label>
+<input type="text" name="tResposta" class="form-control form-control-sm" required>
+                     </div>
+                     </div>
+<input class="btn btn-outline-danger" type="submit" value="Enviar">
+<input class="btn btn-outline-danger" type="reset" value="Limpar">
+</div>
 </form>
+
+<div>
+       
+</div>
       <div class="footer">
           <footer> 
             <h2 align="center" id="itens_rodape">Studio de Beleza Evelyn Marins</h2>
