@@ -27,9 +27,6 @@
         if(mail($usuario, 'Recuperação de senha!', 'Olá '.$usuario.', visite este link '.$link, $headers) ){
           echo '<p>Foi enviado um e-mail para o seu endereço, acesse-o e lá encontra um link para a recuperação de sua senha</p>';
  
-        } else {
-          echo '<p>Houve um erro ao enviar o email (o servidor suporta a função mail?)</p>';
- 
         }
  
 		// Apenas para testar o link, no caso do e-mail falhar
