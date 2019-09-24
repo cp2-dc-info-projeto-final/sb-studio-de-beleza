@@ -56,35 +56,20 @@ body
   transition:1s;	
 }
 
-#buttonC, #buttonS, #buttonM
+#panel-title
 {
-	color: #3a3838;
-	border-radius: 20px;
-    margin-bottom: 15px;
-    background: #fff;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    padding: 15px;		
-}
-
-#buttonC, #buttonS, #buttonM
-{
-  font-weight: bold;
-background:#ed7f7a;;
-border: none;
-margin-bottom: 20px;
-}
-#buttonC:hover, #buttonS:hover, #buttonM:hover, #buttonC:focus, #buttonS:focus, #buttonM:focus
-{
-	background: #f1af09;
-  outline: none !important;
+  display: inline-block;
+  text-align: center;
+  border-radius: 20px;
+  background-color: black;
 }
 .div1 
 {
   font-size: px;
   text-align: justify;
   margin-top: -1%;
-  margin-left:20%;
-  margin-right:20%;
+  margin-left:30%;
+  margin-right:30%;
   color:#707070;
   letter-spacing:1px;
   padding-top:1%;

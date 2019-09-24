@@ -3,7 +3,10 @@
 <head>
      <meta charset="UTF-8">
      <link rel="stylesheet" type="text/css" href="servico.css">
-    <div class="logo_studiodiv">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    <div class="logo_studiodiv">
     <img id="logo_studio" src="../fotos_icones/logo_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
     </div>
 </head> 
@@ -19,14 +22,39 @@
      <div class="fundo">
         <div class="div1">
             <h1> Escolha os serviços de sua preferência </h1>
-            <div class="botao">
-                <button id="buttonC">Cabelo</button>
-                <button id="buttonS">Sobrancelhas</button>
-                <button id="buttonM">Mãos e Pés</button>          
-            </div>
             </div>
         </div>
-                    <footer class="footer"> 
+        <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Cabelo
+                </a>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Sobrancelha
+                </a>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Mãos e Pés
+                </a>
+        </p>
+        <div class="row">
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    Serviços de Cabelo aqui
+                </div>
+            </div>
+                <div class="collapse" id="collapseExample2">
+                        <div class="card card-body">
+                            Serviços de Sobrancelha aqui
+                        </div>
+                      </div>
+                      <div class="collapse" id="collapseExample3">
+                            <div class="card card-body">
+                                Serviços de Mãos e Pés aqui
+                            </div>
+                          </div>
+        </div>
+
+                
+    <footer class="footer"> 
                         <h2 align="center" id="itens_rodape">Studio de Beleza Evelyn Marins</h2>
                         <hr></hr>
                         <p align="center">Rua José Ferreira Murro, Nº 320 - Nova Iguaçu<br>Rio de Janeiro - RJ - 26031-170<br>Tel:. (00) 0000-0000</p>
