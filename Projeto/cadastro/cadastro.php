@@ -66,8 +66,8 @@ if(mysqli_query($link, $sql)) {
     echo "<br/>ERRO: Não foi possível executar o $sql. " . mysqli_error($link);
 }
 
-$sql = "INSERT INTO recuperacao (id_pergunta, resposta) VALUES ('$id_pergunta', '$resposta')";
-
+$id_user = mysqli_insert_id($link);
+$sql = "INSERT INTO recuperacao (id_usuario, id_pergunta, resposta) VALUES ('$id_user', '$id_pergunta', '$resposta')";
 if(mysqli_query($link, $sql)) {
     echo "<br/>Cadastro Concluído com sucesso :)";
 } else {

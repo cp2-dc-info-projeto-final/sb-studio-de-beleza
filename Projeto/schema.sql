@@ -77,12 +77,8 @@ INSERT INTO pergunta (pergunta) VALUES ('Qual o apelido de seu filho mais velho?
 
 drop table if exists recuperacao;    
 CREATE TABLE recuperacao (
-id_usuario int AUTO_INCREMENT,
+id_usuario int,
 id_pergunta int,
-email varchar(100) not null,
-resposta VARCHAR (255),
-PRIMARY KEY (id_usuario),
-FOREIGN KEY (id_pergunta) REFERENCES Pergunta(id_pergunta),
-FOREIGN KEY (email) REFERENCES usuario(email)
+resposta VARCHAR (255)
 );
 
