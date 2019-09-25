@@ -1,72 +1,177 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-     <meta charset="UTF-8">
-     <link rel="stylesheet" href="../jquery_css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../jquery_css/bootstrap.min.css">
 
-     <link rel="stylesheet" type="text/css" href="servico.css">
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    <div class="logo_studiodiv">
-    <img id="logo_studio" src="../fotos_icones/logo_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
-    </div>
-</head> 
+  <link rel="stylesheet" type="text/css" href="servico.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <div class="logo_studiodiv">
+    <img id="logo_studio" src="../fotos_icones/logo_editada.png" width="120">
+    <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
+  </div>
+</head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e4121286;">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="../pagina_inicial/paginainicial.html">Página Inicial<span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link active" href="../servicos/servicos.html">Serviços</a>
-            <a class="nav-item nav-link active" href="../galeria_fotos/galeriadefotos.html">Galeria de Fotos</a>
-            <a class="nav-item nav-link active" href="../quem_somos/quemsomos.html">Quem somos</a>
-          </div>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e4121286;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="../pagina_inicial/paginainicial.html">Página Inicial<span
+            class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="../servicos/servicos.html">Serviços</a>
+        <a class="nav-item nav-link active" href="../galeria_fotos/galeriadefotos.html">Galeria de Fotos</a>
+        <a class="nav-item nav-link active" href="../quem_somos/quemsomos.html">Quem somos</a>
+      </div>
+    </div>
+  </nav>
+  <div class="fundo">
+    <div class="div1">
+      <h1> Escolha os serviços de sua preferência </h1>
+    </div>
+  </div>
+  <p>
+    <a class="btn btn-primary" style="background-color: #e4121286; border: #000000;" data-toggle="collapse" href="#collapseExample"
+      role="button" aria-expanded="false" aria-controls="collapseExample">
+      Cabelo
+    </a>
+    <a class="btn btn-primary" style="background-color: #e4121286;  border: #000000;" data-toggle="collapse" href="#collapseExample2"
+      role="button" aria-expanded="false" aria-controls="collapseExample">
+      Sobrancelha
+    </a>
+    <a class="btn btn-primary" style="background-color: #e4121286;  border: #000000;" data-toggle="collapse" href="#collapseExample3"
+      role="button" aria-expanded="false" aria-controls="collapseExample">
+      Mãos e Pés
+    </a>
+  </p>
+  <div class="row">
+    <div class="collapse" id="collapseExample">
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Corte R$30,00
         </div>
-      </nav>
-     <div class="fundo">
-        <div class="div1">
-            <h1> Escolha os serviços de sua preferência </h1>
-            </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Reconstrução R$45,00
         </div>
-        <p>
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                  Cabelo
-                </a>
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
-                  Sobrancelha
-                </a>
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Mãos e Pés
-                </a>
-        </p>
-        <div class="row">
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                    Serviços de Cabelo aqui
-                </div>
-            </div>
-                <div class="collapse" id="collapseExample2">
-                        <div class="card card-body">
-                            Serviços de Sobrancelha aqui
-                        </div>
-                      </div>
-                      <div class="collapse" id="collapseExample3">
-                            <div class="card card-body">
-                                Serviços de Mãos e Pés aqui
-                            </div>
-                          </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Hidratação R$20,00
         </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Coloração R$40,00 (Pequeno)
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Coloração R$50,00 (Médio)
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Coloração R$60,00 (Grande)
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Mechas R$70,00 (Pequeno)
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Mechas R$85,00 (Médio)
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Mechas R$100 (Grande)
+        </div>
+      </a>
+    </div>
+    <div class="collapse" id="collapseExample2">
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Design de sobrancelha simples R$15,00
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Design de sobrancelha com aplicação de hena R$20,00
+        </div>
+      </a>
+    </div>
+    <div class="collapse" id="collapseExample3">
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Spa dos pés R$40,00
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Pés R$15,00
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Mãos R$15,00
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Pés e mãos R$25,00
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Acrigel R$60,00 (Colocação)
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Acrigel R$30,00 (Manutenção)
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Fibra de vidro R$120,00 (Colocação)
+        </div>
+      </a>
+      <a class="" href="agendamento.php">
+        <div class="card card-body">
+          Fibra de vidro R$60,00 (Manutenção)
+        </div>
+      </a>
+    </div>
+  </div>
 
-                
-    <footer class="footer"> 
-                        <h2 align="center" id="itens_rodape">Studio de Beleza Evelyn Marins</h2>
-                        <hr></hr>
-                        <p align="center">Rua José Ferreira Murro, Nº 320 - Nova Iguaçu<br>Rio de Janeiro - RJ - 26031-170<br>Tel:. (00) 0000-0000</p>
-                    </footer>
-                
-     </div>
+
+  <footer class="footer">
+    <h2 align="center" id="itens_rodape">Studio de Beleza Evelyn Marins</h2>
+    <hr>
+    </hr>
+    <p align="center">Rua José Ferreira Murro, Nº 320 - Nova Iguaçu<br>Rio de Janeiro - RJ - 26031-170<br>Tel:. (00)
+      0000-0000</p>
+  </footer>
+
+  </div>
 </body>
+
 </html>
