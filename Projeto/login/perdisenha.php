@@ -9,32 +9,8 @@
     $sql = mysqli_query($connection, "SELECT * FROM usuario WHERE email = '$usuario'");
  
     if( mysqli_num_rows($sql) == 1 ){
-      // se o email existe, vamos gerar um link único e enviá-lo para o e-mail
- 
-      // gerar a chave (única) de confirmação
-      $chave = md5(uniqid( mt_rand(), true));
- 
-      // guardar este par de valores na tabela para confirmar mais tarde
-      $consulta = mysqli_query($connection, "INSERT INTO recuperacao VALUES ('$usuario', '$chave')");
-
-      if(mysqli_affected_rows($connection) == 1){
-      // enviando link de recuperação via email
-        $link = "http://127.0.0.1/edsa-studiodebeleza/login/recuperar.php?email=$usuario&confirmacao=$chave";
-        $headers =  'MIME-Version: 1.0' . "\r\n"; 
-        $headers .= 'From: StudioEvelynMarins <tccin301@hotmail.com>' . "\r\n";
-        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
-
-        if(mail($usuario, 'Recuperação de senha!', 'Olá '.$usuario.', visite este link '.$link, $headers) ){
-          echo '<p>Foi enviado um e-mail para o seu endereço, acesse-o e lá encontra um link para a recuperação de sua senha</p>';
- 
-        }
- 
-		// Apenas para testar o link, no caso do e-mail falhar
-		echo '<p>Link: '.$link.' (apresentado apenas para testes; nunca expor a público!)</p>';
- 
-      } else {
-        echo '<p>Não foi possível gerar o link de recuperação</p>';
- 
+      {
+        echo '<p>Esse usuário existe</p>';
       }
     } else {
 	  echo '<p>Esse usuário não existe</p>';
@@ -42,9 +18,23 @@
   } else {
     // exibir o formulário para o pedido de recuperação de senha ^^
 ?>
-<form method="post">
+<form method="post" action="a.php">
   <label for="email">E-mail:</label>
   <input type="text" name="email" id="email" />
+  <label>Selecione uma pergunta de segurança</label>
+<select name="tPergunta" required>
+                     <option value="">Selecione</option>
+                     <?php
+                        require "../cadastro/BuscaPerguntaCtrl.php";
+                        $perguntas = controle_listar_perguntas();
+                        foreach ($perguntas as $pergunta)
+                        {
+                           echo "<option value='". $pergunta['id'] . "'>" . $pergunta['pergunta']. "</option>";
+                        }
+                     ?>
+                   </select>
+                   <label for="resposta">resposta</label>
+  <input type="text" name="resposta" id="resposta"; />
   <input type="submit" value="Recuperar" />
 </form>
 <?php
