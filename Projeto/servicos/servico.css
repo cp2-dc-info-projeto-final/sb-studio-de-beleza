@@ -51,7 +51,7 @@ height:30%;
   background-image: linear-gradient(to right, rgb(201, 81, 81), rgb(238, 53, 53));
   color: #ddd;
   padding: 2rem;
-  margin-top:relative;
+  margin-top: 15%;
 }
   a {
     color: #aaa;
@@ -60,8 +60,8 @@ height:30%;
     border: 0;
     height: 1px;
     color: neutral;
+    line-height: 1.5;
   }
-
 
 #col {
   width: 100%;
@@ -101,4 +101,3 @@ height:30%;
 .navbar-nav{
   font-size: 120%;  
 }
-   
