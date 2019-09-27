@@ -1,0 +1,59 @@
+.footer {
+    background-image: linear-gradient(to right, rgb(201, 81, 81), rgb(238, 53, 53));
+    color: #ddd;
+    padding: 2rem;
+    margin-top:justify; 
+  
+    li {
+      line-height: 1.5;
+    }
+    a {
+      color: #aaa;
+    }
+    hr {
+      max-width: $body-width;
+      border: 0;
+      height: 1px;
+      color: neutral($primary,2);
+      line-height: 1.5;
+    }
+  
+  
+  %col {
+    width: 100%;
+    @media screen and (min-width: 640px) {
+      float: left;
+    }
+    .tab-row>& {
+      display: table-cell;
+      vertical-align: middle;
+      height: 100%;
+      float: none;
+    }
+  }
+  
+  .col-4 {
+    @extend %col;
+    @media screen and (min-width: 640px) {
+      width: 33%;
+    }
+  }
+  
+  .col-6 {
+    @extend %col;
+    @media screen and (min-width: 640px) {
+      width: 50%;
+    }
+  }
+  
+  .col-12 {
+    @extend %col;
+    width: 100%;
+  }
+  .redessociais {
+    width: 2%;
+  }
+  .navbar-nav{
+    font-size: 120%;  
+  }
+  
