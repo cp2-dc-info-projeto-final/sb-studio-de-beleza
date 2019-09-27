@@ -26,7 +26,7 @@ body
   background-image: linear-gradient(to right, rgb(201, 81, 81), rgb(238, 53, 53));
   color: #ddd;
   padding: 2rem;
-  margin-top: justify;
+  margin-top: -2%;
 }
   a {
     color: #aaa;
