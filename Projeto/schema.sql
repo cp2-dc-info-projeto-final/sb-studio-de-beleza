@@ -79,6 +79,9 @@ drop table if exists recuperacao;
 CREATE TABLE recuperacao (
 id_usuario int,
 id_pergunta int,
-resposta VARCHAR (255)
+resposta VARCHAR (255),
+PRIMARY KEY(id_usuario, id_pergunta),
+FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
+FOREIGN KEY (id_pergunta) REFERENCES usuario(id_pergunta)
 );
 
