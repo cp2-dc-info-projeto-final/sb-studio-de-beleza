@@ -28,32 +28,28 @@ body
   padding: 2rem;
   margin-top:-2%;
 
-  li {
-    line-height: 1.5;
-  }
+}
   a {
     color: #aaa;
   }
   hr {
-    max-width: $body-width;
     border: 0;
     height: 1px;
-    color: neutral($primary,2);
+    color: neutral;
   }
-}
 
-%col {
+#col {
   width: 100%;
   @media screen and (min-width: 640px) {
     float: left;
   }
-  .tab-row>& {
+}
+  .tab-row {
     display: table-cell;
     vertical-align: middle;
     height: 100%;
     float: none;
   }
-}
 
 .col-4 {
   @extend %col;
