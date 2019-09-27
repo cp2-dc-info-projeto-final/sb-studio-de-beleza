@@ -51,7 +51,7 @@ height:30%;
   background-image: linear-gradient(to right, rgb(201, 81, 81), rgb(238, 53, 53));
   color: #ddd;
   padding: 2rem;
-  margin-top: 15%;
+  margin-top: 50%;
 }
   a {
     color: #aaa;
@@ -101,3 +101,16 @@ height:30%;
 .navbar-nav{
   font-size: 120%;  
 }
+.card {
+  width:30%;
+  float: left;
+}
+#card3 {
+left:8%;
+}
+#card1 {
+  left:2%;
+  }
+  #card2 {
+    left:5%;
+    }
