@@ -11,81 +11,14 @@ body
   width: 100%;
   height: 135px;
 }
-#menu /* estilização e esquematização da borda, sombra, margem, etc do menu contido em uma div */
-{
-  width: 100%;
-  background: linear-gradient(#ed7f7a, #c36d66);
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2),
-	0px 1px 0px 1px rgba(255, 255, 255, 0.5) inset,
-	0px -3px 0px 1px rgba(0, 0, 0, 0.1) inset;
-  overflow : hidden;
-  font-family: Roboto,Arial,Helvetica,Sans-serif;
-  display: table;
-  margin-top : 10px;
-  padding: 0;
-}
 
-#menu li /* esquematização de cada item da lista contida no menu */
-{
-  display: table-cell;
-	width: 160px;
-}
-
-#menu a
-{
-	display: block;
-	line-height: 46px;
-  text-align: center;
-	text-decoration : none;
-	color : white;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
-	transition : text-shadow,color 1s;
-	position:relative;	
-}
-#menu a:hover
-{
-	background: rgba(255,255,255,0.1);
-	border-bottom: solid 3px #f1af09;
-	color : white;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-	transition : text-shadow,color 1s;
-}
-#menu a:before
-{
-  content: '';
-  position: absolute;
-  transition:1s;	
-}
-#butftC, #butftS, #butftM
-{
-	color: #3a3838;
-	border-radius: 20px;
-    margin-bottom: 15px;
-    background: #fff;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    padding: 20px;		
-}
-
-#butftC, #butftS, #butftM
-{
-  font-weight: bold;
-background:#ed7f7a;;
-border: none;
-margin-bottom: 20px;
-}
-#butftC:hover, #butftS:hover, #butftM:hover, #butftC:focus, #butftS:focus, #butftM:focus
-{
-	background: #f1af09;
-  outline: none !important;
-}
 .div1 
 {
-  font-size: 20px;
+  font-size: px;
   text-align: center;
   margin-top: -1%;
-  margin-left:20%;
-  margin-right:20%;
+  margin-left:30%;
+  margin-right:30%;
   color:#707070;
   letter-spacing:1px;
   padding-top:1%;
@@ -100,34 +33,31 @@ height:30%;
   background-image: linear-gradient(to right, rgb(201, 81, 81), rgb(238, 53, 53));
   color: #ddd;
   padding: 2rem;
-  margin-top:-2%;
-
-  li {
-    line-height: 1.5;
-  }
+  margin-top: 15%;
+}
   a {
     color: #aaa;
   }
   hr {
-    max-width: $body-width;
-    border: 0;
+    border: 10%;
     height: 1px;
-    color: neutral($primary,2);
+    color: neutral;
+    line-height: 1.5;
   }
-}
 
-%col {
+#col {
   width: 100%;
   @media screen and (min-width: 640px) {
     float: left;
   }
-  .tab-row>& {
+  }
+  .tab-row{
     display: table-cell;
     vertical-align: middle;
     height: 100%;
     float: none;
   }
-}
+
 
 .col-4 {
   @extend %col;
