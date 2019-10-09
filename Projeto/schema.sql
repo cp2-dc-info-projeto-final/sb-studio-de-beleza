@@ -1,3 +1,21 @@
+DROP DATABASE IF EXISTS studiodebeleza;
+CREATE DATABASE studiodebeleza character set UTF8mb4 collate utf8mb4_bin;
+
+
+USE studiodebeleza;
+
+
+drop table if exists usuario;    
+CREATE TABLE usuario (
+    
+id_usuario int AUTO_INCREMENT,
+email VARCHAR (100),
+senha VARCHAR (255),
+PRIMARY KEY (id_usuario)
+);
+INSERT INTO usuario (email, senha) VALUES
+('mceloemerson@gmail.com', '$2y$10$7bgXZylojDHX7sxd.Z4LPe30RYPmdLiuirsspEHBzsJ0Bkv8Thz6q');
+
 drop table if exists Funcionario;
 CREATE TABLE Funcionario (
 
@@ -11,6 +29,9 @@ municipio VARCHAR (50),
 PRIMARY KEY (id_func),
 FOREIGN KEY (id_func) REFERENCES usuario(id_usuario)
 );
+INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio) VALUES
+(1,'Emerson Marcelo', '21 000000000', '2000-11-02', '00000000000', 'M', 'Duque de Caxias');
+
 
 drop table if exists Servico;
 CREATE TABLE Servico (
@@ -53,15 +74,6 @@ FOREIGN KEY (id_funcionario) REFERENCES Funcionario(id_func),
 FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente)
 );
 
-drop table if exists usuario;    
-CREATE TABLE usuario (
-    
-id_usuario int AUTO_INCREMENT,
-email VARCHAR (100),
-senha VARCHAR (255),
-PRIMARY KEY (id_usuario)
-);
-
 drop table if exists Pergunta;    
 CREATE TABLE Pergunta (
     
@@ -69,11 +81,12 @@ id_pergunta int AUTO_INCREMENT,
 pergunta VARCHAR (255),
 PRIMARY KEY (id_pergunta)
 );
-INSERT INTO pergunta (pergunta) VALUES ('Qual era o seu apelido de infância?');
-INSERT INTO pergunta (pergunta) VALUES ('Qual é o seu livro de infância preferido?');
-INSERT INTO pergunta (pergunta) VALUES ('Qual era o nome do seu primeiro animal de estimação?');
-INSERT INTO pergunta (pergunta) VALUES ('Qual o apelido de seu filho mais novo?');
-INSERT INTO pergunta (pergunta) VALUES ('Qual o apelido de seu filho mais velho?');
+INSERT INTO pergunta (pergunta) VALUES 
+('Qual era o seu apelido de infância?'),
+('Qual é o seu livro de infância preferido?'),
+('Qual era o nome do seu primeiro animal de estimação?'),
+('Qual o apelido de seu filho mais novo?'),
+('Qual o apelido de seu filho mais velho?');
 
 drop table if exists recuperacao;    
 CREATE TABLE recuperacao (
@@ -84,4 +97,6 @@ PRIMARY KEY(id_usuario, id_pergunta),
 FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
 FOREIGN KEY (id_pergunta) REFERENCES usuario(id_pergunta)
 );
+
+INSERT INTO recuperacao (id_usuario, id_pergunta, resposta) VALUES (1, 2, 'Smiliguindo');
 
