@@ -1,8 +1,7 @@
 <?php
 
 function BuscaPerguntaSecreta ($email) {
-  $connection = mysqli_connect("localhost", "root", "", "studiodebeleza");  // ligar à base de dados
-  mysqli_select_db($connection, 'studiodebeleza');  // escolher a base de dados pretendida
+  require "../connection_factory.php";
   
   $usuario = mysqli_real_escape_string($connection, $_POST['email']);
   $query = "select pergunta.id_pergunta, pergunta.pergunta, recuperacao.resposta, recuperacao.id_usuario from pergunta
