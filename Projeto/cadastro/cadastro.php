@@ -1,10 +1,10 @@
 <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "root", "", "studiodebeleza"); /* Iniciando a conexão com o banco de dados */
-
+require "../connection_factory.php";
 require "cadastroUsuario.php"; /* Incluiu o arquivo referenciado e, em caso de erro, irá parar o script */
 
+$link = get_connection();
 // Checar conexão
 if($link === false) 
 {

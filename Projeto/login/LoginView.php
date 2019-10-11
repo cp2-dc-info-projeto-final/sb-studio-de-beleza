@@ -37,11 +37,24 @@
             }
         ?>
 </div>
-<div class="footer">
-    <footer> 
-      <h2 align="center" id="itens_rodape">Studio de Beleza Evelyn Marins</h2>
-      <hr></hr>
-      <p align="center">Rua José Ferreira Murro, Nº 320 - Nova Iguaçu<br>Rio de Janeiro - RJ - 26031-170<br>Tel:. (00) 0000-0000</p>
-   </footer>
+         
+<footer class="footer">
+    <div class="row">
+      <div class="col-6">
+        <p><i class="fa fa-phone" aria-hidden="true"></i> Tel:. (00) 0000-0000</p>
+			<p><i class="fa fa-envelope" aria-hidden="true"></i> evelyn@evelyn.com</p>
+      </div>
+      <div class="col-6" style="text-align: right;">
+        <h3>Studio de Beleza Evelyn Marins</h3>
+        <p>Rua José Ferreira Murro, Nº 320 - Nova Iguaçu <br>
+          Rio de Janeiro - RJ - 26031-170
+          </p>    
+      </div>
+    </div>
+    <hr style="line-height: 1.5;"></hr>
+    <div class="row">
+      <div class="col-12"><a href="https://pt-br.facebook.com/studioevelynmarins/"><img src="../fotos_icones/facebook-png-cinza-2.png" title="Facebook"  class="redessociais"/></a>
+    </div>
+</footer>
 </body>
 </html>     
