@@ -4,11 +4,88 @@
      <meta charset="UTF-8">
      <link rel="stylesheet" href="../jquery_css/bootstrap.min.css">
      <link rel="stylesheet" type="text/css" href="paginainicial.css">
-    <div class="logo_studiodiv">
-    <img id="logo_studio" src="../fotos_icones/logo_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
-    </div>
+    
+     <script type="text/javascript">
+      function setaImagem(){
+          var settings = {
+              primeiraImg: function(){
+                  elemento = document.querySelector("#slider a:first-child");
+                  elemento.classList.add("ativo");
+                  this.legenda(elemento);
+              },
+      
+              slide: function(){
+                  elemento = document.querySelector(".ativo");
+      
+                  if(elemento.nextElementSibling){
+                      elemento.nextElementSibling.classList.add("ativo");
+                      settings.legenda(elemento.nextElementSibling);
+                      elemento.classList.remove("ativo");
+                  }else{
+                      elemento.classList.remove("ativo");
+                      settings.primeiraImg();
+                  }
+      
+              },
+      
+              proximo: function(){
+                  clearInterval(intervalo);
+                  elemento = document.querySelector(".ativo");
+      
+                  if(elemento.nextElementSibling){
+                      elemento.nextElementSibling.classList.add("ativo");
+                      settings.legenda(elemento.nextElementSibling);
+                      elemento.classList.remove("ativo");
+                  }else{
+                      elemento.classList.remove("ativo");
+                      settings.primeiraImg();
+                  }
+                  intervalo = setInterval(settings.slide,4000);
+              },
+      
+              anterior: function(){
+                  clearInterval(intervalo);
+                  elemento = document.querySelector(".ativo");
+      
+                  if(elemento.previousElementSibling){
+                      elemento.previousElementSibling.classList.add("ativo");
+                      settings.legenda(elemento.previousElementSibling);
+                      elemento.classList.remove("ativo");
+                  }else{
+                      elemento.classList.remove("ativo");                     
+                      elemento = document.querySelector("a:last-child");
+                      elemento.classList.add("ativo");
+                      this.legenda(elemento);
+                  }
+                  intervalo = setInterval(settings.slide,4000);
+              },
+      
+              legenda: function(obj){
+                  var legenda = obj.querySelector("img").getAttribute("alt");
+                  document.querySelector("figcaption").innerHTML = legenda;
+              }
+      
+          }
+      
+          //chama o slide
+          settings.primeiraImg();
+      
+          //chama a legenda
+          settings.legenda(elemento);
+      
+          //chama o slide à um determinado tempo
+          var intervalo = setInterval(settings.slide,4000);
+          document.querySelector(".next").addEventListener("click",settings.proximo,false);
+          document.querySelector(".prev").addEventListener("click",settings.anterior,false);
+      }
+      
+      window.addEventListener("load",setaImagem,false);
+      </script>
 </head> 
     <body>
+        <div class="logo_studiodiv">
+            <img id="logo_studio" src="../fotos_icones/logo_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
+            </div>
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e4121286;">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -22,6 +99,21 @@
               </div>
             </div>
           </nav>
+          <figure>
+            <span class="trs next"></span>
+            <span class="trs prev"></span>
+         
+            <div id="slider">
+               <a href="paginainicial.html" class="trs"><img src="../Fotos/pgini.jpg" alt="Legenda da imagem 1" /></a>
+               <a href="paginainicial.html" class="trs"><img src="../Fotos/servicos.png" alt="Legenda da imagem 2" /></a>
+               <a href="paginainicial.html" class="trs"><img src="../Fotos/galeria.png" alt="Legenda da imagem 2" /></a>
+               <a href="paginainicial.html" class="trs"><img src="../fotos/quemsomos.png" alt="Legenda da imagem 2" /></a>
+            </div>
+         
+            <figcaption></figcaption>
+         </figure>
+
+
             
             <footer class="footer">
                 <div class="row">
