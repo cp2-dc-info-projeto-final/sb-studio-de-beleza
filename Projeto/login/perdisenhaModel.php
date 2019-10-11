@@ -14,7 +14,6 @@ function BuscaPerguntaSecreta ($email) {
   
   if( mysqli_num_rows($result) > 0 )
   {
-    // a condição a seguir serve para fazer a comparação da senha com a hash da mesma
     while($row = mysqli_fetch_assoc($result)) {
         $pergunta = $row["pergunta"];
         return $pergunta;
