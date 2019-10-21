@@ -4,87 +4,33 @@
      <meta charset="UTF-8">
      <link rel="stylesheet" href="../jquery_css/bootstrap.min.css">
      <link rel="stylesheet" type="text/css" href="paginainicial.css">
-    
-     <script type="text/javascript">
-      function setaImagem(){
-          var settings = {
-              primeiraImg: function(){
-                  elemento = document.querySelector("#slider a:first-child");
-                  elemento.classList.add("ativo");
-                  this.legenda(elemento);
-              },
-      
-              slide: function(){
-                  elemento = document.querySelector(".ativo");
-      
-                  if(elemento.nextElementSibling){
-                      elemento.nextElementSibling.classList.add("ativo");
-                      settings.legenda(elemento.nextElementSibling);
-                      elemento.classList.remove("ativo");
-                  }else{
-                      elemento.classList.remove("ativo");
-                      settings.primeiraImg();
-                  }
-      
-              },
-      
-              proximo: function(){
-                  clearInterval(intervalo);
-                  elemento = document.querySelector(".ativo");
-      
-                  if(elemento.nextElementSibling){
-                      elemento.nextElementSibling.classList.add("ativo");
-                      settings.legenda(elemento.nextElementSibling);
-                      elemento.classList.remove("ativo");
-                  }else{
-                      elemento.classList.remove("ativo");
-                      settings.primeiraImg();
-                  }
-                  intervalo = setInterval(settings.slide,4000);
-              },
-      
-              anterior: function(){
-                  clearInterval(intervalo);
-                  elemento = document.querySelector(".ativo");
-      
-                  if(elemento.previousElementSibling){
-                      elemento.previousElementSibling.classList.add("ativo");
-                      settings.legenda(elemento.previousElementSibling);
-                      elemento.classList.remove("ativo");
-                  }else{
-                      elemento.classList.remove("ativo");                     
-                      elemento = document.querySelector("a:last-child");
-                      elemento.classList.add("ativo");
-                      this.legenda(elemento);
-                  }
-                  intervalo = setInterval(settings.slide,4000);
-              },
-      
-              legenda: function(obj){
-                  var legenda = obj.querySelector("img").getAttribute("alt");
-                  document.querySelector("figcaption").innerHTML = legenda;
-              }
-      
-          }
-      
-          //chama o slide
-          settings.primeiraImg();
-      
-          //chama a legenda
-          settings.legenda(elemento);
-      
-          //chama o slide à um determinado tempo
-          var intervalo = setInterval(settings.slide,4000);
-          document.querySelector(".next").addEventListener("click",settings.proximo,false);
-          document.querySelector(".prev").addEventListener("click",settings.anterior,false);
-      }
-      
-      window.addEventListener("load",setaImagem,false);
-      </script>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/agency.min.css" rel="stylesheet">
+
+<body id="page-top">
 </head> 
     <body>
         <div class="logo_studiodiv">
-            <img id="logo_studio" src="../fotos_icones/logo_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
+            <img id="logo_studio" src="../fotos_icones/foto_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
             </div>
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e4121286;">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,21 +45,62 @@
               </div>
             </div>
           </nav>
-          <figure>
-            <span class="trs next"></span>
-            <span class="trs prev"></span>
-         
-            <div id="slider">
-               <a href="paginainicial.html" class="trs"><img src="../Fotos/pgini.jpg" alt="Legenda da imagem 1" /></a>
-               <a href="paginainicial.html" class="trs"><img src="../Fotos/servicos.png" alt="Legenda da imagem 2" /></a>
-               <a href="paginainicial.html" class="trs"><img src="../Fotos/galeria.png" alt="Legenda da imagem 2" /></a>
-               <a href="paginainicial.html" class="trs"><img src="../fotos/quemsomos.png" alt="Legenda da imagem 2" /></a>
+          <body id="page-top">
+
+            <!-- Header -->
+            <header class="masthead">
+              <div class="container">
+                <div class="intro-text">
+                  <div class="intro-lead-in" style= color:#d46565d2;>Seja Bem-Vindo(a) ao Studio!</div> 
+                  <div class="intro-heading text-uppercase" style= color:#bd4b4bd2;>É um prazer<p>recebê-lo(a) aqui!</p></div>
+                  <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../login/LoginView.php" style= background-color:#f0a0a0d2;>Login</a>
+                </div>
+              </div>
+            </header>
+           
+           <style>
+            .mySlides {display:none;}
+            </style>
+            </head>
+
+            <body>
+
+            <div class="w3-content w3-section" style="max-width:1000px">
+            <img class="mySlides" src="../Fotos/pgini_3.jpg" style="width:100%">
+            <img class="mySlides" src="../Fotos/pgini_1.jpg" style="width:100%">
+            <img class="mySlides" src="../Fotos/pgini_2.jpg" style="width:100%">
+            <img class="mySlides" src="../Fotos/pgini_4.jpg" style="width:100%">
+            <img class="mySlides" src="../Fotos/pgini_5.jpg" style="width:100%">
+            <img class="mySlides" src="../Fotos/pgini_6.jpg" style="width:100%">
+            <img class="mySlides" src="../Fotos/pgini_7.jpg" style="width:100%">
+            <img class="mySlides" src="../Fotos/pgini_8.jpg" style="width:100%">
+            <img class="mySlides" src="../Fotos/pgini_9.jpg" style="width:100%">
+            <img class="mySlides" src="../Fotos/pgini_10.jpg" style="width:100%">
+
+
             </div>
-         
-            <figcaption></figcaption>
-         </figure>
 
+            <script>
+            var myIndex = 0;
+            carousel();
 
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+            </script>
+
+</body>
+</html>
+
+        
             
             <footer class="footer">
                 <div class="row">
