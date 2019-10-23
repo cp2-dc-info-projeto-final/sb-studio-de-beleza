@@ -40,17 +40,25 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
 	</head>
 	 <body>
 		<div class="logo_studiodiv"></div>
-			<img id="logo_studio" src="../fotos_icones/logo_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
-		</div>
-      <div>
-			<ul id="menu">
-         <li><a href="../pagina_inicial/paginainicial.html">Página Inicial</a></li>
-			<li><a href="../servicos/servicos.html">Serviços</a></li>
-			<li><a href="../galeria_fotos/galeriadefotos.html">Galeria de Fotos</a></li>
-         <li><a href="../quem_somos/quemsomos.html">Quem somos nós</a></li>
-			</ul>
-		</div>
-
+			<img id="logo_studio" src="../fotos_icones/foto_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
+      </div>
+     
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e4121286;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="../pagina_inicial/paginainicial.html">Página Inicial<span
+            class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="../servicos/servicos.html">Serviços</a>
+        <a class="nav-item nav-link active" href="../galeria_fotos/galeriadefotos.html">Galeria de Fotos</a>
+        <a class="nav-item nav-link active" href="../quem_somos/quemsomos.html">Quem somos</a>
+        <a class="nav-item nav-link active btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../login/LoginView.php" style= background-color:#f0a0a0d2;>Login</a>
+      </div>
+    </div>
+  </nav>
       <div class="icone_usuariodiv"> 
        	<img id="icone_perfil_usuario" src="../fotos_icones/icone.png" width="120"> 
         	<h1 align="center">@Usuário</h1>

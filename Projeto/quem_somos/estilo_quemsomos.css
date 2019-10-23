@@ -76,4 +76,7 @@ body
 .navbar-nav{
   font-size: 120%;  
 }
+.btn-right {
+  margin-left: auto;
+}
    
