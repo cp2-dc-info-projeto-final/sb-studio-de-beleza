@@ -23,6 +23,35 @@
             </div>
           </nav>
 
+          
+        <div class="calendario">
+    <div class="d-flex align-items-center pb-2">
+        <button class="btn btn-link d-flex align-items-center p-0" ng-click="voltar()">
+            <i class="material-icons">arrow_back</i>
+            <span class="ml-1 d-none d-sm-block">Anterior</span>
+        </button>
+        <span class="escolha-horario" style="flex: 1; text-align: center">Escolha o seu horário</span>
+        <button class="btn btn-link d-flex align-items-center p-0" ng-click="avancar()">
+            <span class="mr-1 d-none d-sm-block">Próximo</span>
+            <i class="material-icons">arrow_forward</i>
+        </button>
+    </div>
+    <hr class="m-0" />
+    <div class="calendario__lista-datas">
+        <div class="calendario__dia calendario-dia" ng-repeat="data in datas" ng-class="{'calendario-dia--selecionado': dataEstaSelecionada(data.data)}" ng-click="selecionarData(data.data)">
+            <span class="calendario-dia__dia-semana" >{{data.diaDaSemana}}</span>
+            <span class="calendario-dia__dia-mes">
+                <span>{{data.dia}}</span>
+                <span>/</span>
+                <span class="calendario-dia__dia">{{data.mes}}</span>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+    
+
+
 
 
 
@@ -46,3 +75,6 @@
     </div>
   </div>
 </footer>
+
+</body>
+</html>
