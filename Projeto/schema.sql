@@ -100,3 +100,23 @@ FOREIGN KEY (id_pergunta) REFERENCES usuario(id_pergunta)
 
 INSERT INTO recuperacao (id_usuario, id_pergunta, resposta) VALUES (1, 2, 'Smiliguindo');
 
+CREATE TABLE municipio (
+id_municipio int AUTO_INCREMENT,
+nome_municipio VARCHAR (100),
+PRIMARY KEY (id_municipio)
+);
+INSERT INTO municipio (nome_municipio) VALUES 
+('Rio de Janeiro'),
+('Belford Roxo'),
+('Duque de Caxias'),
+('Guapimirim'),
+('Itaguai'),
+('Japeri'),
+('Magé'),
+('Mesquita'),
+('Nilópolis'),
+('Nova Iguaçu'),
+('Paracambi'),
+('Queimados'),
+('São João de Meriti'),
+('Seropedica');
