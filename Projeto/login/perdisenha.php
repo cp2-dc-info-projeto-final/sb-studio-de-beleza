@@ -1,8 +1,6 @@
 <?php
-
-require "../connection_factory.php";
-
-$link = get_connection();
+require_once "../connection_factory.php";
+$conn = get_connection();
 ?>
 <html>
   <head>

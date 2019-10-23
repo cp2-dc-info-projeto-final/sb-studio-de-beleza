@@ -1,18 +1,9 @@
 <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-require "../connection_factory.php";
+require_once "../connection_factory.php";
+$conn = get_connection();
 require "cadastroUsuario.php"; /* Incluiu o arquivo referenciado e, em caso de erro, irá parar o script */
-
-$link = get_connection();
-// Checar conexão
-if($link === false) 
-{
-    die("ERRO: Não foi possível conectar" . mysqli_connect_error());
-} else
-{
-    echo "Hello World!";
-}
  
 // processo de armazenar os dados vindos do input através do método POST para variável 
 $email = $_POST['tEmail'];
