@@ -5,7 +5,7 @@
      <link rel="stylesheet" href="../jquery_css/bootstrap.min.css">
      <link rel="stylesheet" type="text/css" href="agendamento.css">
     <div class="logo_studiodiv">
-    <img id="logo_studio" src="../fotos_icones/logo_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
+    <img id="logo_studio" src="../fotos_icones/foto_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
     </div>
 </head> 
     <body>
@@ -22,40 +22,74 @@
               </div>
             </div>
           </nav>
+        	<h1 id="titulo">Olá, caro visitante!</h1>
+        	<p id="subtitulo" align="justify"><b>É um prazer tê-lo acessando o nosso site!</b> <br><br> Você sabia que agora fazer o <b>agendamento</b> dos nossos serviços está bem mais fácil? <br><br> Para isso, é preciso que você possua um cadastro em nosso sistema. Caso não possua, <a href="../cadastro/CadastroView.php"><b>faça-o agora mesmo!</b></a></p>
+      </div>
+      <div>
+ <form class="form-cadastro" action="cadastro.php" method="post" onsubmit="return validarSenha(this);" name="formulario">
+ <?php
+            session_start();
+            if(array_key_exists('erro', $_SESSION) == true){
+                $erro = $_SESSION["erro"];
+                ?>
 
-          
-        <div class="calendario">
-    <div class="d-flex align-items-center pb-2">
-        <button class="btn btn-link d-flex align-items-center p-0" ng-click="voltar()">
-            <i class="material-icons">arrow_back</i>
-            <span class="ml-1 d-none d-sm-block">Anterior</span>
-        </button>
-        <span class="escolha-horario" style="flex: 1; text-align: center">Escolha o seu horário</span>
-        <button class="btn btn-link d-flex align-items-center p-0" ng-click="avancar()">
-            <span class="mr-1 d-none d-sm-block">Próximo</span>
-            <i class="material-icons">arrow_forward</i>
-        </button>
-    </div>
-    <hr class="m-0" />
-    <div class="calendario__lista-datas">
-        <div class="calendario__dia calendario-dia" ng-repeat="data in datas" ng-class="{'calendario-dia--selecionado': dataEstaSelecionada(data.data)}" ng-click="selecionarData(data.data)">
-            <span class="calendario-dia__dia-semana" >{{data.diaDaSemana}}</span>
-            <span class="calendario-dia__dia-mes">
-                <span>{{data.dia}}</span>
-                <span>/</span>
-                <span class="calendario-dia__dia">{{data.mes}}</span>
-                </span>
-            </span>
-        </div>
-    </div>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <?php
+  echo $erro;
+  ?>
 </div>
-    
+<?php
 
 
+                session_unset();
+            }
+        ?>
+
+<div class='form-group col-md-6'>
+<label>Data desejada para a realização do procedimento</label>
+<input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
+</div>
+   <label>Serviços</label>
+<select class="form-control form-control-sm" name="tservicos" required>
+                     <option value="">Selecione</option>
+                
+	<option value="corte">Corte R$30,00</option>
+    <option value="reconstrucao">Reconstrução R$45,00</option>
+    <option value="hidratacao">Hidratação R$20,00</option>
+    <option value="coloracaop">Coloração R$40,00 (Pequeno)</option>
+    <option value="coloracaom">Coloração R$50,00 (Médio)</option>
+    <option value="coloracaog">Coloração R$60,00 (Grande)</option>
+    <option value="mechap">Mechas R$70,00 (Pequeno)</option>
+    <option value="mecham">Mechas R$85,00 (Médio)</option>
+    <option value="mechag">Mechas R$100 (Grande)</option>
+    <option value="designss">Design de sobrancelha simples R$15,00</option>
+    <option value="designsh">Design de sobrancelha com aplicação de hena R$20,00</option>
+    <option value="spape">Spa dos pés R$40,00</option>
+    <option value="pes">Pés R$15,00</option>
+    <option value="maos">Mãos R$15,00</option>
+    <option value="pemao">Pés e mãos R$25,00</option>
+    <option value="acrigelc">Acrigel R$60,00 (Colocação)</option>
+    <option value="acrigelm">Acrigel R$30,00 (Manutenção)</option>
+    <option value="fibrac">Fibra de vidro R$120,00 (Colocação)</option>
+    <option value="fibram">Fibra de vidro R$60,00 (Manutenção)</option>
 
 
+                   </select>
+                     </div>
+                     </div>
+      
+  <div>
+  <label>Selecione o profissional</label>
+  <select class="form-control form-control-sm" name="tTipoUsuario" required>
+  <option value="">Selecione</option>
+                <option value="1">Não tenho preferência de profissional</option>
+                <option value="2">Andressa</option>
+                <option value="1">Evelyn</option>
+                <option value="2">Cátia</option>
+                <option value="1">Rosane</option>
+                <option value="2">Karen</option>
 
-
+                     </div>
 <footer class="footer">
   <div class="row">
       <div class="col-6">
