@@ -1,8 +1,9 @@
 <?php 
+  require_once "../connection_factory.php";
 
     function autenticacao($email, $senha) {
-        $connection = mysqli_connect("localhost", "root", "", "studiodebeleza"); 
-        $sql = "SELECT senha,email FROM usuario WHERE email='$email'";
+        $conn = get_connection();
+
         $result = mysqli_query($connection, $sql);
         $erro = "";
         if (mysqli_num_rows($result) > 0) /*serve para validar a autenticação a partir 

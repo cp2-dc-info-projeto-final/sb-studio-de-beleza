@@ -1,9 +1,7 @@
 DROP DATABASE IF EXISTS studiodebeleza;
 CREATE DATABASE studiodebeleza character set UTF8mb4 collate utf8mb4_bin;
 
-
 USE studiodebeleza;
-
 
 drop table if exists usuario;    
 CREATE TABLE usuario (
@@ -110,7 +108,7 @@ INSERT INTO municipio (nome_municipio) VALUES
 ('Belford Roxo'),
 ('Duque de Caxias'),
 ('Guapimirim'),
-('Itaguai'),
+('Itaguaí'),
 ('Japeri'),
 ('Magé'),
 ('Mesquita'),
@@ -119,4 +117,4 @@ INSERT INTO municipio (nome_municipio) VALUES
 ('Paracambi'),
 ('Queimados'),
 ('São João de Meriti'),
-('Seropedica');
+('Seropédica');

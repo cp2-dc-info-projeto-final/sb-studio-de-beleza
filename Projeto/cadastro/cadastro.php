@@ -2,7 +2,7 @@
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 require_once "../connection_factory.php";
-$conn = get_connection();
+$link = get_connection();
 require "cadastroUsuario.php"; /* Incluiu o arquivo referenciado e, em caso de erro, irá parar o script */
  
 // processo de armazenar os dados vindos do input através do método POST para variável 

@@ -117,26 +117,22 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
 <label>Telefone</label>
 <input type="text" name="tTelefone" id="cTelefone" class="form-control form-control-sm" required>
 </div>
-<div class='form-group col-md-6'>
-   <label>Municipio</label>
-<select class="form-control form-control-sm" name="tMunicipio" required>
-                     <option value="">Selecione</option>
-                
-	<option value="Belford Roxo">Belford Roxo</option>
-    <option value="Duque de Caxias">Duque de Caxias</option>
-    <option value="Guapimirim">Guapimirim</option>
-    <option value="Itaguai">Itaguai</option>
-    <option value="Japeri">Japeri</option>
-    <option value="Magé">Magé</option>
-    <option value="Mesquita">Mesquita</option>
-    <option value="Nilopolis">Nilopolis</option>
-    <option value="Nova Iguaçu">Nova Iguaçu</option>
-    <option value="Paracambi">Paracambi</option>
-    <option value="Queimados">Queimados</option>
-    <option value="São João de Meriti">São João de Meriti</option>
-    <option value="Seropedica">Seropedica</option>
+   <div class='form-group col-md-6'>
+<label>Estado</label>
+<select name="tEstado"  class="form-control form-control-sm" required>
+<option value="">Selecione</option>
+                     <?php
+                        require "CadastroCtrl.php";
+                        $municipios = controle_listar_municipios();
+                        foreach ($municipios as $municipio)
+                        {
+                           echo "<option value='". $municipio['id'] . "'>" . $municipio['municipios']. "</option>";
+                        }
+                     ?>
                    </select>
                      </div>
+                  
+                    
                      </div>
       <h2 class="card-title">Informações de login</h2>
       <div class="form-group">
@@ -168,7 +164,6 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
 <select name="tPergunta"  class="form-control form-control-sm" required>
                      <option value="">Selecione</option>
                      <?php
-                        require "BuscaPerguntaCtrl.php";
                         $perguntas = controle_listar_perguntas();
                         foreach ($perguntas as $pergunta)
                         {

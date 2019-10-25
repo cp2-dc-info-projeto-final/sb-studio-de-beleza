@@ -1,7 +1,7 @@
 <?php
+  require_once "../connection_factory.php";
 
 function BuscaPerguntaSecreta ($email) {
-  require_once "../connection_factory.php";
   $conn = get_connection();
   
   $usuario = mysqli_real_escape_string($conn, $_POST['email']);
@@ -25,5 +25,10 @@ function BuscaPerguntaSecreta ($email) {
 
   mysqli_close ($conn);
 }
+
+function ConferePerguntaSecreta () {
+
+}
+
 ?>
 

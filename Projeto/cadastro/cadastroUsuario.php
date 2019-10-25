@@ -1,9 +1,10 @@
 <?php
 require_once "../connection_factory.php";
-$conn = get_connection();
+
+
 function cadastraUsuario($email, $hash, $senha) {
-   
-    $sql = "SELECT id_usuario FROM usuario WHERE email='$email'";
+    $conn = get_connection();
+    $sql = "SELECT id_usuario FROM uwqpuqwefwefqwefsuario WHERE email='$email'";
     $result = mysqli_query($conn, $sql);
     $erro = "";
     # password hash
@@ -23,6 +24,7 @@ function cadastraUsuario($email, $hash, $senha) {
 }
 
     function BuscarPerguntas() {
+        $conn = get_connection();
         $sql = "SELECT * FROM pergunta";
         $result = mysqli_query($conn, $sql);
 
@@ -40,18 +42,24 @@ function cadastraUsuario($email, $hash, $senha) {
     }
 
     function BuscarMunicipios() {
+        $conn = get_connection();
 
-        $sql = "SELECT * FROM municipios";
+        $sql = "SELECT * FROM municipio";
         $result = mysqli_query($conn, $sql);
 
         $municipios = [];
 
-        while($linha = mysqli_fetch_assoc($result))
-        {
-            $municipio["id"] = $linha["id_municipio"];
-            $pergunta["municipios"] =  $linha["nome_municipio"];
-            array_push($municipios, $municipio);
+        if(mysqli_query($conn, $sql)){
+            while($linha = mysqli_fetch_assoc($result))
+            {
+                $municipio["id"] = $linha["id_municipio"];
+                $municipio["municipios"] =  $linha["nome_municipio"];
+                array_push($municipios, $municipio);
+            }
+        } else{
+            die("Erro ao efetuar cadastro $sql. " . mysqli_error($conn));
         }
+        
         mysqli_close($conn);
 
         return $municipios;

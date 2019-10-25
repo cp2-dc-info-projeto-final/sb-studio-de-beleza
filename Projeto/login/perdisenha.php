@@ -11,7 +11,7 @@ $conn = get_connection();
     <h1>Perdi a senha de acesso</h1>
     <form method="post" action="perdisenha.php">
       <label for="email">E-mail:</label>
-      <input type="text" name="email" id="email" />
+      <input type="text" name="tEmail" id="email" />
       <?php
         require "perdisenhaCtrl.php";
           if( !empty($_POST) ){
@@ -22,7 +22,7 @@ $conn = get_connection();
             }
             else {
               echo "<label> $perguntaSecreta </label>";
-              echo "<input type='text' name='resposta'/>";
+              echo "<input type='text' name='tResposta'/>";
             }
           }   
         ?>
