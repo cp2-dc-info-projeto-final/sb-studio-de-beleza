@@ -16,10 +16,10 @@ join usuario on usuario.id_usuario = recuperacao.id_usuario
 where usuario.email = '$email'";
 
 if(mysql_num_rows($sql) == 1){
-    echo "";
+    echo "e";
   }
   else{
-    echo "";
+    echo "a";
   }
 }
 ?>
