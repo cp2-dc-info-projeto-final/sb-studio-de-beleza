@@ -4,6 +4,22 @@
      <meta charset="UTF-8">
      <link rel="stylesheet" href="../jquery_css/bootstrap.min.css">
      <link rel="stylesheet" type="text/css" href="agendamento.css">
+     <script type="text/javascript" src="jquery_javascript/calendario.js"></script>
+     <script>  
+     $(document).ready(function() /* evento em Jquery que espera instantaneamente o documento html ser carregado para ser executado */
+  {  
+     /* inserção das mascáras nos campos de input */
+    
+     $("#datepicker").mask("0000-00-00", {placeholder: "AAAA-MM-DD"});
+
+  });
+   </script>
+   <script type="text/javascript"> 
+     $(function() /* declaração para chamar o método DATEPICKER contido no arquivo jqueryUI, a partir do campo input datepicker */ 
+  {
+     $("#datepicker").datepicker({
+  });
+   </script> 
     <div class="logo_studiodiv">
     <img id="logo_studio" src="../fotos_icones/foto_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
     </div>
@@ -19,40 +35,33 @@
                 <a class="nav-item nav-link active" href="../servicos/servicos.html">Serviços</a>
                 <a class="nav-item nav-link active" href="../galeria_fotos/galeriadefotos.html">Galeria de Fotos</a>
                 <a class="nav-item nav-link active" href="../quem_somos/quemsomos.html">Quem somos</a>
+                <a class="nav-item nav-link active btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../login/LoginView.php" style= background-color:#f0a0a0d2;>Login</a>
+          
               </div>
             </div>
-          </nav>
+           </nav>
+        
         	<h1 id="titulo">Olá, caro visitante!</h1>
         	<p id="subtitulo" align="justify"><b>É um prazer tê-lo acessando o nosso site!</b> <br><br> Você sabia que agora fazer o <b>agendamento</b> dos nossos serviços está bem mais fácil? <br><br> Para isso, é preciso que você possua um cadastro em nosso sistema. Caso não possua, <a href="../cadastro/CadastroView.php"><b>faça-o agora mesmo!</b></a></p>
+
       </div>
       <div>
- <form class="form-cadastro" action="cadastro.php" method="post" onsubmit="return validarSenha(this);" name="formulario">
- <?php
-            session_start();
-            if(array_key_exists('erro', $_SESSION) == true){
-                $erro = $_SESSION["erro"];
-                ?>
 
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-  <?php
-  echo $erro;
-  ?>
-</div>
-<?php
-
-
-                session_unset();
-            }
-        ?>
 
 <div class='form-group col-md-6'>
-<label>Data desejada para a realização do procedimento</label>
-<input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
-</div>
-   <label>Serviços</label>
-<select class="form-control form-control-sm" name="tservicos" required>
-                     <option value="">Selecione</option>
-                
+
+<td> <label for="datepicker">Data desejada para a realização do procedimento:</label>
+           </td>
+            <td align="left">
+             <input type="text" id="datepicker" name="tCalendario">
+          
+            </td>
+          
+            <div>
+  <label>Serviço desejado:</label>
+  <select class="form-control form-control-sm">
+  
+               <option value="">Selecione</option>      
 	<option value="corte">Corte R$30,00</option>
     <option value="reconstrucao">Reconstrução R$45,00</option>
     <option value="hidratacao">Hidratação R$20,00</option>
@@ -72,11 +81,13 @@
     <option value="acrigelm">Acrigel R$30,00 (Manutenção)</option>
     <option value="fibrac">Fibra de vidro R$120,00 (Colocação)</option>
     <option value="fibram">Fibra de vidro R$60,00 (Manutenção)</option>
+   
+    </select>
+         
 
-
-                   </select>
+                   
                      </div>
-                     </div>
+                    
       
   <div>
   <label>Selecione o profissional</label>
