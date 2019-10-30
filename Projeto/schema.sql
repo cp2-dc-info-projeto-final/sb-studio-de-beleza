@@ -1,9 +1,7 @@
 DROP DATABASE IF EXISTS studiodebeleza;
 CREATE DATABASE studiodebeleza character set UTF8mb4 collate utf8mb4_bin;
 
-
 USE studiodebeleza;
-
 
 drop table if exists usuario;    
 CREATE TABLE usuario (
@@ -26,6 +24,7 @@ data_nasc date,
 cpf VARCHAR (20),
 sexo VARCHAR (1),
 municipio VARCHAR (50),
+estado VARCHAR (50),
 PRIMARY KEY (id_func),
 FOREIGN KEY (id_func) REFERENCES usuario(id_usuario)
 );
@@ -55,6 +54,7 @@ telefone VARCHAR (20),
 data_nasc date,
 cpf VARCHAR (20),
 sexo VARCHAR (1),
+estado VARCHAR (50),
 municipio VARCHAR (50),
 PRIMARY KEY (id_cliente),
 FOREIGN KEY (id_cliente) REFERENCES usuario(id_usuario)
@@ -106,17 +106,30 @@ nome_municipio VARCHAR (100),
 PRIMARY KEY (id_municipio)
 );
 INSERT INTO municipio (nome_municipio) VALUES 
+('Acre'),
+('Alagoas'),
+('Amapá'),
+('Amazonas'),
+('Bahia'),
+('Ceará'),
+('Distrito Federal'),
+('Espírito Santo'),
+('Goiás'),
+('Maranhão'),
+('Mato Grosso'),
+('Mato Grosso do Sul'),
+('Minas Gerais'),
+('Pará'),
+('Paraíba'),
+('Paraná'),
+('Pernambuco'),
+('Piauí'),
 ('Rio de Janeiro'),
-('Belford Roxo'),
-('Duque de Caxias'),
-('Guapimirim'),
-('Itaguai'),
-('Japeri'),
-('Magé'),
-('Mesquita'),
-('Nilópolis'),
-('Nova Iguaçu'),
-('Paracambi'),
-('Queimados'),
-('São João de Meriti'),
-('Seropedica');
+('Rio Grande do Norte'),
+('Rio Grande do Sul'),
+('Rondônia'),
+('Roraima'),
+('Santa Catarina'),
+('São Paulo'),
+('Sergipe'),
+('Tocantins');

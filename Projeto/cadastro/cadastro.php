@@ -2,7 +2,7 @@
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 require_once "../connection_factory.php";
-$conn = get_connection();
+$link = get_connection();
 require "cadastroUsuario.php"; /* Incluiu o arquivo referenciado e, em caso de erro, irá parar o script */
  
 // processo de armazenar os dados vindos do input através do método POST para variável 
@@ -10,6 +10,7 @@ $email = $_POST['tEmail'];
 $senha = $_POST['tSenha'];
 $hash = password_hash($senha, PASSWORD_DEFAULT);
 $mun = $_POST['tMunicipio'];
+$est = $_POST['tEstado'];
 $nome = $_POST['tNome'];
 $tipoUsuario = $_POST['tTipoUsuario'];
 $tel = $_POST['tTelefone'];
@@ -74,7 +75,7 @@ if ($result=mysqli_query($link,$sql)) {
         $id_usuario = $row[0];
         if ($tipoUsuario == 2) // condição para caso o tipo de usuário seja o 2 (funcionário)
         {
-            $sql = "INSERT INTO Funcionario (id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio) VALUES ($id_usuario, '$nome', '$tel', '$calendario', '$cpf', '$sexo', '$mun')";
+            $sql = "INSERT INTO Funcionario (id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES ($id_usuario, '$nome', '$tel', '$calendario', '$cpf', '$sexo', '$mun'. '$est')";
             if(mysqli_query($link, $sql))
             {
                 header("Location: ../login/LoginView.php");  //redirecionando para a página de login ao final da inserção na tabela correta, de acordo com o tipo usuário desse IF
@@ -87,7 +88,7 @@ if ($result=mysqli_query($link,$sql)) {
         }
         if ($tipoUsuario == 1) // condição para caso o tipo de usuário seja o 1 (cliente)
         {
-            $sql = "INSERT INTO Cliente (id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo, municipio) VALUES ($id_usuario, '$nome', '$tel', '$calendario', '$cpf', '$sexo', '$mun')";
+            $sql = "INSERT INTO Cliente (id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES ($id_usuario, '$nome', '$tel', '$calendario', '$cpf', '$sexo', '$mun', '$est')";
                 if(mysqli_query($link, $sql))
                 {
                     header("Location: ../login/LoginView.php"); //redirecionando para a página de login ao final da inserção na tabela correta, de acordo com o tipo usuário desse IF
