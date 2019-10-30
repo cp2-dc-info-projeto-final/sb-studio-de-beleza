@@ -58,8 +58,8 @@ hr {
 
 .flip-card {
   background-color: transparent;
-  width: 330px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
   perspective: 1000px;
 }
 
@@ -90,7 +90,14 @@ hr {
 }
 
 .flip-card-back {
-  background-color: #2980b9;
-  color: white;
+  background-color: #DCDCDC;
+  color: #707070;
   transform: rotateY(180deg);
+}
+
+.card-title
+{
+  background-color: #DCDCDC;
+  color: #707070;
+  font-family: arial, verdana, sans-serif;
 }
