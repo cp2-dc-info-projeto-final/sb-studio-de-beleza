@@ -123,10 +123,10 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
 <option value="">Selecione</option>
                      <?php
                         require "CadastroCtrl.php";
-                        $municipios = controle_listar_municipios();
-                        foreach ($municipios as $municipio)
+                        $estados = controle_listar_estados();
+                        foreach ($estados as $estado)
                         {
-                           echo "<option value='". $municipio['id'] . "'>" . $municipio['municipios']. "</option>";
+                           echo "<option value='". $estado['id'] . "'>" . $estado['municipios']. "</option>";
                         }
                      ?>
                    </select>
