@@ -22,11 +22,12 @@ CREATE TABLE Funcionario (
     cpf VARCHAR (20),
     sexo VARCHAR (1),
     municipio VARCHAR (50),
+    estado VARCHAR (50),
     PRIMARY KEY (id_func),
     FOREIGN KEY (id_func) REFERENCES usuario(id_usuario)
 );
-INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio) VALUES
-(1,'Emerson Marcelo', '21 000000000', '2000-11-02', '00000000000', 'M', 'Duque de Caxias');
+INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
+(1,'Emerson Marcelo', '21 000000000', '2000-11-02', '00000000000', 'M', 'Duque de Caxias', 'RJ');
 
 
 drop table if exists Servico;
@@ -34,7 +35,7 @@ CREATE TABLE Servico (
     id_servico int AUTO_INCREMENT,
     nome_servico VARCHAR (50),
     preco_servico double,
-    duracao time
+    duracao time,
     PRIMARY KEY (id_servico)
 );
 
@@ -60,6 +61,7 @@ CREATE TABLE Cliente (
     cpf VARCHAR (20),
     sexo VARCHAR (1),
     municipio VARCHAR (50),
+     estado VARCHAR (50),
     PRIMARY KEY (id_cliente),
     FOREIGN KEY (id_cliente) REFERENCES usuario(id_usuario)
 );
@@ -89,24 +91,36 @@ CREATE TABLE recuperacao (
 
 INSERT INTO recuperacao (id_usuario, id_pergunta, resposta) VALUES (1, 2, 'Smiliguindo');
 
-CREATE TABLE municipio (
+CREATE TABLE estados (
     id_municipio int AUTO_INCREMENT,
     nome_municipio VARCHAR (100),
     PRIMARY KEY (id_municipio)
 );
-INSERT INTO municipio (nome_municipio) VALUES 
-('Belford Roxo'),
-('Duque de Caxias'),
-('Guapimirim'),
-('Itaboraí'),
-('Itaguaí'),
-('Japeri'),
-('Magé'),
-('Nilópolis'),
-('Niterói'),
-('Nova Iguaçu'),
-('Queimados'),
+INSERT INTO estados (nome_municipio) VALUES 
+('Acre'),
+('Alagoas'),
+('Amapá'),
+('Amazonas'),
+('Bahia'),
+('Ceará'),
+('Distrito Federal'),
+('Espírito Santo'),
+('Goiás'),
+('Maranhão'),
+('Mato Grosso'),
+('Mato Grosso do Sul'),
+('Minas Gerais'),
+('Pará'),
+('Paraíba'),
+('Paraná'),
+('Pernambuco'),
+('Piauí'),
+('Rio Grande do Norte'),
+('Rio Grande do Sul'),
 ('Rio de Janeiro'),
-('São Gonçalo'),
-('São João de Meriti'),
-('Seropédica');
+('Rondônia'),
+('Roraima'),
+('Santa Catarina'),
+('São Paulo'),
+('Sergipe'),
+('Tocantins');
