@@ -8,8 +8,8 @@ require "cadastroUsuario.php";
 
 
 
-function controle_listar_municipios() {
-    return BuscarMunicipios();
+function controle_listar_estados() {
+    return BuscarEstados();
 }
 
 function controle_listar_perguntas() {
