@@ -10,6 +10,11 @@
     <script src="../jquery_javascript/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../jquery_javascript/traducao.js"></script>
     <script src="../jquery_javascript/jquery.mask.min.js"></script>
+
+    <div class="logo_studiodiv"></div>
+			<img id="logo_studio" src="../fotos_icones/foto_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
+      </div>
+      
    <script>  
      $(document).ready(function() /* evento em Jquery que espera instantaneamente o documento html ser carregado para ser executado */
   {  
@@ -39,10 +44,6 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
    </script> 
 	</head>
 	 <body>
-		<div class="logo_studiodiv"></div>
-			<img id="logo_studio" src="../fotos_icones/foto_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
-      </div>
-     
       <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e4121286;">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,7 +91,7 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
    <h1 class="card-title">Informações pessoais</h1>
    <div class="form-row">
    <div class='form-group col-md-6'>
-   <label>Nome</label>
+   <label>Nome Completo</label>
    <input type="text" name="tNome" class="form-control form-control-sm" required>
 </div>
 <div class='form-group col-md-6'>
