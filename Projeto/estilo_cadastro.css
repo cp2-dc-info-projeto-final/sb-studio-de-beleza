@@ -17,6 +17,7 @@ body /* estilização do esqueleto da página */
    width: 100%;
    height: 135px;
   }
+  
 #menu /* estilização e esquematização da borda, sombra, margem, etc do menu contido em uma div */
   {
    width: 100%;
