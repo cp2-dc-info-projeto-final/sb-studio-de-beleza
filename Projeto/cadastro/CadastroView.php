@@ -1,4 +1,4 @@
-<html>
+<!Doctype html>
 <head>
   <meta charset="UTF-8">
   <title>Cadastre-se</title>
@@ -11,7 +11,7 @@
     <script type="text/javascript" src="../jquery_javascript/traducao.js"></script>
     <script src="../jquery_javascript/jquery.mask.min.js"></script>
    <script>  
-     $(document).ready(function() /* evento em Jquery que espera instantaneamente o documento html ser carregado para ser executado */
+     $(document).ready(function()) /* evento em Jquery que espera instantaneamente o documento html ser carregado para ser executado */
   {  
      /* inserção das mascáras nos campos de input */
      $("#cCpf").mask("000.000.000-00", {placeholder: " 9 dígitos + 2 dígitos"});
@@ -39,7 +39,7 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
    </script> 
 	</head>
 	 <body>
-		<div class="logo_studiodiv"></div>
+		<div class="logo_studiodiv">
 			<img id="logo_studio" src="../fotos_icones/foto_editada.png" width="120">  <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
       </div>
      
@@ -185,14 +185,26 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
 </div>
 </form>
 
-<div>
-       
-</div>
-      <div class="footer">
-          <footer> 
-            <h2 align="center" id="itens_rodape">Studio de Beleza Evelyn Marins</h2>
-            <hr></hr>
-            <p align="center">Rua José Ferreira Murro, Nº 320 - Nova Iguaçu<br>Rio de Janeiro - RJ - 26031-170<br>Tel:. (00) 0000-0000</p>
-         </footer>
+
+<footer class="footer">
+    <div class="row">
+      <div class="col-6">
+        <p><i class="fa fa-phone" aria-hidden="true"></i> Tel:. (00) 0000-0000</p>
+			<p><i class="fa fa-envelope" aria-hidden="true"></i> evelyn@evelyn.com</p>
+      </div>
+      <div class="col-6" style="text-align: right;">
+        <h3>Studio de Beleza Evelyn Marins</h3>
+        <p>Rua José Ferreira Murro, Nº 320 - Nova Iguaçu <br>
+          Rio de Janeiro - RJ - 26031-170
+          </p>  
+      </div>
+    </div>
+    <hr></hr>
+    <div class="row">
+      <div class="col-12"><a href="https://pt-br.facebook.com/studioevelynmarins/"><img src="../fotos_icones/facebook-png-cinza-2.png" title="Facebook"  class="redessociais"/
+        style="width:40px;height:40px;"></a>
+    </div>
+    </div>
+</footer>
 </body>
 </html>
