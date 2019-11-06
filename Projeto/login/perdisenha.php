@@ -14,22 +14,35 @@ $conn = get_connection();
       <input type="text" name="tEmail" id="email" />
       <?php
         require "perdisenhaCtrl.php";
-          if( !empty($_POST) ){
-            $perguntaSecreta = RecuperaPerguntaSecreta($_POST['email']);
-
+          $perguntaSecreta = null;
+          if( !empty($_POST['tEmail']) ){
+            $perguntaSecreta = RecuperaPerguntaSecreta($_POST['tEmail']);
             if ($perguntaSecreta == false) {
               echo "Email não cadastrado";
-            }
-            else {
-              echo "<label> $perguntaSecreta </label>";
-              echo "<input type='text' name='tResposta'/>";
             }
           }   
         ?>
       
       <input type="submit" value="Recuperar" />
     </form>
+    
+      <?php
+        
+        if (isset($perguntaSecreta) && $perguntaSecreta != false) {
+      ?>
+        <form method="post" action="perdisenhaCtrl.php">
+          <label> <?php echo $perguntaSecreta['pergunta'] ?></label>";
+          <input type='text' name='tResposta'/>;
+          <?php if( !empty($_POST['tEmail']) ){
+            echo "<input type='hidden' value='" . $_POST['tEmail'] . "' />";
+          }
+          ?>
+             
+          <input type="submit" value="Conferir resposta secreta" />
+        </form>
+      <?php
+        }
+      ?>
+      
   </body>
 </html>
-
-

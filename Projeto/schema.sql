@@ -35,12 +35,8 @@ CREATE TABLE Servico (
     id_servico int AUTO_INCREMENT  PRIMARY KEY ,
     nome_servico VARCHAR (50),
     preco_servico double,
-<<<<<<< HEAD
-    duracao time
-=======
     duracao time,
     PRIMARY KEY (id_servico)
->>>>>>> 5460643573260e396436c69ce5ea3d9d52a653f5
 );
 
 drop table if exists Agendamento;

@@ -11,9 +11,7 @@
      $(document).ready(function() /* evento em Jquery que espera instantaneamente o documento html ser carregado para ser executado */
   {  
      /* inserção das mascáras nos campos de input */
-    
-     $("#datepicker").mask("0000-00-00", {placeholder: "AAAA-MM-DD"});
-
+     $("#datepicker").mask("00-00-0000", {placeholder: " DD-MM-AAAA"});
   });
    </script>
    <script type="text/javascript"> 
@@ -99,6 +97,8 @@
                 <option value="2">Cátia</option>
                 <option value="1">Rosane</option>
                 <option value="2">Karen</option>
+                </div>
+                
 
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container">
