@@ -41,20 +41,20 @@ function cadastraUsuario($email, $hash, $senha) {
         return $perguntas;
     }
 
-    function BuscarMunicipios() {
+    function BuscarEstados() {
         $conn = get_connection();
 
-        $sql = "SELECT * FROM municipio";
+        $sql = "SELECT * FROM estados";
         $result = mysqli_query($conn, $sql);
 
-        $municipios = [];
+        $estados = [];
 
         if(mysqli_query($conn, $sql)){
             while($linha = mysqli_fetch_assoc($result))
             {
-                $municipio["id"] = $linha["id_municipio"];
-                $municipio["municipios"] =  $linha["nome_municipio"];
-                array_push($municipios, $municipio);
+                $estado["id"] = $linha["id_municipio"];
+                $estado["municipios"] =  $linha["nome_municipio"];
+                array_push($estados, $estado);
             }
         } else{
             die("Erro ao efetuar cadastro $sql. " . mysqli_error($conn));
@@ -62,7 +62,7 @@ function cadastraUsuario($email, $hash, $senha) {
         
         mysqli_close($conn);
 
-        return $municipios;
+        return $estados;
     }
 
 ?>
