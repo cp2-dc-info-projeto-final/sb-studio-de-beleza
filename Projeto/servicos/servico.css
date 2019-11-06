@@ -43,7 +43,7 @@ height:30%;
   background-image: linear-gradient(to right, rgb(201, 81, 81), rgb(238, 53, 53));
   color: #ddd;
   padding: 2rem;
-  margin-top: 50%;
+  margin-top: 10%;
 }
 a {
     color: #aaa;
@@ -54,6 +54,17 @@ hr {
     color: neutral;
     line-height: 1.5;
 }
+
+.redessociais {
+  width: 2%;
+}
+.navbar-nav{
+  font-size: 120%;  
+}
+.btn-right {
+  margin-left: auto;
+}
+   
 
 
 .flip-card {
@@ -100,4 +111,9 @@ hr {
   background-color: #DCDCDC;
   color: #707070;
   font-family: arial, verdana, sans-serif;
+}
+.linha 
+{
+  display: inline-block;
+  margin-left: 1.2%;
 }
