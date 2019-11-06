@@ -32,11 +32,10 @@ INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sex
 
 drop table if exists Servico;
 CREATE TABLE Servico (
-    id_servico int AUTO_INCREMENT,
+    id_servico int AUTO_INCREMENT PRIMARY KEY,
     nome_servico VARCHAR (50),
     preco_servico double,
-    duracao time,
-    PRIMARY KEY (id_servico)
+    duracao time
 );
 
 drop table if exists Agendamento;
