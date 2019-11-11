@@ -16,7 +16,7 @@
      /* inserção das mascáras nos campos de input */
      $("#cCpf").mask("000.000.000-00", {placeholder: " 9 dígitos + 2 dígitos"});
      $("#datepicker").mask("00-00-0000", {placeholder: " DD-MM-AAAA"});
-     $("#cTelefone").mask("(00) 000000000", {placeholder: " (DDD)"});
+     $("#cTelefone").mask("(00) 00000-0000", {placeholder: " (DDD)"});
   });
    </script>
    <script type="text/javascript"> 

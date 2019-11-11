@@ -2,14 +2,14 @@ body > div
 {
    transition: all 0.3s ease;           
    font-family: Verdana, serif;
-   color:black;
+   color:white;
    letter-spacing:2px;          
 }
 body /* estilização do esqueleto da página */
 { 
   background-color:#fcf0eb; 
   position:absolute;
-  margin: 0;
+  margin:0;
   padding:0;  
 }
 #logo_studio /* definir altura e largura (respectivamente) do logo situado no topo da página */ 
@@ -111,7 +111,7 @@ width: 160px;
 
 }
 #menu a{
-display:block;
+display: block;
 line-height: 46px;
   text-align: center;
 text-decoration : none;

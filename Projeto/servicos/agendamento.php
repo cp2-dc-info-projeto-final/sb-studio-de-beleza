@@ -39,75 +39,78 @@
               </div>
             </div>
           </nav>
+
+          <div class="icone_usuariodiv"> 
+       	<img id="icone_perfil_usuario" src="../fotos_icones/icone.png" width="120"> 
+        	<h1 align="center">@Usuário</h1>
+         <p align="center" id="texto-iconeusuario">Cliente assíduo(a) do Studio de Beleza Evelyn Marins</p>  
+      </div>
         
         	<h1 id="titulo">Olá, caro visitante!</h1>
         	<p id="subtitulo" align="justify"><b>É um prazer tê-lo acessando o nosso site!</b> <br><br> Você sabia que agora fazer o <b>agendamento</b> dos nossos serviços está bem mais fácil? <br><br> Para isso, é preciso que você possua um cadastro em nosso sistema. Caso não possua, <a href="../cadastro/CadastroView.php"><b>faça-o agora mesmo!</b></a></p>
 
       </div>
       <div>
+      
+      <div class='alinhar'>
 
-
-<div class='form-group col-md-6'>
+<div class="confirma cadastro">
+<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../servicos/agendamento.php">Confirmar Cadastro</a>
+</div>
 
 <td> <label for="datepicker">Data desejada para a realização do procedimento:</label>
-           </td>
-            <td align="left">
-             <input type="text" id="datepicker" name="tCalendario">
-          
-            </td>
-          
-            <div>
-  <label>Serviço desejado:</label>
-  <select class="form-control form-control-sm">
-  
-               <option value="">Selecione</option>      
-	<option value="corte">Corte R$30,00</option>
-    <option value="reconstrucao">Reconstrução R$45,00</option>
-    <option value="hidratacao">Hidratação R$20,00</option>
-    <option value="coloracaop">Coloração R$40,00 (Pequeno)</option>
-    <option value="coloracaom">Coloração R$50,00 (Médio)</option>
-    <option value="coloracaog">Coloração R$60,00 (Grande)</option>
-    <option value="mechap">Mechas R$70,00 (Pequeno)</option>
-    <option value="mecham">Mechas R$85,00 (Médio)</option>
-    <option value="mechag">Mechas R$100 (Grande)</option>
-    <option value="designss">Design de sobrancelha simples R$15,00</option>
-    <option value="designsh">Design de sobrancelha com aplicação de hena R$20,00</option>
-    <option value="spape">Spa dos pés R$40,00</option>
-    <option value="pes">Pés R$15,00</option>
-    <option value="maos">Mãos R$15,00</option>
-    <option value="pemao">Pés e mãos R$25,00</option>
-    <option value="acrigelc">Acrigel R$60,00 (Colocação)</option>
-    <option value="acrigelm">Acrigel R$30,00 (Manutenção)</option>
-    <option value="fibrac">Fibra de vidro R$120,00 (Colocação)</option>
-    <option value="fibram">Fibra de vidro R$60,00 (Manutenção)</option>
-   
-    </select>
-         
+ </td>
+  <td align="left">
+   <input type="text" id="datepicker" name="tCalendario">
+
+  </td>
+
+  <div>
+<label>Serviço desejado:</label>
+<select class="form-control form-control-sm">
+
+     <option value="">Selecione</option>      
+<option value="corte">Corte R$30,00</option>
+<option value="reconstrucao">Reconstrução R$45,00</option>
+<option value="hidratacao">Hidratação R$20,00</option>
+<option value="coloracaop">Coloração R$40,00 (Pequeno)</option>
+<option value="coloracaom">Coloração R$50,00 (Médio)</option>
+<option value="coloracaog">Coloração R$60,00 (Grande)</option>
+<option value="mechap">Mechas R$70,00 (Pequeno)</option>
+<option value="mecham">Mechas R$85,00 (Médio)</option>
+<option value="mechag">Mechas R$100 (Grande)</option>
+<option value="designss">Design de sobrancelha simples R$15,00</option>
+<option value="designsh">Design de sobrancelha com aplicação de hena R$20,00</option>
+<option value="spape">Spa dos pés R$40,00</option>
+<option value="pes">Pés R$15,00</option>
+<option value="maos">Mãos R$15,00</option>
+<option value="pemao">Pés e mãos R$25,00</option>
+<option value="acrigelc">Acrigel R$60,00 (Colocação)</option>
+<option value="acrigelm">Acrigel R$30,00 (Manutenção)</option>
+<option value="fibrac">Fibra de vidro R$120,00 (Colocação)</option>
+<option value="fibram">Fibra de vidro R$60,00 (Manutenção)</option>
+
+</select>
+
+<div>
+<label>Selecione o profissional</label>
+<select class="form-control form-control-sm" name="tTipoUsuario" required>
+<option value="">Selecione</option>
+      <option value="1">Não tenho preferência de profissional</option>
+      <option value="2">Andressa</option>
+      <option value="1">Evelyn</option>
+      <option value="2">Cátia</option>
+      <option value="1">Rosane</option>
+      <option value="2">Karen</option>
+      </div>
+  </div>
+
+  <div class="confirma cadastro">
+<a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../servicos/agendamento.php">Confirmar Cadastro</a>
+</div>
 
 </div>
-                    
-      
-  <div>
-  <label>Selecione o profissional</label>
-  <select class="form-control form-control-sm" name="tTipoUsuario" required>
-  <option value="">Selecione</option>
-                <option value="1">Não tenho preferência de profissional</option>
-                <option value="2">Andressa</option>
-                <option value="1">Evelyn</option>
-                <option value="2">Cátia</option>
-                <option value="1">Rosane</option>
-                <option value="2">Karen</option>
-                </div>
-                
 
-                <div class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                      <h1 class="display-4">Localize-nos</h1>
-                      <p class="lead">Consulte o endereço da nossa unidade com a ajuda do Google Maps abaixo</p>
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d730.2986211680335!2d-43.43329372593754!3d-22.710603162729317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x996893d7b6ff85%3A0x2b3a26f4ef7882f2!2sR.+Jos%C3%A9+Ferreira+Murro%2C+320+-+Miguel+Couto%2C+Nova+Igua%C3%A7u+-+RJ%2C+26070-527!5e0!3m2!1spt-BR!2sbr!4v1562716100684!5m2!1spt-BR!2sbr" width="61%" height="350" frameborder="0" style="border:0" allowfullscreen class="div1" id="iframe1"></iframe>
-                    </div>
-                  </div>              
-           
 <footer class="footer">
     <div class="row">
       <div class="col-6">
