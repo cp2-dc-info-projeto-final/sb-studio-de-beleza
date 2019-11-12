@@ -1,6 +1,7 @@
 body>div {
     transition: all 0.3s ease;
     color: black;
+    background-color: #fcf0eb;
 }
 
 body
@@ -52,6 +53,7 @@ body
     margin-left: 296px;
     color: #4a4a49;
     margin-top: 3%;
+    font-family: arial, verdana, sans-serif;
 }
 
 #subtitulo {
@@ -60,6 +62,7 @@ body
     color: #4a4a49;
     margin-top: 3%;
     font-size: 25px;
+    font-family: arial, verdana, sans-serif;
 }
 
 .ui-datepicker-header {
