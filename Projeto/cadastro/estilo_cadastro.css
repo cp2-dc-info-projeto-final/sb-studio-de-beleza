@@ -70,21 +70,19 @@ body
 }
 
 .footer {
-    background-color: #e4423b;
-    color: white;
-    padding-bottom: 12px;
-    font-family: lato, arial;
-    font-size: 15px;
-    margin-top: -8%;
+    background-image: linear-gradient(to right, rgb(201, 81, 81), rgb(238, 53, 53));
+    color: #ddd;
+    padding: 2rem;
+    margin-top: 15%;
 }
 
 hr {
-    border: 0;
-    height: 4px;
-    width: 55%;
-    background: #f8998e;
-    background-image: linear-gradient(to right, #f1af09, #f8998e, #f1af09);
+    border: 10%;
+    height: 1px;
+    color: neutral;
+    line-height: 1.5;
 }
+  
 
 #itens_rodape {
     padding-top: 1%;
