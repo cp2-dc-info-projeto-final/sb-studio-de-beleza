@@ -40,12 +40,13 @@ CREATE TABLE Servico (
 
 drop table if exists Agendamento;
 CREATE table agendamento (
-    id_agend int PRIMARY KEY,
+    id_agend int AUTO_INCREMENT PRIMARY KEY,
     id_cliente int,
     id_servico int,
     id_func int,
-    data_hora_inicio datetime,
-    data_hora_fim datetime,
+    data_agend date,
+    hora_inicio time,
+    hora_fim time
     FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente),
     FOREIGN KEY(id_servico) REFERENCES servico(id_servico),
     FOREIGN KEY(id_func) REFERENCES funcionario(id_func)
