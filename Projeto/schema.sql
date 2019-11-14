@@ -32,32 +32,21 @@ INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sex
 
 drop table if exists Servico;
 CREATE TABLE Servico (
-<<<<<<< HEAD
     id_servico int AUTO_INCREMENT PRIMARY KEY,
     nome_servico VARCHAR (50),
     preco_servico double,
     duracao time
-=======
-    id_servico int AUTO_INCREMENT  PRIMARY KEY ,
-    nome_servico VARCHAR (50),
-    preco_servico double,
-    duracao time,
-    PRIMARY KEY (id_servico)
-<<<<<<< HEAD
-=======
->>>>>>> 5460643573260e396436c69ce5ea3d9d52a653f5
->>>>>>> 7e4a65259439e8d19dfebb15a4589161a96cc55a
->>>>>>> 49c452a1762648d82ec1e97f1ca11f690acfc5be
 );
 
 drop table if exists Agendamento;
 CREATE table agendamento (
-    id_agend int PRIMARY KEY,
+    id_agend int AUTO_INCREMENT PRIMARY KEY,
     id_cliente int,
     id_servico int,
     id_func int,
-    data_hora_inicio datetime,
-    data_hora_fim datetime,
+    data_agend date,
+    hora_inicio time,
+    hora_fim time
     FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente),
     FOREIGN KEY(id_servico) REFERENCES servico(id_servico),
     FOREIGN KEY(id_func) REFERENCES funcionario(id_func)
@@ -85,53 +74,4 @@ CREATE TABLE Pergunta (
 );
 INSERT INTO pergunta (pergunta) VALUES 
 ('Qual era o seu apelido de infância?'),
-('Qual é o seu livro de infância preferido?'),
-('Qual era o nome do seu primeiro animal de estimação?'),
-('Qual o apelido de seu filho mais novo?'),
-('Qual o apelido de seu filho mais velho?');
-
-drop table if exists recuperacao;    
-CREATE TABLE recuperacao (
-    id_usuario int,
-    id_pergunta int,
-    resposta VARCHAR (255),
-    PRIMARY KEY(id_usuario, id_pergunta),
-    FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
-    FOREIGN KEY (id_pergunta) REFERENCES usuario(id_pergunta)
-);
-
-INSERT INTO recuperacao (id_usuario, id_pergunta, resposta) VALUES (1, 2, 'Smiliguindo');
-
-CREATE TABLE estados (
-    id_municipio int AUTO_INCREMENT,
-    nome_municipio VARCHAR (100),
-    PRIMARY KEY (id_municipio)
-);
-INSERT INTO estados (nome_municipio) VALUES 
-('Acre'),
-('Alagoas'),
-('Amapá'),
-('Amazonas'),
-('Bahia'),
-('Ceará'),
-('Distrito Federal'),
-('Espírito Santo'),
-('Goiás'),
-('Maranhão'),
-('Mato Grosso'),
-('Mato Grosso do Sul'),
-('Minas Gerais'),
-('Pará'),
-('Paraíba'),
-('Paraná'),
-('Pernambuco'),
-('Piauí'),
-('Rio Grande do Norte'),
-('Rio Grande do Sul'),
-('Rio de Janeiro'),
-('Rondônia'),
-('Roraima'),
-('Santa Catarina'),
-('São Paulo'),
-('Sergipe'),
-('Tocantins');
+('Qual é o seu livro de infância preferido?');

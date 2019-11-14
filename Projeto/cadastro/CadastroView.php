@@ -87,104 +87,108 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
                 session_unset();
             }
         ?>
-   <h1 class="card-title">Informações pessoais</h1>
-   <div class="form-row">
-   <div class='form-group col-md-6'>
-   <label>Nome</label>
-   <input type="text" name="tNome" class="form-control form-control-sm" required>
-</div>
-<div class='form-group col-md-6'>
-<label>Data de nascimento</label>
-<input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
-</div>
-</div>
-<div class="form-row">
-<div class='form-group col-md-6'>
-<label>CPF</label>
-<input type="text" name="tCpf" id="cCpf" class="form-control form-control-sm"> 
-</div>
-<div class='form-group col-md-6'>
-   <label>Sexo</label>
-   <select class="form-control form-control-sm" name="tSexo">
-  <option value="">Selecione</option>
-                <option value="F">Feminino</option>
-                <option value="M">Masculino</option>
-</select>
-</div>
-</div>
-<div class="form-row">
-<div class='form-group col-md-6'>
-<label>Telefone</label>
-<input type="text" name="tTelefone" id="cTelefone" class="form-control form-control-sm" required>
-</div>
-   <div class='form-group col-md-6'>
-<label>Estado</label>
-<select name="tEstado"  class="form-control form-control-sm" required>
-<option value="">Selecione</option>
-                     <?php
-                        require "CadastroCtrl.php";
-                        $estados = controle_listar_estados();
-                        foreach ($estados as $estado)
-                        {
-                           echo "<option value='". $estado['id'] . "'>" . $estado['municipios']. "</option>";
-                        }
-                     ?>
-                   </select>
-                     </div>
-                     <div class='form-group col-md-6'>
-<label>Município</label>
-<input type="text" name="tMunicipio" id="cMunicipio" class="form-control form-control-sm" required>
-</div>
-                    
-                     </div>
-      <h2 class="card-title">Informações de login</h2>
-      <div class="form-group">
-    <label>Endereço de email</label>
-    <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email" name="tEmail" required>
-  </div>
+<h1 class="card-title">Informações pessoais</h1>
   <div class="form-row">
     <div class='form-group col-md-6'>
+      <label>Nome</label>
+      <input type="text" name="tNome" class="form-control form-control-sm" required>
+    </div>
+    <div class='form-group col-md-6'>
+      <label>Data de nascimento</label>
+      <input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+  <div class='form-group col-md-6'>
+    <label>CPF</label>
+    <input type="text" name="tCpf" id="cCpf" class="form-control form-control-sm"> 
+  </div>
+  <div class='form-group col-md-6'>
+    <label>Sexo</label>
+      <select class="form-control form-control-sm" name="tSexo">
+        <option value="">Selecione</option>
+          <option value="F">Feminino</option>
+          <option value="M">Masculino</option>
+      </select>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class='form-group col-md-6'>
+    <label>Telefone</label>
+    <input type="text" name="tTelefone" id="cTelefone" class="form-control form-control-sm" required>
+  </div>
+  <div class='form-group col-md-6'>
+    <label>Estado</label>
+    <select name="tEstado"  class="form-control form-control-sm" required>
+      <option value="">Selecione</option>
+          <?php
+          require "CadastroCtrl.php";
+          $estados = controle_listar_estados();
+          foreach ($estados as $estado)
+          {
+          echo "<option value='". $estado['id'] . "'>" . $estado['municipios']. "</option>";
+          }
+          ?>
+    </select>
+  </div>
+</div>
+
+<div class='form-group col-md-6'>
+  <label>Município</label>
+  <input type="text" name="tMunicipio" id="cMunicipio" class="form-control form-control-sm" required>
+</div>
+<h2 class="card-title">Informações de login</h2>
+<div class="form-group">
+  <label>Endereço de email</label>
+  <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email" name="tEmail" required>
+</div>
+
+<div class="form-row">
+  <div class='form-group col-md-6'>
     <label>Senha</label>
     <input type="password" class="form-control form-control-sm" id="exampleInputPassword1" placeholder="Senha" maxlength="8" name="tSenha" required>
     <small class="form-text text-muted">A senha deverá possuir apenas 8 dígitos</small>
-</div>
-    <div class='form-group col-md-6'>
+  </div>
+  <div class='form-group col-md-6'>
     <label>Confirme a senha</label>
     <input type="password" class="form-control form-control-sm" id="exampleInputPassword2" placeholder="Confirme a senha" maxlength="8"name="tConfirmaSenha" required>
-</div>
+  </div>
 </div>  
-  <div>
-  <label>Selecione o tipo de usuário</label>
-  <select class="form-control form-control-sm" name="tTipoUsuario" required>
-  <option value="">Selecione</option>
+<div>
+    <label>Selecione o tipo de usuário</label>
+    <select class="form-control form-control-sm" name="tTipoUsuario" required>
+      <option value="">Selecione</option>
                 <option value="1">Cliente</option>
                 <option value="2">Funcionário</option>
-</select>
-</div><br>
+    </select>
+</div>
+<br>
 <div class="form-row"> 
-<div class='form-group col-md-6'>
-   <label>Selecione uma pergunta de segurança</label>
-<select name="tPergunta"  class="form-control form-control-sm" required>
-                     <option value="">Selecione</option>
-                     <?php
-                        $perguntas = controle_listar_perguntas();
-                        foreach ($perguntas as $pergunta)
-                        {
-                           echo "<option value='". $pergunta['id'] . "'>" . $pergunta['pergunta']. "</option>";
-                        }
-                     ?>
-                   </select>
-                     </div>
-<div class='form-group col-md-6'>
-<label>Resposta</label>
-<input type="text" name="tResposta" class="form-control form-control-sm" required>
-                     </div>
-                     </div>
+    <div class='form-group col-md-6'>
+      <label>Selecione uma pergunta de segurança</label>
+      <select name="tPergunta"  class="form-control form-control-sm" required>
+        <option value="">Selecione</option>
+            <?php
+            $perguntas = controle_listar_perguntas();
+            foreach ($perguntas as $pergunta)
+              {
+                echo "<option value='". $pergunta['id'] . "'>" . $pergunta['pergunta']. "</option>";
+              }
+            ?>
+      </select>
+    </div>
+    <div class='form-group col-md-6'>
+      <label>Resposta</label>
+      <input type="text" name="tResposta" class="form-control form-control-sm" required>
+    </div>
+</div>
+
 <input class="btn btn-outline-danger" type="submit" value="Enviar">
 <input class="btn btn-outline-danger" type="reset" value="Limpar">
-</div>
-</form>
 
+</form>
 
 <footer class="footer">
     <div class="row">
@@ -201,7 +205,7 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
     </div>
     <hr></hr>
     <div class="row">
-      <div class="col-12"><a href="https://pt-br.facebook.com/studioevelynmarins/"><img src="../fotos_icones/facebook-png-cinza-2.png" title="Facebook"  class="redessociais"/
+      <div class="col-12"><a href="https://pt-br.facebook.com/studioevelynmarins/"><img src="../fotos_icones/facebook-png-cinza-2.png" title="Facebook"  class="redessociais"
         style="width:40px;height:40px;"></a>
     </div>
     </div>
