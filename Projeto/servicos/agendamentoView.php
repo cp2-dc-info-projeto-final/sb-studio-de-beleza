@@ -10,6 +10,12 @@
     <script src="../jquery_javascript/jquery.mask.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <?php
+
+  require "agendamentoCtrl.php";
+
+  ?>
   
 
   <script>  
@@ -71,53 +77,63 @@
       <select>
         <option value="">Selecione</option>      
         <option value="corte">Corte R$30,00</option>
+        <input type="text" name="tServico" class="form-control form-control-sm" required>
         <option value="reconstrucao">Reconstrução R$45,00</option>
+        <input type="text" name="tServico" class="form-control form-control-sm" required>
         <option value="hidratacao">Hidratação R$20,00</option>
-        <option value="coloracaop">Coloração R$40,00 (Pequeno)</option>
-        <option value="coloracaom">Coloração R$50,00 (Médio)</option>
-        <option value="coloracaog">Coloração R$60,00 (Grande)</option>
-        <option value="mechap">Mechas R$70,00 (Pequeno)</option>
-        <option value="mecham">Mechas R$85,00 (Médio)</option>
-        <option value="mechag">Mechas R$100 (Grande)</option>
-        <option value="designss">Design de sobrancelha simples R$15,00</option>
+        <input type="text" name="tServico" class="form-control form-control-sm" required>
+        <option value="coloracao">Coloração R$50,00</option>
+        <input type="text" name="tServico" class="form-control form-control-sm" required>
+        <option value="mecha">Mechas R$85,00</option>
+        <input type="text" name="tServico" class="form-control form-control-sm" required>
+        <option value="designs">Design de sobrancelha R$15,00</option>
+        <input type="text" name="tServico" class="form-control form-control-sm" required>
         <option value="designsh">Design de sobrancelha com aplicação de hena R$20,00</option>
-        <option value="spape">Spa dos pés R$40,00</option>
+        <input type="text" name="tServico" class="form-control form-control-sm" required>
         <option value="pes">Pés R$15,00</option>
+        <input type="text" name="tServico" class="form-control form-control-sm" required>
         <option value="maos">Mãos R$15,00</option>
+        <input type="text" name="tServico" class="form-control form-control-sm" required>
         <option value="pemao">Pés e mãos R$25,00</option>
+        <input type="text" name="tServico" class="form-control form-control-sm" required>
         <option value="acrigelc">Acrigel R$60,00 (Colocação)</option>
+        <input type="text" name="tServico" class="form-control form-control-sm" required>
         <option value="acrigelm">Acrigel R$30,00 (Manutenção)</option>
-        <option value="fibrac">Fibra de vidro R$120,00 (Colocação)</option>
-        <option value="fibram">Fibra de vidro R$60,00 (Manutenção)</option>    
+        <input type="text" name="tServico" class="form-control form-control-sm" required>  
       </select>
   </div>
-  <div class='form-group col-md-6'>
-      <h3>Selecione o profissional</h3>
-        <select>
-          <option value="">Selecione</option>
-          <option value="1">Não tenho preferência de profissional</option>
-          <option value="2">Andressa</option>
-          <option value="1">Evelyn</option>
-          <option value="2">Cátia</option>
-          <option value="1">Rosane</option>
-          <option value="2">Karen</option>
-        </select>
+  <div class='form-group col-md-6'>      
+        <h3>Escolha o melhor dia pra você</h3>
+    <input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
   </div>
 </div>
 
 <div class="form row">
   <div class="form-group col-md-6">
-    <h3>Escolha o melhor dia pra você</h3>
-    <input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
-  </div>
-  <div class="form-group col-md-6">
-    date("Y-m-d-D"); <!-- colocar 1 hora para cada procedimento e fazer escolhendo o profissional e depois aparecendo data e horário !--> 
+    <h3>Selecione o profissional</h3>
+          <select>
+            <option value="">Selecione</option>
+            <option value="andre">Andressa</option>
+            <input type="text" name="tAndre" class="form-control form-control-sm" required>
+            <option value="eve">Evelyn</option>
+            <input type="text" name="tEve" class="form-control form-control-sm" required>
+            <option value="cat">Cátia</option>
+            <input type="text" name="tCat" class="form-control form-control-sm" required>
+            <option value="rosa">Rosane</option>
+            <input type="text" name="tRosa" class="form-control form-control-sm" required>
+            <option value="kar">Karen</option>
+            <input type="text" name="tKar" class="form-control form-control-sm" required>
+          </select>
   </div>
 </div>
 
 
 <div class="confirma agendamento">
+<<<<<<< HEAD:Projeto/servicos/agendamento.php
   <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../servicos/agendamento.php.html">Confirmar Agendamento</a>
+=======
+  <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../pagina_inicial/paginainicial.html">Confirmar Agendamento</a>
+>>>>>>> 10556fd222b7559e5753f794af839d6f1f2c5793:Projeto/servicos/agendamentoView.php
 </div>
 
 
