@@ -117,7 +117,7 @@
 
 
 <div class="confirma agendamento">
-  <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../servicos/agendamento.php.html">Confirmar Cadastro</a>
+  <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../servicos/agendamento.php.html">Confirmar Agendamento</a>
 </div>
 
 
