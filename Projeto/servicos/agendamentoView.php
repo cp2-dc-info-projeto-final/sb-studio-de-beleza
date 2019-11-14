@@ -129,11 +129,7 @@
 
 
 <div class="confirma agendamento">
-<<<<<<< HEAD:Projeto/servicos/agendamento.php
-  <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../servicos/agendamento.php.html">Confirmar Agendamento</a>
-=======
   <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../pagina_inicial/paginainicial.html">Confirmar Agendamento</a>
->>>>>>> 10556fd222b7559e5753f794af839d6f1f2c5793:Projeto/servicos/agendamentoView.php
 </div>
 
 
