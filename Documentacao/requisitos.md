@@ -27,26 +27,15 @@
 
     - [RNF05](#RNF05)
 
-    - [RNF06](#RNF06)
+    
 
 # Requisitos Funcionais
 
 ## RF01
 
-O sistema armazena informações dos clientes e funcionários para realizar cadastro e login
+O sistema armazena informações dos clientes para realizar cadastro e login
 
 + Informações dos Clientes:
-
-        1. Nome;
-        2. Sobrenome;
-        3. Data de Nascimento;
-        4. CPF;
-        5. Sexo;
-        6. Telefone para Contato;
-        7. Email;
-        8. Senha;
-
-+ Informações dos Funcionários:
 
         1. Nome;
         2. Sobrenome;
@@ -66,15 +55,12 @@ O sistema armazena informações dos clientes e funcionários para realizar cada
 
 + Será solicitado login e uma senha para agendamentos de serviços
 
+
 ## RF03
-
-+ Haverá uma diferenciação no login para redirecionar para a aba do administrador e funcionários.
-
-## RF04
 
 + O administrador poderá alterar os preços, cupons e agendamentos que são divulgados no site
 
-## RF05
+## RF04
 
 + O cliente terá a opção de fazer um agendamento online diretamente do site
 
@@ -83,8 +69,9 @@ O sistema armazena informações dos clientes e funcionários para realizar cada
         1. Serviço Desejado;
         2. Data de agendamento;
         3. Horário;
+        4. Funcionário desejado.
 
-## RF06
+## RF05
 
 + O sistema disponibilizará um menu que irá direcionar o usuário para o setor desejado
 
