@@ -11,7 +11,7 @@
     <script type="text/javascript" src="../jquery_javascript/traducao.js"></script>
     <script src="../jquery_javascript/jquery.mask.min.js"></script>
    <script>  
-     $(document).ready(function()) /* evento em Jquery que espera instantaneamente o documento html ser carregado para ser executado */
+     $(document).ready(function() /* evento em Jquery que espera instantaneamente o documento html ser carregado para ser executado */
   {  
      /* inserção das mascáras nos campos de input */
      $("#cCpf").mask("000.000.000-00", {placeholder: " 9 dígitos + 2 dígitos"});
