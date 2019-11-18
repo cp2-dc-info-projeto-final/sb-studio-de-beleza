@@ -11,14 +11,14 @@ if($link === false)
     echo "Hello World!";
 }
 
-$id_servico = $_POST['tServico']; 
-$id_func = $_POST['tAndre']; $_POST['tEve']; $_POST['tCat']; $_POST['tRosa']; $_POST['tKar'];
-$data_agend = $_POST['tCalendario'];
-$hora_inicio = $_POST['t'];
-$hora_fim = $_POST['t'];
 
 session_start();
 
+function cadastraAgendamento($id_servico, $id_func, $data_agend, $hora_inicio) {
+  $sql = "INSERT INTO agendamento(id_servico, id_func, data_agend, hora_inicio, duracao) VALUES ('$id_servico, $id_func, $data_agend, $hora_inicio, $duracao')";  
+  $result = mysqli_query($link, $sql); //armazenar o resultado da QUERY
+  $erro = "";
+}
 
 $sql = "SELECT data_agend FROM agendamento WHERE data_agend = '$data_agend'";
 $result = mysqli_query($link, $sql); //armazenar o resultado da QUERY

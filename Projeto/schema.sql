@@ -46,7 +46,7 @@ CREATE table agendamento (
     id_func int,
     data_agend date,
     hora_inicio time,
-    hora_fim time
+    duracao time
     FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente),
     FOREIGN KEY(id_servico) REFERENCES servico(id_servico),
     FOREIGN KEY(id_func) REFERENCES funcionario(id_func)
