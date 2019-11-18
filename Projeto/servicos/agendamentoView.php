@@ -76,6 +76,10 @@
 
 
       <!-- -------------------------------------------------------------- !-->
+<?php
+
+}
+?>
 
 <form class="form-agendamento">
 <div class="form row">
@@ -122,15 +126,11 @@
     <h3>Escolha o horário desejado:</h3>
       <select>
         <option value="">Selecione</option>
-        <option value=""> 
-          <?php
-            echo $horario
-            ?></option>          
+        <option value="">  </option>         
       </select>
-
+      
   </div>
 </div>
-
 
 <div class="confirma agendamento">
   <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../pagina_inicial/paginainicial.html">Confirmar Agendamento</a>

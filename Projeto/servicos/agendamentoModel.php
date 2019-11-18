@@ -15,45 +15,37 @@ if($link === false)
 session_start();
 
 function cadastraAgendamento($id_servico, $id_func, $data_agend, $horario) {
-  $sql = "INSERT INTO agendamento(id_servico, id_func, data_agend, hora_inicio) VALUES ('$id_servico, $id_func, $data_agend, $horario')";  
-  $result = mysqli_query($link, $sql); //armazenar o resultado da QUERY
-  $erro = "";
+  $sql = "INSERT INTO Agendamento (id_servico, id_func, data_agend, hora_inicio) VALUES ('$id_servico', '$id_func', '$data_agend', '$horario')"; 
+  $result = mysqli_query($link, $sql);
+}
+//----------------------------------------------------------------------------------------
+
+$tempoocupado = "SELECT hora_inicio FROM Agendamento WHERE id_func = '.$id_func.' AND data_agend = '.$data_agend.'";
+$result = mysqli_query($link, $tempoocupado);
+
+while ($row = mysql_fetch_row($result)) {
+  $row['hora_inicio'];
 }
 
-//----------------------------------------------------------------------------------------
-$tempoocupado = "SELECT hora_inicio FROM Agendamento";
 
 $hora = array ('9:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00');
+$i = 0;
 
-if ($id_servico == "tServico" && $id_func == "tFunc"){
-  if ($data_agend != $tempoocupado){
-    for ($i; 0<=7; $i++){
-      if ($hora[$i] != $tempoocupado){
-        $horario = $hora[$i];
-      }
-    }
+for ($i; 0 <= 7 ; $i--){
+  if ($hora != $tempoocupado){ 
+    $horario = $hora[$i];
+    $i = $i + 2;
+    echo ($horario);
   }
+  Break;
 }
-
-
-
-
-
-
 
 
 
 
 //------------------------------------------------------------------------------------------
-$sql = "SELECT data_agend FROM agendamento WHERE data_agend = '$data_agend'";
-$result = mysqli_query($link, $sql); //armazenar o resultado da QUERY
-$erro = "";
 
 
-  // Free result set
-{
-  mysqli_free_result($result); 
-}
 
 mysqli_close($link);
 ?>
