@@ -27,6 +27,7 @@
      /* inserção das mascáras nos campos de input */
      $("#datepicker").mask("00-00-0000", {placeholder: " DD-MM-AAAA"}); 
   });
+  
    </script>
    <script type="text/javascript"> 
      $(function() /* declaração para chamar o método DATEPICKER contido no arquivo jqueryUI, a partir do campo input datepicker */ 
@@ -109,21 +110,23 @@
     <h3>Selecione o profissional:</h3>
           <select>
             <option value="">Selecione</option>
-            <option value="tAndre">Andressa</option>         
-            <option value="tEve">Evelyn</option>          
-            <option value="tCat">Cátia</option>    
-            <option value="tRosa">Rosane</option>
-            <option value="tKar">Karen</option>
+            <option value="tFunc">Andressa</option>         
+            <option value="tFunc">Evelyn</option>          
+            <option value="tFunc">Cátia</option>    
+            <option value="tFunc">Rosane</option>
+            <option value="tFunc">Karen</option>
           </select>
   </div>
-</div>
 
-<div class="form row">
   <div class="form-group col-md-6">
     <h3>Escolha o horário desejado:</h3>
-          <select>
-          <input type="text" id="timepicker" name="tHorario" class="form-control form-control-sm" required>
-          </select>
+      <select>
+        <option value="">Selecione</option>
+        <option value=""> 
+          <?php
+            echo $horario
+            ?></option>          
+      </select>
 
   </div>
 </div>
