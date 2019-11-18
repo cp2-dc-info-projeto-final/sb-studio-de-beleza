@@ -22,7 +22,7 @@
      $(document).ready(function()) /* evento em Jquery que espera instantaneamente o documento html ser carregado para ser executado */
   {  
      /* inserção das mascáras nos campos de input */
-     $("#datepicker").mask("00-00-0000", {placeholder: " DD-MM-AAAA"});
+     $("#datepicker").mask("00-00-0000", {placeholder: " DD-MM-AAAA"}); 
   });
    </script>
    <script type="text/javascript"> 
@@ -76,54 +76,40 @@
     <h3>Serviço desejado:</h3>
       <select>
         <option value="">Selecione</option>      
-        <option value="corte">Corte R$30,00</option>
-        <input type="text" name="tServico" class="form-control form-control-sm" required>
-        <option value="reconstrucao">Reconstrução R$45,00</option>
-        <input type="text" name="tServico" class="form-control form-control-sm" required>
-        <option value="hidratacao">Hidratação R$20,00</option>
-        <input type="text" name="tServico" class="form-control form-control-sm" required>
-        <option value="coloracao">Coloração R$50,00</option>
-        <input type="text" name="tServico" class="form-control form-control-sm" required>
-        <option value="mecha">Mechas R$85,00</option>
-        <input type="text" name="tServico" class="form-control form-control-sm" required>
-        <option value="designs">Design de sobrancelha R$15,00</option>
-        <input type="text" name="tServico" class="form-control form-control-sm" required>
-        <option value="designsh">Design de sobrancelha com aplicação de hena R$20,00</option>
-        <input type="text" name="tServico" class="form-control form-control-sm" required>
-        <option value="pes">Pés R$15,00</option>
-        <input type="text" name="tServico" class="form-control form-control-sm" required>
-        <option value="maos">Mãos R$15,00</option>
-        <input type="text" name="tServico" class="form-control form-control-sm" required>
-        <option value="pemao">Pés e mãos R$25,00</option>
-        <input type="text" name="tServico" class="form-control form-control-sm" required>
-        <option value="acrigelc">Acrigel R$60,00 (Colocação)</option>
-        <input type="text" name="tServico" class="form-control form-control-sm" required>
-        <option value="acrigelm">Acrigel R$30,00 (Manutenção)</option>
-        <input type="text" name="tServico" class="form-control form-control-sm" required>  
+        <option value="tServico">Corte R$30,00</option>        
+        <option value="tServico">Reconstrução R$45,00</option>       
+        <option value="tServico">Hidratação R$20,00</option>       
+        <option value="tServico">Coloração R$50,00</option>       
+        <option value="tServico">Mechas R$85,00</option>        
+        <option value="tServico">Design de sobrancelha R$15,00</option>        
+        <option value="tServico">Design de sobrancelha com aplicação de hena R$20,00</option>        
+        <option value="tServico">Pés R$15,00</option>       
+        <option value="tServico">Mãos R$15,00</option>        
+        <option value="tServico">Pés e mãos R$25,00</option>        
+        <option value="tServico">Acrigel R$60,00 (Colocação)</option>        
+        <option value="tServico">Acrigel R$30,00 (Manutenção)</option>          
       </select>
   </div>
-  <div class='form-group col-md-6'>      
-        <h3>Escolha o melhor dia pra você</h3>
-    <input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
-  </div>
-</div>
-
-<div class="form row">
   <div class="form-group col-md-6">
     <h3>Selecione o profissional</h3>
           <select>
             <option value="">Selecione</option>
-            <option value="andre">Andressa</option>
-            <input type="text" name="tAndre" class="form-control form-control-sm" required>
-            <option value="eve">Evelyn</option>
-            <input type="text" name="tEve" class="form-control form-control-sm" required>
-            <option value="cat">Cátia</option>
-            <input type="text" name="tCat" class="form-control form-control-sm" required>
-            <option value="rosa">Rosane</option>
-            <input type="text" name="tRosa" class="form-control form-control-sm" required>
-            <option value="kar">Karen</option>
-            <input type="text" name="tKar" class="form-control form-control-sm" required>
+            <option value="tAndre">Andressa</option>         
+            <option value="tEve">Evelyn</option>          
+            <option value="tCat">Cátia</option>    
+            <option value="tRosa">Rosane</option>
+            <option value="tKar">Karen</option>
           </select>
+  </div>
+</div>
+
+<div class="form row">
+  <div class="form-group col-md-6">    
+    <h3>Escolha o melhor dia pra você</h3>
+    <input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
+  </div>
+  <div class="form-group col-md-6">
+
   </div>
 </div>
 
@@ -135,6 +121,7 @@
 
 </form>
 <!--  ------------------------------------------------------------  !-->
+
   <footer class="footer">
     <div class="row">
       <div class="col-6">
