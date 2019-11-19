@@ -29,7 +29,7 @@
         <a class="nav-link" href="#">Cadastrar</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Sair</a>
+      <a class="nav-link" href="../login/logout.php">Sair</a>
       </li>
     </ul>
   </div>
@@ -68,7 +68,7 @@
                         echo "<td>" . $cliente['sexo'] . "<br></td>";
                         echo "<td>" . $cliente['municipio'] . "<br></td>";
                         echo "<td>" . $cliente['estado'] . "<br></td>";
-                        echo "<td><a href='excluir.php?id=" . $cliente['id'] ."'>Excluir</a><br></td>";
+                        echo "<td><a href='excluir_cliente.php?id=" . $cliente['id'] ."'>Excluir</a><br></td>";
                         echo "</tr>";
                     }
             ?>
