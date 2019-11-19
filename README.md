@@ -31,18 +31,18 @@
 
 ## Casos de Uso
 Diagrama de Casos de Uso:
-![Diagrama de Casos de Uso](Documentacao/Diagrama_de_casos_de_uso.png)
+![Diagrama de Casos de Uso](Documentacao/Diagrama_de_casos_de-uso.png)
 
 [Especificação de Casos de Uso](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/casos-de-uso.md)
 
 ## Modelagem
 **Diagrama de Classes**
 
-![Diagrama de Classes](Documentacao/Diagrama-de-classes.png)
+![Diagrama de Classes](Documentacao/Diagrama_de_classes.png)
 
 **Diagrama Banco de Dados**
 
-![Diagrama Banco de Dados](Documentacao/Diagrama-banco-de-dados.png)
+![Diagrama Banco de Dados](Documentacao/Diagrama_de_banco_de_dados.png)
 
 [Script SQL](Projeto/schema.sql) 
 
