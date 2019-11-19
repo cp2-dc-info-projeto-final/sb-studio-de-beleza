@@ -31,7 +31,7 @@
 
 ## Casos de Uso
 Diagrama de Casos de Uso:
-![Diagrama de Casos de Uso](Documentacao/Diagrama_de_casos_de-uso.png)
+![Diagrama de Casos de Uso](Documentacao/Diagrama_de_casos_de_uso.png)
 
 [Especificação de Casos de Uso](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/casos-de-uso.md)
 
