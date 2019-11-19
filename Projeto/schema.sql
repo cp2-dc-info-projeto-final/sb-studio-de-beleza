@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS studiodebeleza;
 CREATE DATABASE studiodebeleza character set UTF8mb4 collate utf8mb4_bin;
 
-USE studiodebeleza;
+USE studiodebeleza;git
 
 drop table if exists usuario;    
 CREATE TABLE usuario (  
@@ -10,6 +10,7 @@ CREATE TABLE usuario (
     senha VARCHAR (255),
     PRIMARY KEY (id_usuario)
 );
+
 INSERT INTO usuario (email, senha) VALUES
 ('mceloemerson@gmail.com', '$2y$10$7bgXZylojDHX7sxd.Z4LPe30RYPmdLiuirsspEHBzsJ0Bkv8Thz6q');
 
@@ -70,6 +71,7 @@ CREATE TABLE Pergunta (
     pergunta VARCHAR (255),
     PRIMARY KEY (id_pergunta)
 );
+
 INSERT INTO pergunta (pergunta) VALUES 
 ('Qual era o seu apelido de infância?'),
 ('Qual é o seu livro de infância preferido?'),
@@ -94,6 +96,7 @@ CREATE TABLE estados (
     nome_municipio VARCHAR (100),
     PRIMARY KEY (id_municipio)
 );
+
 INSERT INTO estados (nome_municipio) VALUES 
 ('Acre'),
 ('Alagoas'),
