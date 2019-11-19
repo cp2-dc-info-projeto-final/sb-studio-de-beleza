@@ -10,6 +10,8 @@
 <link rel="stylesheet" type="text/css" href="formLogin.css"/> 
 </head>
 <body>
+<a href="../pagina_inicial/paginainicial.html" class="btn btn-primary btn-outline-danger" role="button" aria-pressed="true" id="btn_voltar">Voltar para a página inicial</a>
+
 <div class="login-form">
 	<h2 class="text-center" id="itens_titulo">Faça seu login agora mesmo</h2>
     <form action="LoginCtrl.php" method="post">
