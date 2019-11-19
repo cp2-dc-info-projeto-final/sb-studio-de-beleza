@@ -19,8 +19,6 @@ $hora_fim = $_POST['t'];
 
 session_start();
 
-<<<<<<< HEAD
-=======
 
 $sql = "SELECT data_agend FROM agendamento WHERE data_agend = '$data_agend'";
 $result = mysqli_query($link, $sql); //armazenar o resultado da QUERY
@@ -33,5 +31,4 @@ $erro = "";
 }
 
 mysqli_close($link);
->>>>>>> f2c97e509891c8c270ea73a89ab468c84b705c67
 ?>
