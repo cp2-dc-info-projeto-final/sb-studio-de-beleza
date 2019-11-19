@@ -13,7 +13,7 @@
 
     - [RF05](#RF05)
 
-    - [RF06](#RF06)
+    
 
 - [Requisitos Não Funcionais](#Requisitos-Não-Funcionais)
 
@@ -26,6 +26,8 @@
     - [RNF04](#RNF04)
 
     - [RNF05](#RNF05)
+
+    - [RNF06](#RNF06)
 
     
 
