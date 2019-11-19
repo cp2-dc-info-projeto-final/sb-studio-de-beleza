@@ -1,17 +1,17 @@
 <?php
 require "agendamentoModel.php";
 
+$link = mysqli_connect("localhost", "root", "", "studiodebeleza");
+
 $id_servico = $_POST['tServico']; 
 $id_func = $_POST['tFunc'];
 $data_agend = $_POST['tCalendario'];
 $horario = $_POST['tHorario'];
 $selecione = $_POST['tSelecione'];
-$selecionefunc = $_POST['tSelecione1'];
+$selecione1 = $_POST['tSelecione1'];
 $nulo = $_POST['nulo'];
-$nulofunc = $_POST['nulofunc'];
+$nulofunc = $_POST['nulo1'];
 
 
-
-cadastraAgendamento($id_servico, $id_func, $data_agend, $horario, $selecione, $selecionefunc);
 
 ?>
