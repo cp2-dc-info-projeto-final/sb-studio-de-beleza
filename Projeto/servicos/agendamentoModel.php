@@ -14,14 +14,11 @@ if($link === false)
 
 session_start();
 
-<<<<<<< HEAD
-=======
 function cadastraAgendamento($id_servico, $id_func, $data_agend, $horario) {
   $sql = "INSERT INTO Agendamento (id_servico, id_func, data_agend, hora_inicio) VALUES ('$id_servico', '$id_func', '$data_agend', '$horario')"; 
   $result = mysqli_query($link, $sql);
 }
 //----------------------------------------------------------------------------------------
->>>>>>> 7a9b8aa9bd59283049010beb34f2233a6d4ed7a4
 
 $tempoocupado = "SELECT hora_inicio FROM Agendamento WHERE id_func = '.$id_func.' AND data_agend = '.$data_agend.'";
 $result = mysqli_query($link, $tempoocupado);
