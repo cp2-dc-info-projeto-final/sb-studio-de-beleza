@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS studiodebeleza;
 CREATE DATABASE studiodebeleza character set UTF8mb4 collate utf8mb4_bin;
 
-USE studiodebeleza;git
+USE studiodebeleza;
 
 drop table if exists usuario;    
 CREATE TABLE usuario (  
@@ -28,7 +28,11 @@ CREATE TABLE Funcionario (
     FOREIGN KEY (id_func) REFERENCES usuario(id_usuario)
 );
 INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
-(1,'Emerson Marcelo', '21 000000000', '2000-11-02', '00000000000', 'M', 'Duque de Caxias', 'RJ');
+(1,'Andressa', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
+(2,'Evelyn', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
+(3,'Cátia', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
+(4,'Rosane', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
+(5,'Karen', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ');
 
 drop table if exists Servico;
 CREATE TABLE Servico (
@@ -37,19 +41,19 @@ CREATE TABLE Servico (
     preco_servico double,
     duracao time
 );
-
-drop table if exists Agendamento;
-CREATE table agendamento (
-    id_agend int PRIMARY KEY,
-    id_cliente int,
-    id_servico int,
-    id_func int,
-    data_hora_inicio datetime,
-    data_hora_fim datetime,
-    FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente),
-    FOREIGN KEY(id_servico) REFERENCES servico(id_servico),
-    FOREIGN KEY(id_func) REFERENCES funcionario(id_func)
-);
+INSERT INTO Servico(nome_servico, preco_servico, duracao) VALUES
+('Corte', '30.00', '1:00'),
+('Reconstrução','45.00','1:00'),
+('Hidratação', '20.00' ,'1:00'),
+('Coloração', '50.00','1:00'),
+('Mechas','85.00' ,'1:00'),
+('Design de sobrancelha', '15.00' ,'1:00'),
+('Design de sobrancelha com aplicação de hena', '20.00' ,'1:00'),
+('Pés', '15.00' ,'1:00'),
+('Mãos', '15.00' ,'1:00'),
+('Pés e mãos', '25.00' ,'1:00'),
+('Acrigel (Colocação)', '25.00' ,'1:00'),
+('Acrigel (Manutenção)', '25.00' ,'1:00');
 
 drop table if exists Cliente;   
 CREATE TABLE Cliente (
@@ -60,11 +64,33 @@ CREATE TABLE Cliente (
     cpf VARCHAR (20),
     sexo VARCHAR (1),
     municipio VARCHAR (50),
-     estado VARCHAR (50),
+    estado VARCHAR (50),
     PRIMARY KEY (id_cliente),
     FOREIGN KEY (id_cliente) REFERENCES usuario(id_usuario)
 );
+INSERT INTO Cliente (id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
+(1,'Fabricia', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
+(2,'Ygor', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
+(3,'Alayne', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ');
 
+drop table if exists Agendamento;
+CREATE table agendamento (
+    id_agend int PRIMARY KEY,
+    id_cliente int,
+    id_servico int,
+    id_func int,
+    data_agend date,
+    hora_inicio time,
+    FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente),
+    FOREIGN KEY(id_servico) REFERENCES servico(id_servico),
+    FOREIGN KEY(id_func) REFERENCES funcionario(id_func)
+);
+
+INSERT INTO Agendamento (id_agend, id_cliente, id_servico, id_func, data_agend, hora_inicio) VALUES
+(1, 1, 2, 1, '2019-11-19','11:00'),
+(2, 2, 2, 1, '2019-11-19','11:00'),
+(3, 3, 5, 2, '2019-11-19','17:00');
+ 
 drop table if exists Pergunta;    
 CREATE TABLE Pergunta (    
     id_pergunta int AUTO_INCREMENT,

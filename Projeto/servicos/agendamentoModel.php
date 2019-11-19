@@ -1,53 +1,55 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "", "studiodebeleza");
+require_once("../connection_factory.php");
 
-// Check connection
-if($link === false)
-{
-    die("ERRO: Não foi possível conectar" . mysqli_connect_error());
-} else
-{
-    echo "Hello World!";
+function buscaServicos() {
+  $conn = get_connection();
+
+  $query = "SELECT id_servico, nome_servico, preco_servico FROM Servico";
+  $result = mysqli_query($conn, $query); 
+
+  $servicos = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
+  return $servicos;
 }
 
+function buscaFuncionario(){
+  $conn = get_connection();
+  $query = "SELECT id_func, nome_funcionario FROM Funcionario";
+  $result = mysqli_query($conn, $query); 
 
-session_start();
+  $funcionario = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
 
-function cadastraAgendamento($id_servico, $id_func, $data_agend, $horario, $selecione, $selecione1, $nulo, $nulofunc) {
-  $sql = "INSERT INTO Agendamento (id_servico, id_func, data_agend, hora_inicio) VALUES ('$id_servico', '$id_func', '$data_agend', '$horario')"; 
-  $result = mysqli_query($link, $sql);
+  return $funcionario;
+}
 
 //----------------------------------------------------------------------------------------
 
-  $tempoocupado = "SELECT hora_inicio FROM Agendamento WHERE id_func = '.$id_func.' AND data_agend = '.$data_agend.'";
-  $result = mysqli_query($link, $tempoocupado);
-
+function buscaHorario($data_agend, $nome_funcionario){
+  $conn = get_connection();
+  $tempoocupado = "SELECT hora_inicio FROM Agendamento where data_agend = $data_agend AND id_func = $nome_funcionario";
+  $result = mysqli_query($conn, $tempoocupado);
 
   $hora = array ('9:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00');
   $i = 0;
 
-  for ($i; 0 <= 7 ; $i--){
+  for ($i; $i <= 7 ; $i++){
     if ($hora != $tempoocupado){ 
       $horario = $hora[$i];
-      $i = $i + 2;
     }
-    Break;
   }
+
+  return $horario;
 
 // ---------------------------------------------------------------------------------------
 
-if ($selecione != $nulo && $selecione1 != $nulofunc){
-  function deixarOculto(){
-    document.getElementById('$data_agend').style.display == "none";
-   }
-}
-
 }
 
 
 
 
 
-mysqli_close($link);
+
+
 ?>

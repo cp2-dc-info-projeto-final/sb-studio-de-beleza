@@ -75,34 +75,41 @@
 <form action="agendamentoCtrl.php" method="POST" class="form-agendamento">
 <div class="form row">
   <div class='form-group col-md-6'>
-    <h3>Serviço desejado:</h3>
-      <select name="tSelecione"> 
-        <option name="nulo">Selecione</option>     
-        <option name="tServico">Corte R$30,00</option>        
-        <option name="tServico">Reconstrução R$45,00</option>       
-        <option name="tServico">Hidratação R$20,00</option>       
-        <option name="tServico">Coloração R$50,00</option>       
-        <option name="tServico">Mechas R$85,00</option>        
-        <option name="tServico">Design de sobrancelha R$15,00</option>        
-        <option name="tServico">Design de sobrancelha com aplicação de hena R$20,00</option>        
-        <option name="tServico">Pés R$15,00</option>       
-        <option name="tServico">Mãos R$15,00</option>        
-        <option name="tServico">Pés e mãos R$25,00</option>        
-        <option name="tServico">Acrigel R$60,00 (Colocação)</option>        
-        <option name="tServico">Acrigel R$30,00 (Manutenção)</option>          
-      </select>
+  <h3>Selecione o serviço:</h3>
+    <select name="tServico">
+      <option name="tServico"></option>
+    <?php
+     $servicos = buscaServicos();
+
+     foreach ($servicos as $servico) {
+
+    ?>
+
+      <option name="tServico" value="<?php echo $servico['id_servico'];?>"><?php echo ($servico['nome_servico'] . " - R$ " . $servico['preco_servico']); ?></option>
+    <?php
+     }
+
+    ?>
+
+    </select>
   </div>
 
 <div class="form-group col-md-6">
   <h3>Selecione o profissional:</h3>
-          <select name="tSelecione1">
-            <option name="nulofunc">Selecione</option>
-            <option name="tFunc">Andressa</option>         
-            <option name="tFunc">Evelyn</option>          
-            <option name="tFunc">Cátia</option>    
-            <option name="tFunc">Rosane</option>
-            <option name="tFunc">Karen</option>
-          </select>
+    <select name="tFunc">
+      <option name="tFunc"></option>
+        <?php
+          $funcionarios = buscaFuncionario();
+
+          foreach($funcionarios as $funcionario){
+        ?>
+      <option name="tFunc" value="<?php echo $funcionario['id_func'];?>"><?php echo $funcionario['nome_funcionario']; ?></option>
+      <?php
+          }
+      ?>
+
+    </select>
+        
   </div>
 </div>
 
@@ -115,14 +122,23 @@
   <div class="form-group col-md-6">
     <h3>Escolha o horário desejado:</h3>
       <select>
-        <option name="">Selecione</option>
-        <option name="">  </option>         
+          <option name="tHora"></option>
+          <?php
+            $horarios = buscaHorario($data_agend, $nome_funcionario);
+
+            foreach ($horarios as $horario){
+          ?>
+          <option name="tHora" value="<?php echo $tempoocupado['hora_inicio']?>"><?php echo $tempoocupado['hora_inicio']?></option>
+          <?php
+          }
+          ?> 
+      
       </select>
   </div>
 </div>
 
 <div class="confirma agendamento">
-  <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../pagina_inicial/paginainicial.html">Confirmar Agendamento</a>
+  <input type ="submit" value="Confirmar Agendamento"/>
 </div>
 
 
