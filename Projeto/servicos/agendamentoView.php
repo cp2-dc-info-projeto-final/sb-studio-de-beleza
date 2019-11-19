@@ -81,8 +81,8 @@
 <div class="form row">
   <div class='form-group col-md-6'>
     <h3>Serviço desejado:</h3>
-      <select>
-        <option value="">Selecione</option>      
+      <select value="tSelecione"> 
+        <option value="nulo">Selecione</option>      
         <option value="tServico">Corte R$30,00</option>        
         <option value="tServico">Reconstrução R$45,00</option>       
         <option value="tServico">Hidratação R$20,00</option>       
@@ -98,24 +98,23 @@
       </select>
   </div>
 
-  <div class='form-group col-md-6'>      
-        <h3>Escolha o melhor dia para você:</h3>
-    <input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
-  </div>
-</div>
-
-<div class="form row">
-
-  <div class="form-group col-md-6">
-    <h3>Selecione o profissional:</h3>
-          <select>
-            <option value="">Selecione</option>
+<div class="form-group col-md-6">
+  <h3>Selecione o profissional:</h3>
+          <select value="tSelecione1">
+            <option value="nulofunc">Selecione</option>
             <option value="tFunc">Andressa</option>         
             <option value="tFunc">Evelyn</option>          
             <option value="tFunc">Cátia</option>    
             <option value="tFunc">Rosane</option>
             <option value="tFunc">Karen</option>
           </select>
+  </div>
+</div>
+
+<div class="form row">
+  <div class='form-group col-md-6'>      
+    <h3>Escolha o melhor dia para você:</h3>
+    <input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
   </div>
 
   <div class="form-group col-md-6">
