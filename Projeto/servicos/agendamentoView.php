@@ -10,8 +10,6 @@
     <script src="../jquery_javascript/jquery.mask.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
   
 
   <?php
@@ -35,9 +33,6 @@
     $("#datepicker").datepicker({
     });
 });
-    $(document).ready(function(){
-        $('input.timepicker').timepicker({});
-    });
   </script>
 
   <div class="logo_studiodiv">
@@ -77,36 +72,36 @@
 
       <!-- -------------------------------------------------------------- !-->
 
-<form class="form-agendamento">
+<form action="agendamentoCtrl.php" method="POST" class="form-agendamento">
 <div class="form row">
   <div class='form-group col-md-6'>
     <h3>Serviço desejado:</h3>
-      <select value="tSelecione"> 
-        <option value="nulo">Selecione</option>      
-        <option value="tServico">Corte R$30,00</option>        
-        <option value="tServico">Reconstrução R$45,00</option>       
-        <option value="tServico">Hidratação R$20,00</option>       
-        <option value="tServico">Coloração R$50,00</option>       
-        <option value="tServico">Mechas R$85,00</option>        
-        <option value="tServico">Design de sobrancelha R$15,00</option>        
-        <option value="tServico">Design de sobrancelha com aplicação de hena R$20,00</option>        
-        <option value="tServico">Pés R$15,00</option>       
-        <option value="tServico">Mãos R$15,00</option>        
-        <option value="tServico">Pés e mãos R$25,00</option>        
-        <option value="tServico">Acrigel R$60,00 (Colocação)</option>        
-        <option value="tServico">Acrigel R$30,00 (Manutenção)</option>          
+      <select name="tSelecione"> 
+        <option name="nulo">Selecione</option>     
+        <option name="tServico">Corte R$30,00</option>        
+        <option name="tServico">Reconstrução R$45,00</option>       
+        <option name="tServico">Hidratação R$20,00</option>       
+        <option name="tServico">Coloração R$50,00</option>       
+        <option name="tServico">Mechas R$85,00</option>        
+        <option name="tServico">Design de sobrancelha R$15,00</option>        
+        <option name="tServico">Design de sobrancelha com aplicação de hena R$20,00</option>        
+        <option name="tServico">Pés R$15,00</option>       
+        <option name="tServico">Mãos R$15,00</option>        
+        <option name="tServico">Pés e mãos R$25,00</option>        
+        <option name="tServico">Acrigel R$60,00 (Colocação)</option>        
+        <option name="tServico">Acrigel R$30,00 (Manutenção)</option>          
       </select>
   </div>
 
 <div class="form-group col-md-6">
   <h3>Selecione o profissional:</h3>
-          <select value="tSelecione1">
-            <option value="nulofunc">Selecione</option>
-            <option value="tFunc">Andressa</option>         
-            <option value="tFunc">Evelyn</option>          
-            <option value="tFunc">Cátia</option>    
-            <option value="tFunc">Rosane</option>
-            <option value="tFunc">Karen</option>
+          <select name="tSelecione1">
+            <option name="nulofunc">Selecione</option>
+            <option name="tFunc">Andressa</option>         
+            <option name="tFunc">Evelyn</option>          
+            <option name="tFunc">Cátia</option>    
+            <option name="tFunc">Rosane</option>
+            <option name="tFunc">Karen</option>
           </select>
   </div>
 </div>
@@ -120,10 +115,9 @@
   <div class="form-group col-md-6">
     <h3>Escolha o horário desejado:</h3>
       <select>
-        <option value="">Selecione</option>
-        <option value="">  </option>         
+        <option name="">Selecione</option>
+        <option name="">  </option>         
       </select>
-      
   </div>
 </div>
 
