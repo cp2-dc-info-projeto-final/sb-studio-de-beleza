@@ -27,7 +27,15 @@ CREATE TABLE Funcionario (
     FOREIGN KEY (id_func) REFERENCES usuario(id_usuario)
 );
 INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
-(1,'Emerson Marcelo', '21 000000000', '2000-11-02', '00000000000', 'M', 'Duque de Caxias', 'RJ');
+(1,'Andressa', '21 111111111', '2000-04-08', '12345678910', 'F', 'Duque de Caxias', 'RJ');
+INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
+(2,'Evelyn Marins', '21 222222222', '2000-05-15', '00000000000', 'F', 'Duque de Caxias', 'RJ');
+INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
+(3,'Cátia', '21 985412016', '1999-11-05', '32165498701', 'F', 'Duque de Caxias', 'RJ');
+INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
+(4,'Roseane', '21 962150136', '2001-01-28', '10987654321', 'F', 'Duque de Caxias', 'RJ');
+INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
+(5,'Karen', '21 996320218', '1998-03-10', '45612398702', 'F', 'Duque de Caxias', 'RJ');
 
 
 drop table if exists Servico;
@@ -46,7 +54,7 @@ CREATE table agendamento (
     id_func int,
     data_agend date,
     hora_inicio time,
-    hora_fim time
+    duracao time,
     FOREIGN KEY(id_cliente) REFERENCES cliente(id_cliente),
     FOREIGN KEY(id_servico) REFERENCES servico(id_servico),
     FOREIGN KEY(id_func) REFERENCES funcionario(id_func)
