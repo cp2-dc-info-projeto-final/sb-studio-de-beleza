@@ -1,11 +1,12 @@
 <?php
+
+require_once "../connection_factory.php";
+ 
     function listar_funcionarios() {
-        //conectando ao banco de dados
-        $connection = mysqli_connect("localhost", "root", "", "studiodebeleza");
-        if(!$connection) die("Falha ao conectar ao banco");
+        $conn = get_connection();
 
         $sql = "SELECT * FROM funcionario";
-        $result = mysqli_query($connection, $sql);
+        $result = mysqli_query($conn, $sql);
 
         $funcionarios = []; //serve para montar um array de funcionários
 
@@ -23,10 +24,10 @@
 
             array_push($funcionarios, $funcionario);
         }
-        mysqli_close($connection);
+        mysqli_close($conn);
 
         return $funcionarios;
     }
 
-    ?>
+?>
 
