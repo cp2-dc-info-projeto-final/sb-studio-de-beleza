@@ -1,7 +1,6 @@
 DROP DATABASE IF EXISTS studiodebeleza;
-CREATE DATABASE studiodebeleza character set UTF8mb4 collate utf8mb4_bin;
 
-USE studiodebeleza;git
+USE studiodebeleza;
 
 drop table if exists usuario;    
 CREATE TABLE usuario (  
@@ -12,7 +11,8 @@ CREATE TABLE usuario (
 );
 
 INSERT INTO usuario (email, senha) VALUES
-('mceloemerson@gmail.com', '$2y$10$7bgXZylojDHX7sxd.Z4LPe30RYPmdLiuirsspEHBzsJ0Bkv8Thz6q');
+('mceloemerson@gmail.com', '$2y$10$7bgXZylojDHX7sxd.Z4LPe30RYPmdLiuirsspEHBzsJ0Bkv8Thz6q'),
+('adm@adm.com', '$2y$10$qL0mPHz8G4xuEXzAaIjBOuzbVEb4EePyVLbVxAvaMztErID41REhG');
 
 drop table if exists Funcionario;
 CREATE TABLE Funcionario (
@@ -28,7 +28,7 @@ CREATE TABLE Funcionario (
     FOREIGN KEY (id_func) REFERENCES usuario(id_usuario)
 );
 INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
-(1,'Emerson Marcelo', '21 000000000', '2000-11-02', '00000000000', 'M', 'Duque de Caxias', 'RJ');
+(1,'Administrador', '00 000000000', '2001-01-01', '00000000000', 'F', 'Duque de Caxias', 'RJ');
 
 drop table if exists Servico;
 CREATE TABLE Servico (
@@ -60,10 +60,12 @@ CREATE TABLE Cliente (
     cpf VARCHAR (20),
     sexo VARCHAR (1),
     municipio VARCHAR (50),
-     estado VARCHAR (50),
+    estado VARCHAR (50),
     PRIMARY KEY (id_cliente),
     FOREIGN KEY (id_cliente) REFERENCES usuario(id_usuario)
 );
+INSERT INTO Cliente(id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
+(1,'Emerson Marcelo', '21 000000000', '2000-11-02', '00000000000', 'M', 'Duque de Caxias', 'RJ');
 
 drop table if exists Pergunta;    
 CREATE TABLE Pergunta (    
@@ -90,6 +92,7 @@ CREATE TABLE recuperacao (
 );
 
 INSERT INTO recuperacao (id_usuario, id_pergunta, resposta) VALUES (1, 2, 'Smiliguindo');
+INSERT INTO recuperacao (id_usuario, id_pergunta, resposta) VALUES (2, 2, 'Smiliguindo & Sua Turma');
 
 CREATE TABLE estados (
     id_municipio int AUTO_INCREMENT,
