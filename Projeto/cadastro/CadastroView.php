@@ -82,8 +82,6 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
   ?>
 </div>
 <?php
-
-
                 session_unset();
             }
         ?>
@@ -133,12 +131,12 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
           ?>
     </select>
   </div>
-</div>
-
-<div class='form-group col-md-6'>
+  <div class='form-group col-md-6'>
   <label>Município</label>
   <input type="text" name="tMunicipio" id="cMunicipio" class="form-control form-control-sm" required>
 </div>
+</div>
+
 <h2 class="card-title">Informações de login</h2>
 <div class="form-group">
   <label>Endereço de email</label>

@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS studiodebeleza;
-
+CREATE DATABASE studiodebeleza;
 USE studiodebeleza;
 
 drop table if exists usuario;    
@@ -65,7 +65,7 @@ CREATE TABLE Cliente (
     FOREIGN KEY (id_cliente) REFERENCES usuario(id_usuario)
 );
 INSERT INTO Cliente(id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
-(1,'Emerson Marcelo', '21 000000000', '2000-11-02', '00000000000', 'M', 'Duque de Caxias', 'RJ');
+(2,'Emerson Marcelo', '21 000000000', '2000-11-02', '00000000000', 'M', 'Duque de Caxias', 'RJ');
 
 drop table if exists Pergunta;    
 CREATE TABLE Pergunta (    
