@@ -16,17 +16,20 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="#">Funcionários<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Clientes</a>
+        <a class="nav-link" href="lista_clienteView.php">Clientes</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Agendamentos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Sair</a>
+        <a class="nav-link" href="#">Cadastrar</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../login/logout.php">Sair</a>
       </li>
     </ul>
   </div>
@@ -63,7 +66,7 @@
                         echo "<td>" . $funcionario['cpf'] . "<br></td>";
                         echo "<td>" . $funcionario['sexo'] . "<br></td>";
                         echo "<td>" . $funcionario['municipio'] . "<br></td>";
-                        echo "<td><a href='excluir.php?id=" . $funcionario['id'] ."'>Excluir</a><br></td>";
+                        echo "<td><a href='excluir_funcionario.php?id=" . $funcionario['id'] ."'>Excluir</a><br></td>";
                         echo "</tr>";
                     }
             ?>
