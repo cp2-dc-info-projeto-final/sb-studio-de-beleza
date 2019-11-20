@@ -48,25 +48,25 @@ Diagrama de Casos de Uso:
 
 ## Manual de Utilização
  Ao entrar no site, se for cadastrado, o usuário pode realizar login com email e senha. 
- ![Login](Documentação/login.png)
+ ![Login](Documentacao/login.png)
 
  Caso ainda não seja cadastrado, poderá acessar a página de cadastro através no login. Ao escolher esta opção, o usuário é redirecionado à uma página onde preencherá um formulário com informações pessoais como nome, cpf, sexo, telefone, estado, municipio, email, senha e também uma pergunta de segurança em casos de emergência.  
-   ![Cadastro](Documentação/cadastro1.png)
-    ![Cadastro](Documentação/cadastro2.png)
+   ![Cadastro](Documentacao/cadastro1.png)
+    ![Cadastro](Documentacao/cadastro2.png)
    
    Após finzalizar o cadastro, o usuário é redirecionado para a página inicial, que contem uma breve descrição do studio, fotos, e um menu que pode o levar para as outras páginas do site.
-    ![Página Incial](Documentação/pagini1.png)
+    ![Página Incial](Documentacao/pagini1.png)
     
    *Todas as páginas contém um menu que o levará para outras páginas, e também um rodapé com as principais informações do studio(Telefone, localização etc.) 
     
-   ![Página Inicial](Documentação/pagini2.png)
+   ![Página Inicial](Documentacao/pagini2.png)
  Ao lado da página inicial, há a página de serviços que leva o usuário para a página de agendamentos. 
     
-   ![Serviço](Documentação/servico1.png)
+   ![Serviço](Documentacao/servico1.png)
 
    Assim que o usuário mover o mouse por cima das imagens, aparecerá, instantaneamente, os serviços disponíveis e seus respectivos preços. Acima dos serviços há a opção agendar.
 
-   ![Serviço](Documentação/servico2.png)
+   ![Serviço](Documentacao/servico2.png)
    
    Na página agendamento o usuário selecionará o serviço desejado, o profissional, a data e o horário da realização do procedimento. Vale reforçar que o cliente só poderá agendar um procedimento se for cadastrado no site! Por isso, também é possível cadastrar-se através da página de agendamento.
 
