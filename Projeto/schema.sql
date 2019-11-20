@@ -1,10 +1,7 @@
 DROP DATABASE IF EXISTS studiodebeleza;
-<<<<<<< HEAD
 CREATE DATABASE studiodebeleza character set UTF8mb4 collate utf8mb4_bin;
 
-=======
 CREATE DATABASE studiodebeleza;
->>>>>>> c138978b5f1b01c9733d1ecb5da5120d0ac10eca
 USE studiodebeleza;
 
 drop table if exists usuario;    
@@ -33,15 +30,12 @@ CREATE TABLE Funcionario (
     FOREIGN KEY (id_func) REFERENCES usuario(id_usuario)
 );
 INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
-<<<<<<< HEAD
 (1,'Andressa', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
 (2,'Evelyn', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
 (3,'Cátia', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
 (4,'Rosane', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
 (5,'Karen', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ');
-=======
 (1,'Administrador', '00 000000000', '2001-01-01', '00000000000', 'F', 'Duque de Caxias', 'RJ');
->>>>>>> c138978b5f1b01c9733d1ecb5da5120d0ac10eca
 
 drop table if exists Servico;
 CREATE TABLE Servico (
@@ -77,7 +71,6 @@ CREATE TABLE Cliente (
     PRIMARY KEY (id_cliente),
     FOREIGN KEY (id_cliente) REFERENCES usuario(id_usuario)
 );
-<<<<<<< HEAD
 INSERT INTO Cliente (id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
 (1,'Fabricia', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
 (2,'Ygor', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
@@ -95,10 +88,8 @@ CREATE table agendamento (
     FOREIGN KEY(id_servico) REFERENCES servico(id_servico),
     FOREIGN KEY(id_func) REFERENCES funcionario(id_func)
 );
-=======
 INSERT INTO Cliente(id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
 (2,'Emerson Marcelo', '21 000000000', '2000-11-02', '00000000000', 'M', 'Duque de Caxias', 'RJ');
->>>>>>> c138978b5f1b01c9733d1ecb5da5120d0ac10eca
 
 INSERT INTO Agendamento (id_agend, id_cliente, id_servico, id_func, data_agend, hora_inicio) VALUES
 (1, 1, 2, 1, '2019-11-19','11:00'),
