@@ -153,11 +153,8 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
     <label>Confirme a senha</label>
     <input type="password" class="form-control form-control-sm" id="exampleInputPassword2" placeholder="Confirme a senha" maxlength="8"name="tConfirmaSenha" required>
   </div>
-<<<<<<< HEAD
 </div>  
-=======
 </div>
->>>>>>> c138978b5f1b01c9733d1ecb5da5120d0ac10eca
 <br>
 <div class="form-row"> 
     <div class='form-group col-md-6'>
