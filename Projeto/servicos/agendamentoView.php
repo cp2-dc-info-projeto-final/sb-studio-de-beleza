@@ -71,10 +71,7 @@
 
 
       <!-- -------------------------------------------------------------- !-->
-<<<<<<< HEAD
 
-=======
->>>>>>> b1bffd5af4df42240c29afcfab32a8e8e0f81b39
 
 <form action="agendamentoCtrl.php" method="POST" class="form-agendamento">
 <div class="form row">
@@ -130,9 +127,9 @@
           <?php
             $horarios = buscaHorario($data_agend, $nome_funcionario);
 
-            foreach ($horarios as $horario){
+            foreach ($horarios as $tempoocupado){
           ?>
-          <option name="tHora" value="<?php echo $tempoocupado['hora_inicio']?>"><?php echo $tempoocupado['hora_inicio']?></option>
+          <option name="tHora" value="<?php echo $tempoocupado['hora_inicio']?>"><?php echo $tempoocupado['hora_inicio'];?></option>
           <?php
           }
           ?> 
