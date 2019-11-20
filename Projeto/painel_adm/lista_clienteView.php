@@ -17,10 +17,10 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">Funcionários<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="lista_funcView.php">Funcionários<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="lista_clienteView.php">Clientes</a>
+        <a class="nav-link" href="#">Clientes</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Agendamentos</a>
@@ -29,14 +29,14 @@
         <a class="nav-link" href="#">Cadastrar</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../login/logout.php">Sair</a>
+      <a class="nav-link" href="../login/logout.php">Sair</a>
       </li>
     </ul>
   </div>
 </nav>
 
     <div class="container">
-        <h1>Listagem de Funcionários</h1>
+        <h1>Listagem de Clientes</h1>
 
           <table class="table table-striped">
             <thead>
@@ -48,25 +48,27 @@
                 <th>CPF</th>
                 <th>Sexo</th>
                 <th>Município</th>
+                <th>Estado</th>
                 <th>Ação</th>
             </head>
           <tbody>
             <?php 
-                    require "lista_funcCtrl.php";
+                    require "lista_clienteCtrl.php";
 
-                    $funcionarios = controle_listar_funcionarios(); 
-                    foreach ($funcionarios as $funcionario)  /* serve para listar os dados dos funcionários
+                    $clientes = controle_listar_clientes(); 
+                    foreach ($clientes as $cliente)  /* serve para listar os dados dos funcionários
                     e também o botão excluir */
                     {
                         echo "<tr>";
-                        echo "<td>" . $funcionario['id'] . "<br></td>";
-                        echo "<td>" . $funcionario['nome'] . "<br></td>";
-                        echo "<td>" . $funcionario['telefone'] . "<br></td>";
-                        echo "<td>" . $funcionario['nasc'] . "<br></td>";
-                        echo "<td>" . $funcionario['cpf'] . "<br></td>";
-                        echo "<td>" . $funcionario['sexo'] . "<br></td>";
-                        echo "<td>" . $funcionario['municipio'] . "<br></td>";
-                        echo "<td><a href='excluir_funcionario.php?id=" . $funcionario['id'] ."'>Excluir</a><br></td>";
+                        echo "<td>" . $cliente['id'] . "<br></td>";
+                        echo "<td>" . $cliente['nome'] . "<br></td>";
+                        echo "<td>" . $cliente['telefone'] . "<br></td>";
+                        echo "<td>" . $cliente['nasc'] . "<br></td>";
+                        echo "<td>" . $cliente['cpf'] . "<br></td>";
+                        echo "<td>" . $cliente['sexo'] . "<br></td>";
+                        echo "<td>" . $cliente['municipio'] . "<br></td>";
+                        echo "<td>" . $cliente['estado'] . "<br></td>";
+                        echo "<td><a href='excluir_cliente.php?id=" . $cliente['id'] ."'>Excluir</a><br></td>";
                         echo "</tr>";
                     }
             ?>

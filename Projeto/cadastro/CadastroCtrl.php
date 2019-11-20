@@ -5,9 +5,6 @@ server with default setting (user 'root' with no password) */
 require_once "../connection_factory.php";
 require "cadastroUsuario.php";
 
-
-
-
 function controle_listar_estados() {
     return BuscarEstados();
 }

@@ -13,7 +13,7 @@
 
     - [RF05](#RF05)
 
-    - [RF06](#RF06)
+    - [RNF06](#RNF06)
 
 - [Requisitos Não Funcionais](#Requisitos-Não-Funcionais)
 
@@ -26,6 +26,8 @@
     - [RNF04](#RNF04)
 
     - [RNF05](#RNF05)
+
+    - [RNF06](#RNF06)
 
     
 
@@ -60,7 +62,11 @@ O sistema armazena informações dos clientes para realizar cadastro e login
 
 + O administrador poderá alterar os preços, cupons e agendamentos que são divulgados no site
 
-## RF04
+## RF04 
+
++ Haverá uma diferenciação no login para redirecionar para a aba do administrador e funcionários. 
+ 
+## RF05
 
 + O cliente terá a opção de fazer um agendamento online diretamente do site
 
@@ -71,7 +77,7 @@ O sistema armazena informações dos clientes para realizar cadastro e login
         3. Horário;
         4. Funcionário desejado.
 
-## RF05
+## RF06
 
 + O sistema disponibilizará um menu que irá direcionar o usuário para o setor desejado
 

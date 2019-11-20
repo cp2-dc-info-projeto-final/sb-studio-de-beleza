@@ -3,8 +3,8 @@
 
     function autenticacao($email, $senha) {
         $conn = get_connection();
-
-        $result = mysqli_query($connection, $sql);
+        $sql = "SELECT senha,email FROM usuario WHERE email='$email'";
+        $result = mysqli_query($conn, $sql);
         $erro = "";
         if (mysqli_num_rows($result) > 0) /*serve para validar a autenticação a partir 
         do email e senha */
@@ -21,6 +21,6 @@
         } else {
             return false;
         }        
-        mysqli_close($connection);
+        mysqli_close($conn);
     }    
 ?>

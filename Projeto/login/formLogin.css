@@ -23,7 +23,6 @@ body
 {
 	width: 380px;
     margin: 0 auto;
-    margin-top:5%;
 }
     .login-form h2 
 {		
@@ -102,6 +101,10 @@ body
     padding-top: 1%;
     letter-spacing:2px;
     font-size: 1.5em;
+}
+.btn-outline-danger {
+    margin-top:1%;
+    margin-left:1%;
 }
 .footer {
     background-image: linear-gradient(to right, rgb(201, 81, 81), rgb(238, 53, 53));

@@ -10,8 +10,6 @@
     <script src="../jquery_javascript/jquery.mask.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
   
 
   <?php
@@ -35,9 +33,6 @@
     $("#datepicker").datepicker({
     });
 });
-    $(document).ready(function(){
-        $('input.timepicker').timepicker({});
-    });
   </script>
 
   <div class="logo_studiodiv">
@@ -76,61 +71,78 @@
 
 
       <!-- -------------------------------------------------------------- !-->
+<<<<<<< HEAD
 
+=======
+>>>>>>> b1bffd5af4df42240c29afcfab32a8e8e0f81b39
 
-<form class="form-agendamento">
+<form action="agendamentoCtrl.php" method="POST" class="form-agendamento">
 <div class="form row">
   <div class='form-group col-md-6'>
-    <h3>Serviço desejado:</h3>
-      <select>
-        <option value="">Selecione</option>      
-        <option value="tServico">Corte R$30,00</option>        
-        <option value="tServico">Reconstrução R$45,00</option>       
-        <option value="tServico">Hidratação R$20,00</option>       
-        <option value="tServico">Coloração R$50,00</option>       
-        <option value="tServico">Mechas R$85,00</option>        
-        <option value="tServico">Design de sobrancelha R$15,00</option>        
-        <option value="tServico">Design de sobrancelha com aplicação de hena R$20,00</option>        
-        <option value="tServico">Pés R$15,00</option>       
-        <option value="tServico">Mãos R$15,00</option>        
-        <option value="tServico">Pés e mãos R$25,00</option>        
-        <option value="tServico">Acrigel R$60,00 (Colocação)</option>        
-        <option value="tServico">Acrigel R$30,00 (Manutenção)</option>          
-      </select>
+  <h3>Selecione o serviço:</h3>
+    <select name="tServico">
+      <option name="tServico"></option>
+    <?php
+     $servicos = buscaServicos();
+
+     foreach ($servicos as $servico) {
+
+    ?>
+
+      <option name="tServico" value="<?php echo $servico['id_servico'];?>"><?php echo ($servico['nome_servico'] . " - R$ " . $servico['preco_servico']); ?></option>
+    <?php
+     }
+
+    ?>
+
+    </select>
   </div>
 
-  <div class='form-group col-md-6'>      
-        <h3>Escolha o melhor dia para você:</h3>
-    <input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
+<div class="form-group col-md-6">
+  <h3>Selecione o profissional:</h3>
+    <select name="tFunc">
+      <option name="tFunc"></option>
+        <?php
+          $funcionarios = buscaFuncionario();
+
+          foreach($funcionarios as $funcionario){
+        ?>
+      <option name="tFunc" value="<?php echo $funcionario['id_func'];?>"><?php echo $funcionario['nome_funcionario']; ?></option>
+      <?php
+          }
+      ?>
+
+    </select>
+        
   </div>
 </div>
 
 <div class="form row">
-
-  <div class="form-group col-md-6">
-    <h3>Selecione o profissional:</h3>
-          <select>
-            <option value="">Selecione</option>
-            <option value="tFunc">Andressa</option>         
-            <option value="tFunc">Evelyn</option>          
-            <option value="tFunc">Cátia</option>    
-            <option value="tFunc">Rosane</option>
-            <option value="tFunc">Karen</option>
-          </select>
+  <div class='form-group col-md-6'>      
+    <h3>Escolha o melhor dia para você:</h3>
+    <input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
   </div>
 
   <div class="form-group col-md-6">
     <h3>Escolha o horário desejado:</h3>
       <select>
-        <option value="">Selecione</option>
-        <option value="">  </option>         
-      </select>
+          <option name="tHora"></option>
+          <?php
+            $horarios = buscaHorario($data_agend, $nome_funcionario);
+
+            foreach ($horarios as $horario){
+          ?>
+          <option name="tHora" value="<?php echo $tempoocupado['hora_inicio']?>"><?php echo $tempoocupado['hora_inicio']?></option>
+          <?php
+          }
+          ?> 
       
+      </select>
   </div>
 </div>
 
 <div class="confirma agendamento">
-  <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="../pagina_inicial/paginainicial.html">Confirmar Agendamento</a>
+  <input type ="submit" value="Confirmar Agendamento"/>
 </div>
 
 

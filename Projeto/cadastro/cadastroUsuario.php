@@ -4,7 +4,7 @@ require_once "../connection_factory.php";
 
 function cadastraUsuario($email, $hash, $senha) {
     $conn = get_connection();
-    $sql = "SELECT id_usuario FROM uwqpuqwefwefqwefsuario WHERE email='$email'";
+    $sql = "SELECT id_usuario FROM usuario WHERE email='$email'";
     $result = mysqli_query($conn, $sql);
     $erro = "";
     # password hash
