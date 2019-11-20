@@ -48,7 +48,7 @@ Diagrama de Casos de Uso:
 
 ## Manual de Utilização
  Ao entrar no site, se for cadastrado, o usuário pode realizar login com email e senha. 
- ![Login](Documentação/login.png)
+ (..Documentacao/login.png)
 
  Caso ainda não seja cadastrado, poderá acessar a página de cadastro através no login. Ao escolher esta opção, o usuário é redirecionado à uma página onde preencherá um formulário com informações pessoais como nome, cpf, sexo, telefone, estado, municipio, email, senha e também uma pergunta de segurança em casos de emergência.  
    ![Cadastro](Documentação/cadastro1.png)
