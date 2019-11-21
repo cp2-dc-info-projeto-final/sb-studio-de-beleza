@@ -1,7 +1,6 @@
 DROP DATABASE IF EXISTS studiodebeleza;
-CREATE DATABASE studiodebeleza character set UTF8mb4 collate utf8mb4_bin;
+CREATE DATABASE studiodebeleza character set UTF-8mb4 collate utf8mb4_bin;
 
-CREATE DATABASE studiodebeleza;
 USE studiodebeleza;
 
 drop table if exists usuario;    
@@ -35,7 +34,6 @@ INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sex
 (3,'Cátia', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
 (4,'Rosane', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
 (5,'Karen', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ');
-(1,'Administrador', '00 000000000', '2001-01-01', '00000000000', 'F', 'Duque de Caxias', 'RJ');
 
 drop table if exists Servico;
 CREATE TABLE Servico (
@@ -88,12 +86,10 @@ CREATE table agendamento (
     FOREIGN KEY(id_servico) REFERENCES servico(id_servico),
     FOREIGN KEY(id_func) REFERENCES funcionario(id_func)
 );
-INSERT INTO Cliente(id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
-(2,'Emerson Marcelo', '21 000000000', '2000-11-02', '00000000000', 'M', 'Duque de Caxias', 'RJ');
 
 INSERT INTO Agendamento (id_agend, id_cliente, id_servico, id_func, data_agend, hora_inicio) VALUES
 (1, 1, 2, 1, '2019-11-19','11:00'),
-(2, 2, 2, 1, '2019-11-19','11:00'),
+(2, 2, 2, 1, '2019-11-19','13:00'),
 (3, 3, 5, 2, '2019-11-19','17:00');
  
 drop table if exists Pergunta;    

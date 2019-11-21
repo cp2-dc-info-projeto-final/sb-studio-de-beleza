@@ -2,7 +2,6 @@
 
 require_once("../connection_factory.php");
 
-
 function buscaServicos() {
   $conn = get_connection();
 
@@ -32,23 +31,27 @@ function buscaData(){
     return $data_agend;
 }
 
-function buscaHorario($data_agend, $id_func){
+//----------------------------------------------------------------------------------------
+
+function buscaHorario($data_agend, $nome_funcionario){
   $conn = get_connection();
   $tempoocupado = "SELECT hora_inicio FROM Agendamento where data_agend = $data_agend";
   $result = mysqli_query($conn, $tempoocupado);
 
   $hora = array ('9:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00');
   $i = 0;
+  $x = -1;
   $horario = array ("", "", "", "", "", "", "", "");
+   implode (string $horariostring,  array $horario) : string;
 
   for ($i; $i <= 7 ; $i++){
-    if ($hora != $tempoocupado){ 
-      $horario[$i] = $hora[$i];
+    if ($hora != $result){ 
+      $horariostring[$x++] = $hora[$i];
     }
   }
 
 
-  return $result;
+  return $horario;
 }
 
 ?>
