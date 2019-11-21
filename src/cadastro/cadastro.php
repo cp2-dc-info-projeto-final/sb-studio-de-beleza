@@ -12,7 +12,6 @@ $hash = password_hash($senha, PASSWORD_DEFAULT);
 $mun = $_POST['tMunicipio'];
 $est = $_POST['tEstado'];
 $nome = $_POST['tNome'];
-$tipoUsuario = $_POST['tTipoUsuario'];
 $tel = $_POST['tTelefone'];
 $calendario = $_POST['tCalendario'];
 $calendario = date('Y-m-d', strtotime($calendario)); 
