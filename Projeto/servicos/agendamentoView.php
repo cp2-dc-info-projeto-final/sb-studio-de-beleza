@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
   <link rel="stylesheet" href="agendamento.css">
   <link rel="stylesheet" href="../jquery_css/jquery-ui.css"/>
     <link rel="stylesheet" href="../jquery_javascript/calendario.js"/>
@@ -125,11 +125,11 @@
       <select>
           <option name="tHora"></option>
           <?php
-            $horarios = buscaHorario($data_agend, $nome_funcionario);
+            $horarios = buscaHorario($data_agend, $id_func);
 
-            foreach ($horarios as $horario){
+            foreach ($horarios as $result){
           ?>
-          <option name="tHora" value="<?php echo $tempoocupado['hora_inicio']?>"><?php echo $horarios;?></option>
+          <option name="tHora" value="<?php echo $tempoocupado['hora_inicio']?>"><?php echo $result;?></option>
           <?php
           }
           ?> 
@@ -138,7 +138,7 @@
   </div>
 </div>
 
-  <input class="btn btn-outline-danger" type ="submit" value="Confirmar Agendamento"/>
+<input class="btn btn-outline-danger" type="submit" value="Confirmar Agendamento"/>
 
 
 </form>
