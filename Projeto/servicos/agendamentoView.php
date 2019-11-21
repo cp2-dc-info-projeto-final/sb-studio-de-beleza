@@ -127,9 +127,9 @@
           <?php
             $horarios = buscaHorario($data_agend, $nome_funcionario);
 
-            foreach ($horarios as $tempoocupado){
+            foreach ($horarios as $horario){
           ?>
-          <option name="tHora" value="<?php echo $tempoocupado['hora_inicio']?>"><?php echo $tempoocupado['hora_inicio'];?></option>
+          <option name="tHora" value="<?php echo $tempoocupado['hora_inicio']?>"><?php echo $horarios;?></option>
           <?php
           }
           ?> 
@@ -138,9 +138,7 @@
   </div>
 </div>
 
-<div class="confirma agendamento">
-  <input type ="submit" value="Confirmar Agendamento"/>
-</div>
+  <input class="btn btn-outline-danger" type ="submit" value="Confirmar Agendamento"/>
 
 
 </form>

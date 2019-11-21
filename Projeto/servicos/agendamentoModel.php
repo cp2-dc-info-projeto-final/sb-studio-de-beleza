@@ -24,7 +24,11 @@ function buscaFuncionario(){
 }
 
 function buscaData(){
+    $sql = "INSERT INTO Agendamento (data_agend) Values
+    ($calendario)";
+    $data_agend = "SELECT data_agend FROM Agendamento";
 
+    return $data_agend;
 }
 
 //----------------------------------------------------------------------------------------
@@ -36,16 +40,18 @@ function buscaHorario($data_agend, $nome_funcionario){
 
   $hora = array ('9:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00');
   $i = 0;
+  $x = -1;
+  $horario = array ("", "", "", "", "", "", "", "");
+   implode (string $horariostring,  array $horario) : string;
 
   for ($i; $i <= 7 ; $i++){
-    if ($hora != $tempoocupado){ 
-      $horario = $hora[$i];
+    if ($hora != $result){ 
+      $horariostring[$x++] = $hora[$i];
     }
   }
-  
-  echo $horario;
 
-  return $tempoocupado;
+
+  return $horario;
 }
 
 ?>
