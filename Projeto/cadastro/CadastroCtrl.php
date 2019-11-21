@@ -13,5 +13,4 @@ function controle_listar_perguntas() {
     return BuscarPerguntas();
 }
 
-
 ?>

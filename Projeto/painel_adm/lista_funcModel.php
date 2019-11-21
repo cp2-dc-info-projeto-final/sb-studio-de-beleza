@@ -65,7 +65,9 @@ require_once "../connection_factory.php";
         session_start();
        
         header('Location: lista_funcView.php');
-    }else{
+    }
+    else
+    {
         echo "Acesso não permitido!";
     }
 ?>
