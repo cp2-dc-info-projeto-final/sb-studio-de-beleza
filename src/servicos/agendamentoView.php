@@ -14,7 +14,7 @@
 
   <?php
 
-  require "agendamentoCtrl.php";
+   require "agendamentoModel.php";
 
   ?>
   
@@ -23,15 +23,14 @@
      $(document).ready(function()) /* evento em Jquery que espera instantaneamente o documento html ser carregado para ser executado */
   {  
      /* inserção das mascáras nos campos de input */
-     $("#datepicker").mask("00-00-0000", {placeholder: " DD-MM-AAAA"}); 
+     $("#datepicker").mask("0000-00-00", {placeholder: "0000-00-00"}); 
   });
   
    </script>
    <script type="text/javascript"> 
      $(function() /* declaração para chamar o método DATEPICKER contido no arquivo jqueryUI, a partir do campo input datepicker */ 
 { 
-    $("#datepicker").datepicker({
-    });
+    $("#datepicker").datepicker({dateFormat: "yyyy-mm-dd"});
 });
   </script>
 
@@ -73,7 +72,7 @@
       <!-- -------------------------------------------------------------- !-->
 
 
-<form action="agendamentoCtrl.php" method="GET" class="form-agendamento">
+<form action="horarioView.php" method="GET" class="form-agendamento">
 <div class="form row">
   <div class='form-group col-md-6'>
   <h3>Selecione o serviço:</h3>
@@ -118,15 +117,12 @@
   <div class='form-group col-md-6'>      
     <h3>Escolha o melhor dia para você:</h3>
     <input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
-    <?php
-    date_format("tCalendario","Y/m/d");
-    ?>
   </div>
 </div>
 
-<div class="confirma agendamento">
-  <input type ="submit" value="Confirmar Agendamento"/>
-</div>
+
+<input class="btn btn-outline-danger" type="submit" value="Escolha o horario">
+
 
 
 </form>
