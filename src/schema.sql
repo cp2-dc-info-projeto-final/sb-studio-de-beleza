@@ -34,9 +34,9 @@ CREATE TABLE Funcionario (
     FOREIGN KEY (id_func) REFERENCES usuario(id_usuario)
 );
 INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
-(1,'Andressa', '21 000000000', '2000-11-02', '11111111111', 'F', 'Duque de Caxias', 'RJ'),
-(2,'Evelyn', '21 000000000', '2000-11-02', '22222222222', 'F', 'Rio de Janeiro', 'RJ'),
-(3,'Cátia', '21 000000000', '2000-11-02', '33333333333', 'F', 'Duque de Caxias', 'RJ');
+(1,'Andressa', '21 000000000', '2000-11-02', '11111111111', 'F', 'Duque de Caxias', '1'),
+(2,'Evelyn', '21 000000000', '2000-11-02', '22222222222', 'F', 'Rio de Janeiro', '2'),
+(3,'Cátia', '21 000000000', '2000-11-02', '33333333333', 'F', 'Duque de Caxias', '3');
 
 drop table if exists Servico;
 CREATE TABLE Servico (
@@ -73,9 +73,9 @@ CREATE TABLE Cliente (
     FOREIGN KEY (id_cliente) REFERENCES usuario(id_usuario)
 );
 INSERT INTO Cliente (id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
-(4,'Fabricia', '21 000000000', '2000-11-02', '44444444444', 'F', 'Duque de Caxias', 'RJ'),
-(5,'Ygor', '21 000000000', '2000-11-02', '55555555555', 'F', 'Rio de Janeiro', 'RJ'),
-(6,'Alayne', '21 000000000', '2000-11-02', '66666666666', 'F', 'Duque de Caxias', 'RJ');
+(4,'Fabricia', '21 000000000', '2000-11-02', '44444444444', 'F', 'Duque de Caxias', '4'),
+(5,'Ygor', '21 000000000', '2000-11-02', '55555555555', 'F', 'Rio de Janeiro', '5'),
+(6,'Alayne', '21 000000000', '2000-11-02', '66666666666', 'F', 'Duque de Caxias', '6');
 
 drop table if exists Agendamento;
 CREATE table agendamento (
