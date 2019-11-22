@@ -73,7 +73,7 @@
       <!-- -------------------------------------------------------------- !-->
 
 
-<form action="agendamentoCtrl.php" method="POST" class="form-agendamento">
+<form action="agendamentoCtrl.php" method="GET" class="form-agendamento">
 <div class="form row">
   <div class='form-group col-md-6'>
   <h3>Selecione o serviço:</h3>
@@ -118,23 +118,9 @@
   <div class='form-group col-md-6'>      
     <h3>Escolha o melhor dia para você:</h3>
     <input type="text" id="datepicker" name="tCalendario" class="form-control form-control-sm" required>
-  </div>
-
-  <div class="form-group col-md-6">
-    <h3>Escolha o horário desejado:</h3>
-      <select>
-          <option name="tHora"></option>
-          <?php
-            $horarios = buscaHorario($data_agend, $nome_funcionario);
-
-            foreach ($horarios as $tempoocupado){
-          ?>
-          <option name="tHora" value="<?php echo $tempoocupado['hora_inicio']?>"><?php echo $tempoocupado['hora_inicio'];?></option>
-          <?php
-          }
-          ?> 
-      
-      </select>
+    <?php
+    date_format("tCalendario","Y/m/d");
+    ?>
   </div>
 </div>
 

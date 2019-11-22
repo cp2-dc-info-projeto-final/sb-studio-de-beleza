@@ -27,28 +27,26 @@ function buscaFuncionario(){
 function buscaData(){
     $sql = "INSERT INTO Agendamento (data_agend) Values
     ($calendario)";
-    $data_agend = "SELECT data_agend FROM Agendamento";
+    $data_agend = ("SELECT data_agend FROM Agendamento");
 
+    
     return $data_agend;
 }
 
 function buscaHorario($data_agend, $id_func){
   $conn = get_connection();
-  $tempoocupado = "SELECT hora_inicio FROM Agendamento where data_agend = $data_agend";
-  $result = mysqli_query($conn, $tempoocupado);
+  $tempoocupado = "SELECT horario FROM horarios_atendimento
+  WHERE horario NOT IN (
+      SELECT hora_inicio FROM Agendamento
+      WHERE data_agend = $data_agend
+      AND id_func = $id_func
+  );";
 
-  $hora = array ('9:00', '10:00', '11:00', '13:00', '14:00', '15:00', '16:00', '17:00');
-  $i = 0;
-  $horario = array ("", "", "", "", "", "", "", "");
+  $result = mysqli_query($conn, $tempoocupado); 
+  $recebe = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_close($conn);
 
-  for ($i; $i <= 7 ; $i++){
-    if ($hora != $tempoocupado){ 
-      $horario[$i] = $hora[$i];
-    }
-  }
-
-
-  return $result;
+  return $recebe;
 }
 
 ?>
