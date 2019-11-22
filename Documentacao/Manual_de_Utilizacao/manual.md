@@ -1,40 +1,43 @@
-## PARA O USUÁRIO
+## Manual de utilização
+
 - Ao entrar no site, se for cadastrado, o usuário pode realizar login com email e senha
 
- ![img1](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/Documentacao/Prints/login.png)
+ ![img1](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/login.png)
  
 - Caso ainda não seja cadastrado, poderá acessar a página de cadastro através no login. Ao escolher esta opção, o usuário é redirecionado à uma página onde preencherá um formulário com informações pessoais como nome, cpf, sexo, telefone, estado, municipio, email, senha e também uma pergunta de segurança em casos de emergência.
 
- ![img2](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/Documentacao/Prints/cadastro1.png)
+ ![img2](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/cadastro1.png)
 
- ![img3](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/Documentacao/Prints/cadastro2.png)
+ ![img3](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/cadastro2.png)
  
  - Após finalizar o cadastro, o usuário é redirecionado para a página inicial, que contem uma breve descrição do studio, fotos, e um menu que pode o levar para as outras páginas do site.
 
-![img4](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/Documentacao/Prints/pagini1.png)
+![img4](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/pagini1.png)
 
  Todas as páginas contém um menu que o levará para outras páginas, e também um rodapé com as principais informações do studio(Telefone, localização etc.)
 
-![img5](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/Documentacao/Prints/pagini2.png)
+![img5](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/pagini2.png)
 
 - Ao lado da página inicial, há a página de serviços que leva o usuário para a página de agendamentos.
 
-![img5](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/Documentacao/Prints/servico1.png)
+![img6](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/servico1.png)
 
-- Haverá, no site, uma página específica para fotos postadas pelo proprietário, basta clicar em "Fotos" na parte superior do site e será direcionado a um site com diversas fotos.
+- Assim que o usuário mover o mouse por cima das imagens, aparecerá, instantaneamente, os serviços disponíveis e seus respectivos preços. Acima dos serviços há a opção agendar.
 
-![img6](https://github.com/cp2-dc-info-projeto-final/pizzaria-favattos-portugal/blob/master/manual%20do%20usuario/img6.jpg)
+![img7](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/servico2.png)
 
-## PARA O ADMIN
-- O Admin deverá se cadastrar como qualquer outro usuário, e receberá permissão de admin através de um outro admin que poderá lhe conceder a permissão. 
-- Com a permissão de administrador, ele poderá alterar dados dos produtos, adicionar novos produtos, alterar produtos, preços e descrições na página inicial.
+- Na página agendamento o usuário selecionará o serviço desejado, o profissional, a data e o horário da realização do procedimento. Vale reforçar que o cliente só poderá agendar um procedimento se for cadastrado no site! Por isso, também é possível cadastrar-se através da página de agendamento.
 
-![img7](https://github.com/cp2-dc-info-projeto-final/pizzaria-favattos-portugal/blob/master/manual%20do%20usuario/img7.jpg)
+![img8](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/agend.png)
 
-![img8](https://github.com/cp2-dc-info-projeto-final/pizzaria-favattos-portugal/blob/master/manual%20do%20usuario/img8.jpg)
+- Ao lado da página serviços encontramos a galeria de fotos, que contém fotos de diversos tipos. Nessa página o usuário encontra imagens que demonstram procedimentos realizados pelo studio.
 
-- Além disso, o admin terá um “Histórico de pedidos”, para chegar até a página, clique em Usuário, no canto superior direito, que abrirá algumas opções, dentre elas, ‘Histórico de pedidos”. Ali, ele poderá observar os pedidos que estão sendo feitos, com as informações necessárias para realizar as vendas, como cliente, endereço, produtos e preço somado.
+![img9](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/galeria.png)
 
-![img9](https://github.com/cp2-dc-info-projeto-final/pizzaria-favattos-portugal/blob/master/manual%20do%20usuario/img9.jpg)
+- Ao lado da galeria de fotos econtramos a página "quem somos", que conta a história e objetivo do Studio.
 
-Ao entrar no site, se for cadastrado, o usuário pode realizar login com email e senha. 
+![img10](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/quems1.png)
+
+- No corpo da página encontramos também uma funcionalidade do Google Maps, onde o usuário pode consultar a localização do studio no mapa.
+
+![img11](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/quems2.png)
