@@ -1,6 +1,6 @@
 <?php 
   require_once "../connection_factory.php";
-
+    require "../servico/agendamentoCtrl.php"
     function autenticacao($email, $senha) {
         $conn = get_connection();
         $sql = "SELECT id, senha,email FROM usuario WHERE email='$email'";
@@ -14,6 +14,7 @@
             while($row = mysqli_fetch_assoc($result)) {
                 $hash = $row["senha"];
                 $usuario = $row["nome"];
+                $usuario["id"] = $row["id"];
                 if $row["funcionario"] == 1
                     $usuario["tipo"] = "funcionario";
                 if $row["cliente"] == 1

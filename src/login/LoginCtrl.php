@@ -11,8 +11,9 @@
     if ($usuario = autenticacao($email, $senha) != false)
     {
         session_unset();
-        $_SESSION["nome"] = $row["nome"]; //inicia a session caso a autenticação seja verdadeira
-        $_SESSION["tipo"] = $row["tipo"];
+        $_SESSION["nome"] = $usuario["nome"]; //inicia a session caso a autenticação seja verdadeira
+        $_SESSION["tipo"] = $usuario["tipo"];
+        $_SESSION["id"] = $usuario["id"];
         header("Location: ../pagina_inicial/paginainicial.html");
         if ($usuario["tipo"] == "cliente") {
             // header 1

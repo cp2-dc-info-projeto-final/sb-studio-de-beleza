@@ -14,7 +14,7 @@
 
   <?php
 
-   require "agendamentoModel.php";
+require "agendamentoModel.php";
 
   ?>
   
