@@ -1,5 +1,5 @@
 DROP DATABASE IF EXISTS studiodebeleza;
-CREATE DATABASE studiodebeleza character set UTF-8mb4 collate utf8mb4_bin;
+CREATE DATABASE studiodebeleza character set UTF8mb4 collate utf8mb4_bin;
 
 USE studiodebeleza;
 
@@ -12,8 +12,13 @@ CREATE TABLE usuario (
 );
 
 INSERT INTO usuario (email, senha) VALUES
-('mceloemerson@gmail.com', '$2y$10$7bgXZylojDHX7sxd.Z4LPe30RYPmdLiuirsspEHBzsJ0Bkv8Thz6q'),
-('adm@adm.com', '$2y$10$qL0mPHz8G4xuEXzAaIjBOuzbVEb4EePyVLbVxAvaMztErID41REhG');
+('andressa@andressa.com', '$2y$10$7bgXZylojDHX7sxd.Z4LPe30RYPmdLiuirsspEHBzsJ0Bkv8Thz6q'),
+('evelyn@evelyn.com', '$2y$10$7bgXZylojDHX7sxd.Z4LPe30RYPmdLiuirsspEHBzsJ0Bkv8Thz6q'),
+('catia@catia.com', '$2y$10$7bgXZylojDHX7sxd.Z4LPe30RYPmdLiuirsspEHBzsJ0Bkv8Thz6q'),
+('fabricia@fabria.com', '$2y$10$qL0mPHz8G4xuEXzAaIjBOuzbVEb4EePyVLbVxAvaMztErID41REhG'),
+('ygor@ygor.com', '$2y$10$qL0mPHz8G4xuEXzAaIjBOuzbVEb4EePyVLbVxAvaMztErID41REhG'),
+('alayne@alayne.com', '$2y$10$qL0mPHz8G4xuEXzAaIjBOuzbVEb4EePyVLbVxAvaMztErID41REhG');
+
 
 drop table if exists Funcionario;
 CREATE TABLE Funcionario (
@@ -29,11 +34,9 @@ CREATE TABLE Funcionario (
     FOREIGN KEY (id_func) REFERENCES usuario(id_usuario)
 );
 INSERT INTO Funcionario(id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
-(1,'Andressa', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
-(2,'Evelyn', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
-(3,'Cátia', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
-(4,'Rosane', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
-(5,'Karen', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ');
+(1,'Andressa', '21 000000000', '2000-11-02', '11111111111', 'F', 'Duque de Caxias', 'RJ'),
+(2,'Evelyn', '21 000000000', '2000-11-02', '22222222222', 'F', 'Rio de Janeiro', 'RJ'),
+(3,'Cátia', '21 000000000', '2000-11-02', '33333333333', 'F', 'Duque de Caxias', 'RJ');
 
 drop table if exists Servico;
 CREATE TABLE Servico (
@@ -70,9 +73,9 @@ CREATE TABLE Cliente (
     FOREIGN KEY (id_cliente) REFERENCES usuario(id_usuario)
 );
 INSERT INTO Cliente (id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES
-(1,'Fabricia', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
-(2,'Ygor', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ'),
-(3,'Alayne', '21 000000000', '2000-11-02', '00000000000', 'F', 'Duque de Caxias', 'RJ');
+(4,'Fabricia', '21 000000000', '2000-11-02', '44444444444', 'F', 'Duque de Caxias', 'RJ'),
+(5,'Ygor', '21 000000000', '2000-11-02', '55555555555', 'F', 'Rio de Janeiro', 'RJ'),
+(6,'Alayne', '21 000000000', '2000-11-02', '66666666666', 'F', 'Duque de Caxias', 'RJ');
 
 drop table if exists Agendamento;
 CREATE table agendamento (
@@ -116,8 +119,13 @@ CREATE TABLE recuperacao (
     FOREIGN KEY (id_pergunta) REFERENCES usuario(id_pergunta)
 );
 
-INSERT INTO recuperacao (id_usuario, id_pergunta, resposta) VALUES (1, 2, 'Smiliguindo');
-INSERT INTO recuperacao (id_usuario, id_pergunta, resposta) VALUES (2, 2, 'Smiliguindo & Sua Turma');
+INSERT INTO recuperacao (id_usuario, id_pergunta, resposta) VALUES 
+(1, 2, 'Smiliguindo'),
+(2, 2, 'Smiliguindo & sua turma'),
+(3, 2, 'Smiliguindo'),
+(4, 2, 'Smiliguindo & sua turma'),
+(5, 2, 'Smiliguindo'),
+(6, 2, 'Smiliguindo & sua turma');
 
 CREATE TABLE estados (
     id_municipio int AUTO_INCREMENT,
