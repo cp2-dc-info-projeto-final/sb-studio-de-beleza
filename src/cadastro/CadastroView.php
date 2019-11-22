@@ -135,6 +135,13 @@ function validarSenha(form) /* declaração para conferir se as senhas digitadas
   <label>Município</label>
   <input type="text" name="tMunicipio" id="cMunicipio" class="form-control form-control-sm" required>
 </div>
+<div class='form-group col-md-6'>
+  <label>Tipo de usuário</label>
+  <select type="text" name="tTipoUsuario" id="cTipoUsuario" class="form-control form-control-sm" required>
+  <option value="1">Cliente</option>
+  <option value="2">Funcionário
+  </select>
+</div>
 </div>
 
 <h2 class="card-title">Informações de login</h2>
