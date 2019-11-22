@@ -11,13 +11,13 @@
     if ($usuario = autenticacao($email, $senha) != false)
     {
         session_unset();
-        $_SESSION["nome"] = $row["nome"]; //inicia a session caso a autenticação seja verdadeira
-        $_SESSION["tipo"] = $row["tipo"];
-        header("Location: ../pagina_inicial/paginainicial.html");
+        $_SESSION["nome"] = $usuario["nome"]; //inicia a session caso a autenticação seja verdadeira
+        $_SESSION["tipo"] = $usuario["tipo"];
+        
         if ($usuario["tipo"] == "cliente") {
-            // header 1
+            header("Location: ../pagina_inicial/paginainicial.html");
         } else {
-            // header 2
+            header("Location: ../painel_adm/lista_funcView.php");
         }
        
     } else //condição para caso a autenticação venha a sofrer algum erro, seja por conta da senha ou o email
