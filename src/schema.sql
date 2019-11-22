@@ -94,6 +94,15 @@ INSERT INTO Agendamento (id_agend, id_cliente, id_servico, id_func, data_agend, 
 (1, 1, 2, 1, '2019-11-19','11:00'),
 (2, 2, 2, 1, '2019-11-19','13:00'),
 (3, 3, 5, 2, '2019-11-19','17:00');
+
+DROP TABLE IF EXISTS horarios_atendimento;
+CREATE table horarios_atendimento (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    horario time
+);
+
+INSERT INTO horarios_atendimento(horario) VALUES
+('9:00'),('10:00'), ('11:00'), ('13:00'), ('14:00'), ('15:00'), ('16:00'), ('17:00');
  
 drop table if exists Pergunta;    
 CREATE TABLE Pergunta (    
