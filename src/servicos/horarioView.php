@@ -10,7 +10,7 @@
     <!-- provavelmente editar a logo, pois ainda não há o vetor da mesma -->
   </div>
   <?php
-  require "agendamentoCtrl.php";
+  require "agendamentoModel.php";
   ?>
 </head>
 
@@ -33,15 +33,17 @@
   </nav>
 
 
-<form action="agendamentoCtrl.php" class="form-agendamento" >
+<form action="agendamentoCtrl.php" class="form-agendamento" method="GET">
 <div class="form-group col-md-6">
     <h3>Escolha o horário desejado:</h3>
-      <select>
+      <select name="tHora">
           <option name="tHora"></option>
         
 
 <?php
-
+$servico = $_GET['tServico'];
+$func = $_GET['tFunc'];
+$data = $_GET['tCalendario'];
 $data = $_GET["tCalendario"];
 $id_func = $_GET["tFunc"];
 

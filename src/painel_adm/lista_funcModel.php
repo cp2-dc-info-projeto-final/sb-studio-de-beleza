@@ -56,17 +56,6 @@ require_once "../connection_factory.php";
 
         return $clientes;
     }
-    function controle_acesso() {
-        $conn = get_connection();
-
-        $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
-        $eow = mysqli_num_rows($conn, $sql);
-        if ($row > 0){
-        session_start();
-       
-        header('Location: lista_funcView.php');
-    }else{
-        echo "Acesso não permitido!";
-    }
+   
 ?>
 

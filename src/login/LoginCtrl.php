@@ -13,7 +13,10 @@
         session_unset();
         $_SESSION["nome"] = $usuario["nome"]; //inicia a session caso a autenticação seja verdadeira
         $_SESSION["tipo"] = $usuario["tipo"];
-        
+
+        $_SESSION["id"] = $usuario["id"];
+        header("Location: ../pagina_inicial/paginainicial.html");
+
         if ($usuario["tipo"] == "cliente") {
             header("Location: ../pagina_inicial/paginainicial.html");
         } else {

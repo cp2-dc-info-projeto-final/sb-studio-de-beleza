@@ -75,7 +75,7 @@ if ($result=mysqli_query($link,$sql)) {
         $id_usuario = $row[0];
         if ($tipoUsuario == 2) // condição para caso o tipo de usuário seja o 2 (funcionário)
         {
-            $sql = "INSERT INTO Funcionario (id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, id_estado) VALUES ($id_usuario, '$nome', '$tel', '$calendario', '$cpf', '$sexo', '$mun', '$est')";
+            $sql = "INSERT INTO Funcionario (id_func, nome_funcionario, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES ($id_usuario, '$nome', '$tel', '$calendario', '$cpf', '$sexo', '$mun', '$est')";
             if(mysqli_query($link, $sql))
             {
                 header("Location: ../login/LoginView.php");  //redirecionando para a página de login ao final da inserção na tabela correta, de acordo com o tipo usuário desse IF
@@ -88,7 +88,7 @@ if ($result=mysqli_query($link,$sql)) {
         }
         if ($tipoUsuario == 1) // condição para caso o tipo de usuário seja o 1 (cliente)
         {
-            $sql = "INSERT INTO Cliente (id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo, municipio, id_estado) VALUES ($id_usuario, '$nome', '$tel', '$calendario', '$cpf', '$sexo', '$mun', '$est')";
+            $sql = "INSERT INTO Cliente (id_cliente, nome_cliente, telefone, data_nasc, cpf, sexo, municipio, estado) VALUES ($id_usuario, '$nome', '$tel', '$calendario', '$cpf', '$sexo', '$mun', '$est')";
                 if(mysqli_query($link, $sql))
                 {
                     header("Location: ../login/LoginView.php"); //redirecionando para a página de login ao final da inserção na tabela correta, de acordo com o tipo usuário desse IF
