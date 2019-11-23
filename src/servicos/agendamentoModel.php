@@ -15,7 +15,7 @@ function buscaServicos() {
 
 function buscaFuncionario(){
   $conn = get_connection();
-  $query = "SELECT id_func, nome_funcionario FROM Funcionario";
+  $query = "SELECT id_func,nome_funcionario FROM Funcionario";
   $result = mysqli_query($conn, $query); 
   $funcionario = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_close($conn);
@@ -36,13 +36,13 @@ function buscaData($data_agend){
     return $result;
 }
 
-function buscaHorario($data_agend, $id_func){
+function buscaHorario($result, $funcionario){
   $conn = get_connection();
   $tempoocupado = "SELECT horario FROM horarios_atendimento
   WHERE horario NOT IN (
       SELECT hora_inicio FROM Agendamento
-      WHERE data_agend = '$data_agend'
-      AND id_func = '$id_func'
+      WHERE data_agend = '$result'
+      AND id_func = '$funcionario'
   );";
 
   $result = mysqli_query($conn, $tempoocupado); 
@@ -52,4 +52,11 @@ function buscaHorario($data_agend, $id_func){
   return $recebe;
 }
 
+function fazerAgendamento($horario){
+  $conn = get_connection();
+  $consulta = "UPDATE horarios_atendimento SET utiliado = true 
+              WhERE horario = $horario";
+  $result = mysqli_query($conn, $consulta);
+  mysqli_close($conn); 
+}
 ?>

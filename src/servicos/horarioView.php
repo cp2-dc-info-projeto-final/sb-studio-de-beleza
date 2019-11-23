@@ -41,13 +41,14 @@
         
 
 <?php
-$servico = $_GET['tServico'];
-$func = $_GET['tFunc'];
-$data = $_GET['tCalendario'];
-$data = $_GET["tCalendario"];
-$id_func = $_GET["tFunc"];
+session_start();
 
-$horarios = buscaHorario(buscaData($data), $id_func);
+$_SESSION['hora'] = $_GET['tHora'];
+$_SESSION['servico'] = $_GET['tServico']; 
+$_SESSION['id_funcionario'] = $_GET['tFunc'];
+$_SESSION['data_agend'] = $_GET['tCalendario'];
+
+$horarios = buscaHorario(buscaData($_SESSION['data_agend']), $_SESSION['id_funcionario']);
 
 foreach ($horarios as $recebe){
 
@@ -56,7 +57,7 @@ foreach ($horarios as $recebe){
 ?>
   
 
-<option name="tHora" value="<?php echo $recebe['horario']?>"><?php echo $recebe['horario'];?></option>
+<option name="tHora" id="tHora" value="<?php echo $recebe['horario']?>"><?php echo $recebe['horario'];?></option>
 
 <?php
 }
@@ -66,7 +67,7 @@ foreach ($horarios as $recebe){
 <br>
   <br><br>
 
-<input class="btn btn-outline-danger" type='submit' value="finalizar agendamento">
+<input class="btn btn-outline-danger" type='submit' value="Finalizar Agendamento">
 
 <br> <br>
 </form>

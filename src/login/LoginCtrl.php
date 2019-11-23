@@ -17,7 +17,7 @@
         $_SESSION["id"] = $usuario["id"];
         header("Location: ../pagina_inicial/paginainicial.html");
 
-        if ($usuario["tipo"] == "cliente") {
+        if ($_SESSION["tipo"] == "cliente") {
             header("Location: ../pagina_inicial/paginainicial.html");
         } else {
             header("Location: ../painel_adm/lista_funcView.php");
