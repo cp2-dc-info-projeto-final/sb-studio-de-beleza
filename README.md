@@ -45,3 +45,5 @@ Diagrama Banco de Dados:
 ![Diagrama Banco de Dados](Documentacao/Diagrama_Banco_de_Dados/diagrama_BD.png)
 
 [Script SQL](Projeto/schema.sql) 
+
+![Apresentação de TCC ](Documentacao/apresentação.tcc.pdf)

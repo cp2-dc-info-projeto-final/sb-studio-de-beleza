@@ -10,34 +10,42 @@
 
  ![img3](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/cadastro2.png)
  
- - Após finalizar o cadastro, o usuário é redirecionado para a página inicial, que contem uma breve descrição do studio, fotos, e um menu que pode o levar para as outras páginas do site.
+ - Após finalizar o cadastro, o usuário é redirecionado para a página de login.
 
-![img4](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/pagini1.png)
+![img4](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/login.png)
+ 
+ - Após finalizar o login, o usuário é redirecionado para a página inicial, que contem uma breve descrição do studio, fotos, e um menu que pode o levar para as outras páginas do site.
+
+![img5](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/pagini1.png)
 
  Todas as páginas contém um menu que o levará para outras páginas, e também um rodapé com as principais informações do studio(Telefone, localização etc.)
 
-![img5](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/pagini2.png)
+![img6](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/pagini2.png)
 
 - Ao lado da página inicial, há a página de serviços que leva o usuário para a página de agendamentos.
 
-![img6](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/servico1.png)
+![img7](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/servico1.png)
 
 - Assim que o usuário mover o mouse por cima das imagens, aparecerá, instantaneamente, os serviços disponíveis e seus respectivos preços. Acima dos serviços há a opção agendar.
 
-![img7](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/servico2.png)
+![img8](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/servico2.png)
 
-- Na página agendamento o usuário selecionará o serviço desejado, o profissional, a data e o horário da realização do procedimento. Vale reforçar que o cliente só poderá agendar um procedimento se for cadastrado no site! Por isso, também é possível cadastrar-se através da página de agendamento.
+- Na página agendamento o usuário selecionará o serviço desejado, o profissional, e a data  da realização do procedimento. Vale reforçar que o cliente só poderá agendar um procedimento se for cadastrado no site! Por isso, também é possível cadastrar-se através da página de agendamento.
 
-![img8](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/agend.png)
+![img9](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/agendamento1.png)
+
+- Após a primeira etapa, o usuário é encaminhado para outra página para escolher o horário do agendamento. Após isso, o cliente poderá confirmar seu agendamento. 
+
+![img10](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/agendamentodohorario.png)
 
 - Ao lado da página serviços encontramos a galeria de fotos, que contém fotos de diversos tipos. Nessa página o usuário encontra imagens que demonstram procedimentos realizados pelo studio.
 
-![img9](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/galeria.png)
+![img11](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/galeria.png)
 
 - Ao lado da galeria de fotos econtramos a página "quem somos", que conta a história e objetivo do Studio.
 
-![img10](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/quems1.png)
+![img12](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/quems1.png)
 
 - No corpo da página encontramos também uma funcionalidade do Google Maps, onde o usuário pode consultar a localização do studio no mapa.
 
-![img11](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/quems2.png)
+![img13](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Prints/quems2.png)
