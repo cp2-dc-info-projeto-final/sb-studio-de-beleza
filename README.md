@@ -12,7 +12,7 @@
 - [Requisitos](#Requisitos)
 - [Casos de Uso](#Casos-de-Uso)
 - [Modelagem](#Modelagem)
-- [Manual de Utilização](#Manual-de-Utilização)
+- [Manual de Utilização](https://github.com/cp2-dc-info-projeto-final/sb-studio-de-beleza/blob/master/Documentacao/Manual_de_Utilizacao/manual.md)
 
 ## Visão Geral da Proposta
 - Construção de Desenvolvimento Web para um Studio de Beleza que auxilie principalmente no agendamento dos serviços oferecidos pelo salão.
