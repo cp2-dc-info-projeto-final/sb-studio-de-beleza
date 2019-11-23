@@ -47,3 +47,6 @@ Diagrama Banco de Dados:
 [Script SQL](Projeto/schema.sql) 
 
 ![Apresentação de TCC ](Documentacao/apresentação.tcc.pdf)
+
+## Manual de Utilização
+![Manual de Utilização](Documentacao/Manual_de_Utilizacao/manual.md)
