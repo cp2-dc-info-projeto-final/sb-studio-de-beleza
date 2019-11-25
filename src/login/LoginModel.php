@@ -1,6 +1,5 @@
 <?php 
   require_once "../connection_factory.php";
-    require "../servico/agendamentoCtrl.php";
     
     function autenticacao($email, $senha) {
         $conn = get_connection();
